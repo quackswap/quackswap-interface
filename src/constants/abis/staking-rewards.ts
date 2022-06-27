@@ -1,6 +1,6 @@
 import { Interface } from '@ethersproject/abi'
-import StakingRewards from '@pangolindex/governance/artifacts/contracts/StakingRewards.sol/StakingRewards.json'
+import { StakingRewardsAbi } from '@quackswap/sdk'
 
-const STAKING_REWARDS_INTERFACE = new Interface(StakingRewards.abi)
+const STAKING_REWARDS_INTERFACE = new Interface(StakingRewardsAbi)
 
 export { STAKING_REWARDS_INTERFACE }

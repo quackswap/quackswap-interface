@@ -1,6 +1,6 @@
 import { Interface } from '@ethersproject/abi'
-import { abi as IPangolinPairABI } from '@pangolindex/exchange-contracts/artifacts/contracts/pangolin-core/interfaces/IPangolinPair.sol/IPangolinPair.json'
+import { QuackSwapPairAbi } from '@quackswap/sdk'
 
-const PANGOLIN_PAIR_INTERFACE = new Interface(IPangolinPairABI)
+const QUACKSWAP_PAIR_INTERFACE = new Interface(QuackSwapPairAbi)
 
-export { PANGOLIN_PAIR_INTERFACE }
+export { QUACKSWAP_PAIR_INTERFACE }

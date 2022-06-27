@@ -1,13 +1,13 @@
 import { TokenAmount, Pair, Currency } from '@quackswap/sdk'
 import { useMemo } from 'react'
-import IPangolinPair from '@pangolindex/exchange-contracts/artifacts/contracts/pangolin-core/interfaces/IPangolinPair.sol/IPangolinPair.json'
+import { QuackSwapPairAbi } from '@quackswap/sdk'
 import { Interface } from '@ethersproject/abi'
 import { useChainId } from '../hooks'
 
 import { useMultipleContractSingleData } from '../state/multicall/hooks'
 import { wrappedCurrency } from '../utils/wrappedCurrency'
 
-const PAIR_INTERFACE = new Interface(IPangolinPair.abi)
+const PAIR_INTERFACE = new Interface(QuackSwapPairAbi)
 
 export enum PairState {
   LOADING,
@@ -47,7 +47,7 @@ export function usePairs(currencies: [Currency | undefined, Currency | undefined
       if (loading) return [PairState.LOADING, null]
       if (!tokenA || !tokenB || tokenA.equals(tokenB)) return [PairState.INVALID, null]
       if (!reserves) return [PairState.NOT_EXISTS, null]
-      const { reserve0, reserve1 } = reserves
+      const { _reserve0: reserve0, _reserve1: reserve1 } = reserves
       const [token0, token1] = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA]
       return [
         PairState.EXISTS,

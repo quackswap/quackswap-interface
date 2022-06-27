@@ -1,13 +1,14 @@
 import { Contract } from '@ethersproject/contracts'
 import { WBTT } from '@quackswap/sdk'
-import IPangolinPair from '@pangolindex/exchange-contracts/artifacts/contracts/pangolin-core/interfaces/IPangolinPair.sol/IPangolinPair.json'
-import StakingRewards from '@pangolindex/governance/artifacts/contracts/StakingRewards.sol/StakingRewards.json'
-import Airdrop from '@pangolindex/governance/artifacts/contracts/Airdrop.sol/Airdrop.json'
-import GovernorAlpha from '@pangolindex/governance/artifacts/contracts/GovernorAlpha.sol/GovernorAlpha.json'
-// TODO
-import Png from '@pangolindex/governance/artifacts/contracts/PNG.sol/Png.json'
-import PangolinBridgeMigrationRouter from '@pangolindex/exchange-contracts/artifacts/contracts/pangolin-periphery/PangolinBridgeMigrationRouter.sol/PangolinBridgeMigrationRouter.json'
-import MiniChefV2 from '@pangolindex/governance/artifacts/contracts/MiniChefV2.sol/MiniChefV2.json'
+import {
+  QuackSwapPairAbi,
+  StakingRewardsAbi,
+  AirdropAbi,
+  GovernorAlphaAbi,
+  QUACKAbi,
+  MasterChefAbi,
+  QuackSwapBridgeMigrationRouterAbi
+} from '@quackswap/sdk'
 import { useMemo } from 'react'
 import ENS_PUBLIC_RESOLVER_ABI from '../constants/abis/ens-public-resolver.json'
 import { ERC20_BYTES32_ABI } from '../constants/abis/erc20'
@@ -56,11 +57,11 @@ export function useV2MigratorContract(): Contract | null {
 
 export function useMiniChefContract(): Contract | null {
   const chainId = useChainId()
-  return useContract(MINICHEF_ADDRESS[chainId], MiniChefV2.abi, true)
+  return useContract(MINICHEF_ADDRESS[chainId], MasterChefAbi, true)
 }
 
 export function useBridgeMigratorContract(): Contract | null {
-  return useContract(BRIDGE_MIGRATOR_ADDRESS, PangolinBridgeMigrationRouter.abi, true)
+  return useContract(BRIDGE_MIGRATOR_ADDRESS, QuackSwapBridgeMigrationRouterAbi, true)
 }
 
 export function useV1ExchangeContract(address?: string, withSignerIfPossible?: boolean): Contract | null {
@@ -89,7 +90,7 @@ export function useBytes32TokenContract(tokenAddress?: string, withSignerIfPossi
 }
 
 export function usePairContract(pairAddress?: string, withSignerIfPossible?: boolean): Contract | null {
-  return useContract(pairAddress, IPangolinPair.abi, withSignerIfPossible)
+  return useContract(pairAddress, QuackSwapPairAbi, withSignerIfPossible)
 }
 
 export function useMulticallContract(): Contract | null {
@@ -98,19 +99,19 @@ export function useMulticallContract(): Contract | null {
 }
 
 export function useGovernanceContract(): Contract | null {
-  return useContract(GOVERNANCE_ADDRESS, GovernorAlpha.abi, true)
+  return useContract(GOVERNANCE_ADDRESS, GovernorAlphaAbi, true)
 }
 
 export function usePngContract(): Contract | null {
   const chainId = useChainId()
-  return useContract(chainId ? QUACK[chainId].address : undefined, Png.abi, true)
+  return useContract(chainId ? QUACK[chainId].address : undefined, QUACKAbi, true)
 }
 
 export function useStakingContract(stakingAddress?: string, withSignerIfPossible?: boolean): Contract | null {
   const chainId = useChainId()
   return useContract(
     stakingAddress,
-    stakingAddress === MINICHEF_ADDRESS[chainId] ? MiniChefV2.abi : StakingRewards.abi,
+    stakingAddress === MINICHEF_ADDRESS[chainId] ? MasterChefAbi : StakingRewardsAbi,
     withSignerIfPossible
   )
 }
@@ -121,5 +122,5 @@ export function useRewardViaMultiplierContract(address?: string, withSignerIfPos
 
 export function useAirdropContract(): Contract | null {
   const chainId = useChainId()
-  return useContract(chainId ? AIRDROP_ADDRESS[chainId] : undefined, Airdrop.abi, true)
+  return useContract(chainId ? AIRDROP_ADDRESS[chainId] : undefined, AirdropAbi, true)
 }

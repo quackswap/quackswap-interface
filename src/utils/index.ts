@@ -3,7 +3,7 @@ import { getAddress } from '@ethersproject/address'
 import { AddressZero } from '@ethersproject/constants'
 import { JsonRpcSigner, Web3Provider } from '@ethersproject/providers'
 import { BigNumber } from '@ethersproject/bignumber'
-import IPangolinRouter from '@pangolindex/exchange-contracts/artifacts/contracts/pangolin-periphery/interfaces/IPangolinRouter.sol/IPangolinRouter.json'
+import { QuackSwapRouterAbi } from '@quackswap/sdk'
 import { ROUTER_ADDRESS } from '../constants'
 import {
   ChainId,
@@ -106,7 +106,7 @@ export function getContract(address: string, ABI: any, library: Web3Provider, ac
 
 // account is optional
 export function getRouterContract(chainId: ChainId, library: Web3Provider, account?: string): Contract {
-  return getContract(ROUTER_ADDRESS[chainId], IPangolinRouter.abi, library, account)
+  return getContract(ROUTER_ADDRESS[chainId], QuackSwapRouterAbi, library, account)
 }
 
 export function escapeRegExp(string: string): string {

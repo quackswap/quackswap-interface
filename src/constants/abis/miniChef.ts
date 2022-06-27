@@ -1,6 +1,6 @@
 import { Interface } from '@ethersproject/abi'
-import { abi as MINICHEF_ABI } from '@pangolindex/governance/artifacts/contracts/MiniChefV2.sol/MiniChefV2.json'
+import { MasterChefAbi } from '@quackswap/sdk'
 
-const MINICHEF_INTERFACE = new Interface(MINICHEF_ABI)
+const MASTERCHEF_INTERFACE = new Interface(MasterChefAbi)
 
-export { MINICHEF_INTERFACE }
+export { MASTERCHEF_INTERFACE }

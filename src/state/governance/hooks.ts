@@ -9,7 +9,7 @@ import { calculateGasMargin } from 'src/utils'
 import { TransactionResponse } from '@ethersproject/providers'
 import { useTransactionAdder } from '../transactions/hooks'
 import { useState, useEffect, useCallback } from 'react'
-import GOV from '@pangolindex/governance/artifacts/contracts/GovernorAlpha.sol/GovernorAlpha.json'
+import { GovernorAlphaAbi } from '@quackswap/sdk'
 import { GET_BLOCK } from 'src/apollo/block'
 import { blockClient, governanceClient } from 'src/apollo/client'
 import { GET_PROPOSALS } from 'src/apollo/vote'
@@ -125,7 +125,7 @@ export function useDataFromEventLogs() {
 
   useEffect(() => {
     const voteDelay: number = 60 * 60 * 24
-    const eventParser = new ethers.utils.Interface(GOV.abi)
+    const eventParser = new ethers.utils.Interface(GovernorAlphaAbi)
 
     async function fetchData() {
       let pastEvents = [] as any[]

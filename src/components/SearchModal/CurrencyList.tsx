@@ -95,7 +95,6 @@ function CurrencyRow({
   otherSelected: boolean
   style: CSSProperties
 }) {
-  console.log("🚀 ~ file: CurrencyList.tsx ~ line 98 ~ currency", currency)
   const { account } = useActiveWeb3React()
   const chainId = useChainId()
   const key = currencyKey(currency, chainId)
@@ -205,7 +204,6 @@ export default function CurrencyList({
 
   const itemKey = useCallback((index: number, data: any) => currencyKey(data[index], chainId), [chainId])
 
-  console.log(itemData)
   return (
     <FixedSizeList
       height={height}
