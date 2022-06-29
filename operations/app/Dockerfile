@@ -13,8 +13,8 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && \
     apt-get update && apt-get -qq install -y yarn
 
 COPY quackswap-interface/ /usr/quackswap-interface
-COPY sdk/ /usr/sdk
-COPY components/ /usr/components
+COPY sdk/ /usr/quackswap-sdk
+COPY components/ /usr/quackswap-components
 
 WORKDIR /usr/sdk
 RUN yarn
