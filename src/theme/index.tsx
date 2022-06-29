@@ -45,7 +45,7 @@ const chineseBlack = '#111111'
 const darkGunmetal = '#212427'
 const platinum = '#E5E5E5'
 const darkSilver = '#717171'
-const venetianRed = '#CC1512'
+const venetianRed = '#E23E3B'
 const oceanBlue = '#18C145'
 const quickSilver = '#A3A3A3'
 
@@ -76,13 +76,13 @@ export function colors(darkMode: boolean): Colors {
 
     // backgrounds / greys
     bg1: darkMode ? '#212429' : '#FFFFFF',
-    bg2: darkMode ? '#2C2F36' : '#F7F8FA',
+    bg2: darkMode ? '#282222' : '#F7F8FA',
     bg3: darkMode ? '#40444F' : '#EDEEF2',
     bg4: darkMode ? '#565A69' : '#CED0D9',
     bg5: darkMode ? '#6C7284' : '#888D9B',
-    bg6: darkMode ? '#1c1c1c' : '#F7F8FA',
-    bg7: darkMode ? '#2C2D33' : '#F7F8FA',
-    bg8: darkMode ? '#212427' : '#FFFFFF',
+    bg6: darkMode ? '#282222' : '#F7F8FA',
+    bg7: darkMode ? '#282222' : '#F7F8FA',
+    bg8: darkMode ? '#282222' : '#FFFFFF',
     bg9: darkMode ? '#ffffff' : '#000000',
 
     //specialty colors
@@ -91,18 +91,18 @@ export function colors(darkMode: boolean): Colors {
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
     //primary colors
-    primary1: darkMode ? '#2172E5' : '#ff007a',
-    primary2: darkMode ? '#3680E7' : '#ff007a',
-    primary3: darkMode ? '#4D8FEA' : '#ff007a',
+    primary1: darkMode ? '#DF5A3F' : '#ff007a',
+    primary2: darkMode ? '#DF6A52' : '#ff007a',
+    primary3: darkMode ? '#DF7E6A' : '#ff007a',
     primary4: darkMode ? '#376bad70' : '#ff007a',
     primary5: darkMode ? '#153d6f70' : '#ff007a',
-    primary6: darkMode ? '#2172E5' : '#FFFFFF',
+    primary6: darkMode ? '#DF5A3F' : '#FFFFFF',
 
     // color text
-    primaryText1: darkMode ? '#6da8ff' : '#ffffff',
+    primaryText1: darkMode ? '#DF8D7C' : '#ffffff',
 
     // secondary colors
-    secondary1: darkMode ? '#2172E5' : '#ff007a',
+    secondary1: darkMode ? '#DF5A3F' : '#ff007a',
     secondary2: darkMode ? '#17000b26' : '#F6DDE8',
     secondary3: darkMode ? '#17000b26' : '#FDEAF1',
 

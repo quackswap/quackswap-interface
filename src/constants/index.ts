@@ -10,7 +10,7 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]: string } = {
 export const LANDING_PAGE = 'https://pangolin.exchange'
 export const ANALYTICS_PAGE = 'https://info.pangolin.exchange'
 
-export const PANGOLIN_API_BASE_URL = `http://127.0.0.1:8787`
+export const PANGOLIN_API_BASE_URL = `https://quack-swap-staging.hotcross.workers.dev/`
 
 // TODO
 export const PANGOLIN_TOKENS_REPO_RAW_BASE_URL = `https://raw.githubusercontent.com/pangolindex/tokens`
@@ -27,7 +27,7 @@ export const GOVERNANCE_ADDRESS = '0xb0Ff2b1047d9E8d294c2eD798faE3fA817F43Ee1'
 
 export const BRIDGE_MIGRATOR_ADDRESS = '0x4b23Aa72A1214d0E4fd3f2c8Da7C6ba660F7483C'
 
-export const MINICHEF_ADDRESS: { [chainId in ChainId]: string } = {
+export const MASTERCHEF_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.BITTORRENT_MAINNET]: CHAINS[ChainId.BITTORRENT_MAINNET].contracts!.master_chef!
 }
 

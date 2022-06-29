@@ -23,7 +23,7 @@ import { useActiveWeb3React } from './index'
 import {
   AIRDROP_ADDRESS,
   BRIDGE_MIGRATOR_ADDRESS,
-  MINICHEF_ADDRESS,
+  MASTERCHEF_ADDRESS,
   ZERO_ADDRESS,
   GOVERNANCE_ADDRESS
 } from '../constants'
@@ -57,7 +57,7 @@ export function useV2MigratorContract(): Contract | null {
 
 export function useMiniChefContract(): Contract | null {
   const chainId = useChainId()
-  return useContract(MINICHEF_ADDRESS[chainId], MasterChefAbi, true)
+  return useContract(MASTERCHEF_ADDRESS[chainId], MasterChefAbi, true)
 }
 
 export function useBridgeMigratorContract(): Contract | null {
@@ -111,7 +111,7 @@ export function useStakingContract(stakingAddress?: string, withSignerIfPossible
   const chainId = useChainId()
   return useContract(
     stakingAddress,
-    stakingAddress === MINICHEF_ADDRESS[chainId] ? MasterChefAbi : StakingRewardsAbi,
+    stakingAddress === MASTERCHEF_ADDRESS[chainId] ? MasterChefAbi : StakingRewardsAbi,
     withSignerIfPossible
   )
 }

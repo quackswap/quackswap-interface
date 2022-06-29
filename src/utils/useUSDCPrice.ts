@@ -66,17 +66,7 @@ export default function useUSDCPrice(currency?: Currency): Price | undefined {
         return new Price(currency, USDC, usdcPrice.denominator, usdcPrice.numerator)
       }
     }
+
     return undefined
-  }, [
-    chainId,
-    currency,
-    bttPair,
-    bttPairState,
-    usdcBttPair,
-    usdcBttPairState,
-    usdcPair,
-    usdcPairState,
-    wrapped,
-    USDC
-  ])
+  }, [chainId, currency, bttPair, bttPairState, usdcBttPair, usdcBttPairState, usdcPair, usdcPairState, wrapped, USDC])
 }

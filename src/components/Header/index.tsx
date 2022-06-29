@@ -332,35 +332,13 @@ export default function Header() {
           <StyledLink
             id={`png-nav-link`}
             onClick={toggle}
-            isActive={location?.pathname?.startsWith('/png')}
+            isActive={location?.pathname?.startsWith('/quack')}
             ref={node as any}
           >
-            <StyledNavLink id={`swap-nav-link`} to={'/png/2'}>
+            <StyledNavLink id={`swap-nav-link`} to={'/quack/2'}>
               {t('header.farm')}
             </StyledNavLink>
-            {/* {t('header.farm')} <ChevronDown size={24} />
-            {open && (
-              <NarrowMenuFlyout>
-                <MenuNavItem id="link" to={'/png/1'}>
-                  {t('header.version1')}
-                </MenuNavItem>
-                <MenuNavItem id="link" to={'/png/2'}>
-                  {t('header.version2')}
-                </MenuNavItem>
-              </NarrowMenuFlyout>
-            )} */}
           </StyledLink>
-
-          {/* <StyledNavLink
-            id={`stake-nav-link`}
-            to={'/stake/0'}
-            isActive={(match, { pathname }) => Boolean(match) || pathname.startsWith('/stake')}
-          >
-            {t('header.stake')}
-          </StyledNavLink> */}
-          {/* <StyledExternalLink id={`info-nav-link`} href={ANALYTICS_PAGE}>
-            {t('header.charts')} <span style={{ fontSize: '11px' }}>↗</span>
-          </StyledExternalLink> */}
         </HeaderLinks>
       </HeaderRow>
       <HeaderControls>

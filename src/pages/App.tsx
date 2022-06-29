@@ -106,8 +106,8 @@ export default function App() {
               <Route exact strict path="/buy" component={Buy} />
               <Route exact strict path="/find" component={PoolFinder} />
               <Route exact strict path="/pool" component={Pool} />
-              <Route exact strict path="/png/2" component={EarnV2} />
-              <Route exact strict path="/png/:version" component={EarnV1} />
+              <Route exact strict path="/quack/2" component={EarnV2} />
+              <Route exact strict path="/quack/:version" component={EarnV1} />
               {/* <Route exact strict path="/stake/:version" component={Stake} /> */}
               {/* <Route exact strict path="/vote" component={Vote} /> */}
               {/* <Route exact strict path="/ido" component={IDO} /> */}
@@ -122,8 +122,8 @@ export default function App() {
               <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
               <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
 
-              <Route exact strict path="/png/:currencyIdA/:currencyIdB/2" component={ManageV2} />
-              <Route exact strict path="/png/:currencyIdA/:currencyIdB/:version" component={ManageV1} />
+              <Route exact strict path="/quack/:currencyIdA/:currencyIdB/2" component={ManageV2} />
+              <Route exact strict path="/quack/:currencyIdA/:currencyIdB/:version" component={ManageV1} />
 
               <Route exact strict path="/stake/:version/:rewardCurrencyId" component={ManageStake} />
               <Route exact strict path="/vote/:id" component={VotePage} />

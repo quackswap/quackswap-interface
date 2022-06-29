@@ -12,6 +12,17 @@ export const QUACK: { [chainId in ChainId]: Token } = {
   )
 }
 
+// DUMMY TOKEN
+export const PGL: { [chainId in ChainId]: Token } = {
+  [ChainId.BITTORRENT_MAINNET]: new Token(
+    ChainId.BITTORRENT_MAINNET,
+    '0xb218cb9ae3477524d2865468BA15431d7C535558',
+    18,
+    'PGL',
+    'Dummy PGL'
+  )
+}
+
 export const OG: { [chainId in ChainId]: Token } = {
   [ChainId.BITTORRENT_MAINNET]: new Token(ChainId.BITTORRENT_MAINNET, ZERO_ADDRESS, 18, 'OG', 'OG')
 }
@@ -309,7 +320,7 @@ export const HUSKY: { [chainId in ChainId]: Token } = {
 export const USDCe: { [chainId in ChainId]: Token } = {
   [ChainId.BITTORRENT_MAINNET]: new Token(
     ChainId.BITTORRENT_MAINNET,
-    '0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664',
+    '0xAE17940943BA9440540940DB0F1877f101D39e8b',
     6,
     'USDC.e',
     'USD Coin'

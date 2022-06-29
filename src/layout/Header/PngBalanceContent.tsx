@@ -65,34 +65,34 @@ export default function PngBalanceContent({ setShowPngBalanceModal }: { setShowP
   const isBeta = useIsBetaUI()
   const { account } = useActiveWeb3React()
   const chainId = useChainId()
-  const png = chainId ? QUACK[chainId] : undefined
-  const pngSymbol = usePngSymbol()
+  const quack = chainId ? QUACK[chainId] : undefined
+  const quackSymbol = usePngSymbol()
 
   const total = useAggregatePngBalance()
-  const pngBalance: TokenAmount | undefined = useTokenBalance(account ?? undefined, png)
-  const pngToClaim: TokenAmount | undefined = useTotalPngEarned()
+  const quackBalance: TokenAmount | undefined = useTokenBalance(account ?? undefined, quack)
+  const quackToClaim: TokenAmount | undefined = useTotalPngEarned()
 
-  const totalSupply: TokenAmount | undefined = useTotalSupply(png)
+  const totalSupply: TokenAmount | undefined = useTotalSupply(quack)
 
   const oneToken = JSBI.BigInt(1000000000000000000)
   const { t } = useTranslation()
-  let pngPrice
+  let quackPrice
 
-  const usdcPriceTmp = useUSDCPrice(png)
+  const usdcPriceTmp = useUSDCPrice(quack)
   const usdcPrice = CHAINS[chainId].mainnet ? usdcPriceTmp : undefined
 
-  if (usdcPrice && png) {
-    pngPrice = usdcPrice.quote(new TokenAmount(png, oneToken), chainId)
+  if (usdcPrice && quack) {
+    quackPrice = usdcPrice.quote(new TokenAmount(quack, oneToken), chainId)
   }
 
   const [circulation, setCirculation] = useState(totalSupply)
 
   useMemo(() => {
-    if (png === undefined) return
-    fetch(`${PANGOLIN_API_BASE_URL}/png/circulating-supply`)
+    if (quack === undefined) return
+    fetch(`${PANGOLIN_API_BASE_URL}/quack/circulating-supply`)
       .then(res => res.text())
-      .then(val => setCirculation(new TokenAmount(png, val)))
-  }, [png])
+      .then(val => setCirculation(new TokenAmount(quack, val)))
+  }, [quack])
 
   return (
     <ContentWrapper gap="lg">
@@ -101,7 +101,7 @@ export default function PngBalanceContent({ setShowPngBalanceModal }: { setShowP
         <CardNoise />
         <CardSection gap="md">
           <RowBetween>
-            <TYPE.white color="white">{t('header.pngBreakDown', { symbol: pngSymbol })}</TYPE.white>
+            <TYPE.white color="white">{t('header.pngBreakDown', { symbol: quackSymbol })}</TYPE.white>
             <StyledClose stroke="white" onClick={() => setShowPngBalanceModal(false)} />
           </RowBetween>
         </CardSection>
@@ -118,16 +118,16 @@ export default function PngBalanceContent({ setShowPngBalanceModal }: { setShowP
               <AutoColumn gap="md">
                 <RowBetween>
                   <TYPE.white color="white">{t('header.balance')}</TYPE.white>
-                  <TYPE.white color="white">{pngBalance?.toFixed(2, { groupSeparator: ',' })}</TYPE.white>
+                  <TYPE.white color="white">{quackBalance?.toFixed(2, { groupSeparator: ',' })}</TYPE.white>
                 </RowBetween>
                 <RowBetween>
                   <TYPE.white color="white">{t('header.unclaimed')}</TYPE.white>
                   <TYPE.white color="white">
-                    {pngToClaim?.toFixed(4, { groupSeparator: ',' })}{' '}
-                    {pngToClaim && pngToClaim.greaterThan('0') && (
+                    {quackToClaim?.toFixed(4, { groupSeparator: ',' })}{' '}
+                    {quackToClaim && quackToClaim.greaterThan('0') && (
                       <StyledInternalLink
                         onClick={() => setShowPngBalanceModal(false)}
-                        to={isBeta ? BETA_MENU_LINK.pool : `/png/${DOUBLE_SIDE_STAKING_REWARDS_CURRENT_VERSION}`}
+                        to={isBeta ? BETA_MENU_LINK.pool : `/quack/${DOUBLE_SIDE_STAKING_REWARDS_CURRENT_VERSION}`}
                       >
                         ({t('earn.claim')})
                       </StyledInternalLink>
@@ -142,11 +142,11 @@ export default function PngBalanceContent({ setShowPngBalanceModal }: { setShowP
         <CardSection gap="sm">
           <AutoColumn gap="md">
             <RowBetween>
-              <TYPE.white color="white">{t('header.pngPrice', { symbol: pngSymbol })}</TYPE.white>
-              <TYPE.white color="white">${pngPrice?.toFixed(2, { groupSeparator: ',' }) ?? '-'}</TYPE.white>
+              <TYPE.white color="white">{t('header.pngPrice', { symbol: quackSymbol })}</TYPE.white>
+              <TYPE.white color="white">${quackPrice?.toFixed(2, { groupSeparator: ',' }) ?? '-'}</TYPE.white>
             </RowBetween>
             <RowBetween>
-              <TYPE.white color="white">{t('header.pngCirculation', { symbol: pngSymbol })}</TYPE.white>
+              <TYPE.white color="white">{t('header.pngCirculation', { symbol: quackSymbol })}</TYPE.white>
               <TYPE.white color="white">{circulation?.toFixed(0, { groupSeparator: ',' })}</TYPE.white>
             </RowBetween>
             <RowBetween>
@@ -169,9 +169,9 @@ export default function PngBalanceContent({ setShowPngBalanceModal }: { setShowP
                             params: {
                               type: 'ERC20',
                               options: {
-                                address: png?.address,
-                                symbol: png?.symbol,
-                                decimals: png?.decimals,
+                                address: quack?.address,
+                                symbol: quack?.symbol,
+                                decimals: quack?.decimals,
                                 image: getTokenLogoURL(QUACK[ChainId.BITTORRENT_MAINNET].address, 48)
                               }
                             }
@@ -183,7 +183,7 @@ export default function PngBalanceContent({ setShowPngBalanceModal }: { setShowP
                     })
                   }}
                 >
-                  <TYPE.white color="white">{t('header.addMetamask', { symbol: pngSymbol })}</TYPE.white>
+                  <TYPE.white color="white">{t('header.addMetamask', { symbol: quackSymbol })}</TYPE.white>
                 </AddPNG>
               </AutoColumn>
             </CardSection>

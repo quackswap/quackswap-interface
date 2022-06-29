@@ -13,7 +13,7 @@ import { useTransactionAdder } from '../../../state/transactions/hooks'
 import { usePairContract, useStakingContract } from '../../../hooks/useContract'
 import { useApproveCallback, ApprovalState } from '../../../hooks/useApproveCallback'
 import { TransactionResponse } from '@ethersproject/providers'
-import { MINICHEF_ADDRESS } from '../../../constants'
+import { MASTERCHEF_ADDRESS } from '../../../constants'
 import { splitSignature } from 'ethers/lib/utils'
 import useTransactionDeadline from '../../../hooks/useTransactionDeadline'
 import Loader from '../Loader'
@@ -59,7 +59,7 @@ const Stake = ({
   const [stepIndex, setStepIndex] = useState(4)
   // approval data for stake
   const deadline = useTransactionDeadline()
-  const [approval, approveCallback] = useApproveCallback(chainId, parsedAmount, MINICHEF_ADDRESS[chainId])
+  const [approval, approveCallback] = useApproveCallback(chainId, parsedAmount, MASTERCHEF_ADDRESS[chainId])
   const [signatureData, setSignatureData] = useState<{ v: number; r: string; s: string; deadline: number } | null>(null)
 
   const onChangeAmount = (value: string) => {
@@ -114,7 +114,7 @@ const Stake = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [stakingAmount])
 
-  const stakingContract = useStakingContract(MINICHEF_ADDRESS[chainId])
+  const stakingContract = useStakingContract(MASTERCHEF_ADDRESS[chainId])
   const poolMap = useMinichefPools()
 
   const pairContract = usePairContract(stakingInfo.stakedAmount.token.address)

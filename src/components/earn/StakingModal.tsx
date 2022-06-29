@@ -193,7 +193,7 @@ export default function StakingModal({
       { name: 'verifyingContract', type: 'address' }
     ]
     const domain = {
-      name: 'Pangolin Liquidity',
+      name: 'QuackSwap Liquidity',
       version: '1',
       chainId: chainId,
       verifyingContract: pairContract.address

@@ -204,7 +204,7 @@ const Earn: React.FC<EarnProps> = ({ version, stakingInfos, poolMap }) => {
           .map(stakingInfo => {
             if (poolMap) {
               return fetch(
-                `${PANGOLIN_API_BASE_URL}/pangolin/apr2/${poolMap[stakingInfo.totalStakedAmount.token.address]}`
+                `${PANGOLIN_API_BASE_URL}/quackswap/apr2/${poolMap[stakingInfo.totalStakedAmount.token.address]}`
               )
                 .then(res => res.json())
                 .then(res => ({
@@ -214,7 +214,7 @@ const Earn: React.FC<EarnProps> = ({ version, stakingInfos, poolMap }) => {
                   ...stakingInfo
                 }))
             } else {
-              return fetch(`${PANGOLIN_API_BASE_URL}/pangolin/apr/${stakingInfo.stakingRewardAddress}`)
+              return fetch(`${PANGOLIN_API_BASE_URL}/quackswap/apr/${stakingInfo.stakingRewardAddress}`)
                 .then(res => res.json())
                 .then(res => ({
                   swapFeeApr: Number(res.swapFeeApr),
@@ -329,7 +329,7 @@ const Earn: React.FC<EarnProps> = ({ version, stakingInfos, poolMap }) => {
                   <TYPE.white fontSize={14}>{t('earnPage.pangolinGovernanceProposalResult')}</TYPE.white>
                 </RowBetween>
                 {version !== '0' && (
-                  <NavLink style={{ color: 'white', textDecoration: 'underline' }} to="/png/0">
+                  <NavLink style={{ color: 'white', textDecoration: 'underline' }} to="/quack/0">
                     <TYPE.white fontSize={14}>{t('earnPage.oldPngPools', { pngSymbol: pngSymbol })}</TYPE.white>
                   </NavLink>
                 )}

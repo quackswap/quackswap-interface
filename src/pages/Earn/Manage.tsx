@@ -126,7 +126,7 @@ const Manage: React.FC<ManageProps> = ({ version, stakingInfo, currencyA, curren
   const poolMap = useMinichefPools()
   const pairAddress = stakingInfo?.stakedAmount?.token?.address
   const isSuperFarm = (extraRewardTokensAmount || [])?.length > 0
-
+console.log(stakingInfo?.totalStakedInUsd.toString())
   return (
     <PageWrapper gap="lg" justify="center">
       <RowBetween style={{ gap: '24px' }}>

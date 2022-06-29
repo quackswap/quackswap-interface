@@ -1,7 +1,7 @@
 import { ChainId, CurrencyAmount, JSBI, Token, TokenAmount, WBTT, Pair, Percent, CHAINS } from '@quackswap/sdk'
 import { useMemo, useEffect, useState, useCallback, useRef } from 'react'
 import {
-  MINICHEF_ADDRESS,
+  MASTERCHEF_ADDRESS,
   BIG_INT_ZERO,
   BIG_INT_TWO,
   BIG_INT_ONE,
@@ -242,7 +242,6 @@ export interface MinichefV2 {
   id: string
   totalAllocPoint: number
   rewardPerSecond: number
-  rewardsExpiration: number
   farms: Array<MinichefFarm>
 }
 
@@ -342,7 +341,7 @@ export function useStakingInfo(version: number, pairToFilterBy?: Pair | null): D
     [chainId, pairToFilterBy, version]
   )
 
-  const png = QUACK[chainId]
+  const quack = QUACK[chainId]
 
   const rewardsAddresses = useMemo(() => info.map(({ stakingRewardAddress }) => stakingRewardAddress), [info])
   const accountArg = useMemo(() => [account ?? undefined], [account])
@@ -362,7 +361,7 @@ export function useStakingInfo(version: number, pairToFilterBy?: Pair | null): D
 
   const pairTotalSupplies = useMultipleContractSingleData(pairAddresses, ERC20_INTERFACE, 'totalSupply')
 
-  const [bttPngPairState, bttPngPair] = usePair(WBTT[chainId], png)
+  const [bttPngPairState, bttPngPair] = usePair(WBTT[chainId], quack)
 
   // tokens per second, constants
   const rewardRates = useMultipleContractSingleData(
@@ -384,7 +383,7 @@ export function useStakingInfo(version: number, pairToFilterBy?: Pair | null): D
   const usdPrice = CHAINS[chainId].mainnet ? usdPriceTmp : undefined
 
   return useMemo(() => {
-    if (!chainId || !png) return []
+    if (!chainId || !quack) return []
 
     return rewardsAddresses.reduce<DoubleSideStakingInfo[]>((memo, rewardsAddress, index) => {
       // these two are dependent on account
@@ -445,12 +444,12 @@ export function useStakingInfo(version: number, pairToFilterBy?: Pair | null): D
         const stakedAmount = new TokenAmount(dummyPair.liquidityToken, JSBI.BigInt(balanceState?.result?.[0] ?? 0))
         const totalStakedAmount = new TokenAmount(dummyPair.liquidityToken, JSBI.BigInt(totalSupplyStaked))
         const totalRewardRatePerSecond = new TokenAmount(
-          png,
+          quack,
           JSBI.BigInt(isPeriodFinished ? 0 : rewardRateState.result?.[0])
         )
 
         const totalRewardRatePerWeek = new TokenAmount(
-          png,
+          quack,
           JSBI.multiply(totalRewardRatePerSecond.raw, BIG_INT_SECONDS_IN_WEEK)
         )
 
@@ -465,9 +464,9 @@ export function useStakingInfo(version: number, pairToFilterBy?: Pair | null): D
           : calculateTotalStakedAmountInBttFromPng(
               totalSupplyStaked,
               totalSupplyAvailable,
-              bttPngPair.reserveOf(png).raw,
+              bttPngPair.reserveOf(quack).raw,
               bttPngPair.reserveOf(WBTT[tokens[1].chainId]).raw,
-              pair.reserveOf(png).raw,
+              pair.reserveOf(quack).raw,
               chainId
             )
 
@@ -479,7 +478,7 @@ export function useStakingInfo(version: number, pairToFilterBy?: Pair | null): D
           totalRewardRatePerSecond: TokenAmount
         ): TokenAmount => {
           return new TokenAmount(
-            png,
+            quack,
             JSBI.greaterThan(_totalStakedAmount.raw, JSBI.BigInt(0))
               ? JSBI.divide(JSBI.multiply(totalRewardRatePerSecond.raw, _stakedAmount.raw), _totalStakedAmount.raw)
               : JSBI.BigInt(0)
@@ -499,7 +498,7 @@ export function useStakingInfo(version: number, pairToFilterBy?: Pair | null): D
           tokens: tokens,
           periodFinish: periodFinishMs > 0 ? new Date(periodFinishMs) : undefined,
           isPeriodFinished: isPeriodFinished,
-          earnedAmount: new TokenAmount(png, JSBI.BigInt(earnedAmountState?.result?.[0] ?? 0)),
+          earnedAmount: new TokenAmount(quack, JSBI.BigInt(earnedAmountState?.result?.[0] ?? 0)),
           rewardRatePerWeek: individualRewardRatePerWeek,
           totalRewardRatePerSecond: totalRewardRatePerSecond,
           totalRewardRatePerWeek: totalRewardRatePerWeek,
@@ -516,7 +515,7 @@ export function useStakingInfo(version: number, pairToFilterBy?: Pair | null): D
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     chainId,
-    png,
+    quack,
     rewardsAddresses,
     balances,
     earnedAmounts,
@@ -551,16 +550,16 @@ export function useSingleSideStakingInfo(
     [chainId, rewardTokenToFilterBy, version]
   )
 
-  const png = QUACK[chainId]
+  const quack = QUACK[chainId]
 
   const rewardsAddresses = useMemo(() => info.map(({ stakingRewardAddress }) => stakingRewardAddress), [info])
   const routes = useMemo(
     (): string[][] =>
       info.map(({ conversionRouteHops, rewardToken }) => {
-        return [png.address, ...conversionRouteHops.map(token => token.address), rewardToken.address]
+        return [quack.address, ...conversionRouteHops.map(token => token.address), rewardToken.address]
         // eslint-disable-next-line react-hooks/exhaustive-deps
       }),
-    [info, png]
+    [info, quack]
   )
 
   const accountArg = useMemo(() => [account ?? undefined], [account])
@@ -598,7 +597,7 @@ export function useSingleSideStakingInfo(
   const amountsOuts = useSingleContractMultipleData(routerContract, 'getAmountsOut', getAmountsOutArgs, NEVER_RELOAD)
 
   return useMemo(() => {
-    if (!chainId || !png) return []
+    if (!chainId || !quack) return []
 
     return rewardsAddresses.reduce<SingleSideStakingInfo[]>((memo, rewardsAddress, index) => {
       // these two are dependent on account
@@ -642,19 +641,19 @@ export function useSingleSideStakingInfo(
 
         const totalSupplyStaked = JSBI.BigInt(stakingTotalSupplyState.result?.[0])
 
-        const stakedAmount = new TokenAmount(png, JSBI.BigInt(balanceState?.result?.[0] ?? 0))
-        const totalStakedAmount = new TokenAmount(png, JSBI.BigInt(totalSupplyStaked))
+        const stakedAmount = new TokenAmount(quack, JSBI.BigInt(balanceState?.result?.[0] ?? 0))
+        const totalStakedAmount = new TokenAmount(quack, JSBI.BigInt(totalSupplyStaked))
         const totalRewardRatePerSecond = new TokenAmount(
           rewardToken,
           JSBI.BigInt(isPeriodFinished ? 0 : rewardRateState.result?.[0])
         )
 
         const totalRewardRatePerWeek = new TokenAmount(
-          png,
+          quack,
           JSBI.multiply(totalRewardRatePerSecond.raw, BIG_INT_SECONDS_IN_WEEK)
         )
 
-        const earnedAmount = new TokenAmount(png, JSBI.BigInt(earnedAmountState?.result?.[0] ?? 0))
+        const earnedAmount = new TokenAmount(quack, JSBI.BigInt(earnedAmountState?.result?.[0] ?? 0))
 
         const rewardRateInPng = calculateRewardRateInPng(totalRewardRatePerSecond.raw, valueOfPng)
 
@@ -705,7 +704,7 @@ export function useSingleSideStakingInfo(
     }, [])
   }, [
     chainId,
-    png,
+    quack,
     rewardsAddresses,
     balances,
     earnedAmounts,
@@ -720,26 +719,26 @@ export function useSingleSideStakingInfo(
 export function useTotalPngEarned(): TokenAmount | undefined {
   const chainId = useChainId()
 
-  const png = QUACK[chainId]
+  const quack = QUACK[chainId]
   const minichefInfo = useMinichefStakingInfos(2)
-  const singleStakingInfo = useSingleSideStakingInfo(0, png)
+  const singleStakingInfo = useSingleSideStakingInfo(0, quack)
 
   const earnedMinichef = useMemo(() => {
-    if (!png) return new TokenAmount(png, '0')
+    if (!quack) return new TokenAmount(quack, '0')
     return (
       minichefInfo?.reduce(
         (accumulator, stakingInfo) => accumulator.add(stakingInfo.earnedAmount),
-        new TokenAmount(png, '0')
-      ) ?? new TokenAmount(png, '0')
+        new TokenAmount(quack, '0')
+      ) ?? new TokenAmount(quack, '0')
     )
-  }, [minichefInfo, png])
+  }, [minichefInfo, quack])
 
-  //Get png earned from single side staking
+  //Get quack earned from single side staking
   const earnedSingleStaking = useMemo(() => {
-    if (!png) return new TokenAmount(png, '0')
-    const pngSingleStaking = singleStakingInfo.filter(stakingInfo => stakingInfo.stakedAmount.token === png)[0]
-    return pngSingleStaking ? pngSingleStaking.earnedAmount : new TokenAmount(png, '0')
-  }, [png, singleStakingInfo])
+    if (!quack) return new TokenAmount(quack, '0')
+    const quackSingleStaking = singleStakingInfo.filter(stakingInfo => stakingInfo.stakedAmount.token === quack)[0]
+    return quackSingleStaking ? quackSingleStaking.earnedAmount : new TokenAmount(quack, '0')
+  }, [quack, singleStakingInfo])
 
   return earnedSingleStaking.add(earnedMinichef)
 }
@@ -820,8 +819,8 @@ export function useGetStakingDataWithAPR(version: number) {
         stakingInfos.map(stakingInfo => {
           const APR_URL =
             version < 2
-              ? `${PANGOLIN_API_BASE_URL}/pangolin/apr/${stakingInfo.stakingRewardAddress}`
-              : `${PANGOLIN_API_BASE_URL}/pangolin/apr2/${stakingInfo.stakingRewardAddress}`
+              ? `${PANGOLIN_API_BASE_URL}/quackswap/apr/${stakingInfo.stakingRewardAddress}`
+              : `${PANGOLIN_API_BASE_URL}/quackswap/apr2/${stakingInfo.stakingRewardAddress}`
           return fetch(APR_URL)
             .then(res => res.json())
             .then(res => ({
@@ -906,7 +905,7 @@ export function useGetPairDataFromPair(pair: Pair) {
 
 export const useMinichefPools = (): { [key: string]: number } => {
   const chainId = useChainId()
-  const minichefContract = useStakingContract(MINICHEF_ADDRESS[chainId])
+  const minichefContract = useStakingContract(MASTERCHEF_ADDRESS[chainId])
   const lpTokens = useSingleCallResult(minichefContract, 'lpTokens', []).result
   const lpTokensArr = lpTokens?.[0]
 
@@ -963,9 +962,9 @@ export const useMinichefStakingInfos = (version = 2, pairToFilterBy?: Pair | nul
   const { account } = useActiveWeb3React()
   const chainId = useChainId()
 
-  const minichefContract = useStakingContract(MINICHEF_ADDRESS[chainId])
+  const minichefContract = useStakingContract(MASTERCHEF_ADDRESS[chainId])
   const poolMap = useMinichefPools()
-  const png = QUACK[chainId]
+  const quack = QUACK[chainId]
 
   const info = useMemo(
     () =>
@@ -994,10 +993,10 @@ export const useMinichefStakingInfos = (version = 2, pairToFilterBy?: Pair | nul
 
   const pairTotalSupplies = useMultipleContractSingleData(pairAddresses, ERC20_INTERFACE, 'totalSupply')
   const balances = useMultipleContractSingleData(pairAddresses, ERC20_INTERFACE, 'balanceOf', [
-    MINICHEF_ADDRESS[chainId]
+    MASTERCHEF_ADDRESS[chainId]
   ])
 
-  const [bttPngPairState, bttPngPair] = usePair(WBTT[chainId], png)
+  const [bttPngPairState, bttPngPair] = usePair(WBTT[chainId], quack)
 
   const poolIdArray = useMemo(() => {
     if (!pairAddresses || !poolMap) return []
@@ -1048,12 +1047,11 @@ export const useMinichefStakingInfos = (version = 2, pairToFilterBy?: Pair | nul
 
   const rewardPerSecond = useSingleCallResult(minichefContract, 'rewardPerSecond', []).result
   const totalAllocPoint = useSingleCallResult(minichefContract, 'totalAllocPoint', []).result
-  const rewardsExpiration = useSingleCallResult(minichefContract, 'rewardsExpiration', []).result
   const usdPriceTmp = useUSDCPrice(WBTT[chainId])
   const usdPrice = CHAINS[chainId].mainnet ? usdPriceTmp : undefined
 
   const arr = useMemo(() => {
-    if (!chainId || !png) return []
+    if (!chainId || !quack) return []
 
     return pairAddresses.reduce<any[]>((memo, _pairAddress, index) => {
       const pairTotalSupplyState = pairTotalSupplies[index]
@@ -1076,7 +1074,6 @@ export const useMinichefStakingInfos = (version = 2, pairToFilterBy?: Pair | nul
         bttPngPairState !== PairState.LOADING &&
         rewardPerSecond &&
         totalAllocPoint &&
-        rewardsExpiration?.[0] &&
         rewardTokensAddress?.loading === false
       ) {
         if (
@@ -1102,24 +1099,19 @@ export const useMinichefStakingInfos = (version = 2, pairToFilterBy?: Pair | nul
 
         const poolAllocPointAmount = new TokenAmount(lpToken, JSBI.BigInt(poolInfo?.result?.['allocPoint']))
         const totalAllocPointAmount = new TokenAmount(lpToken, JSBI.BigInt(totalAllocPoint?.[0]))
-        const rewardRatePerSecAmount = new TokenAmount(png, JSBI.BigInt(rewardPerSecond?.[0]))
+        const rewardRatePerSecAmount = new TokenAmount(quack, JSBI.BigInt(rewardPerSecond?.[0]))
         const poolRewardRate = new TokenAmount(
-          png,
+          quack,
           JSBI.divide(JSBI.multiply(poolAllocPointAmount.raw, rewardRatePerSecAmount.raw), totalAllocPointAmount.raw)
         )
 
-        const totalRewardRatePerWeek = new TokenAmount(png, JSBI.multiply(poolRewardRate.raw, BIG_INT_SECONDS_IN_WEEK))
-
-        const periodFinishMs = rewardsExpiration?.[0]?.mul(1000)?.toNumber()
-        // periodFinish will be 0 immediately after a reward contract is initialized
-        const isPeriodFinished =
-          periodFinishMs === 0 ? false : periodFinishMs < Date.now() || poolAllocPointAmount.equalTo('0')
+        const totalRewardRatePerWeek = new TokenAmount(quack, JSBI.multiply(poolRewardRate.raw, BIG_INT_SECONDS_IN_WEEK))
 
         const totalSupplyStaked = JSBI.BigInt(balanceState?.result?.[0])
         const totalSupplyAvailable = JSBI.BigInt(pairTotalSupplyState?.result?.[0])
         const totalStakedAmount = new TokenAmount(lpToken, JSBI.BigInt(balanceState?.result?.[0]))
         const stakedAmount = new TokenAmount(lpToken, JSBI.BigInt(userPoolInfo?.result?.['amount'] ?? 0))
-        const earnedAmount = new TokenAmount(png, JSBI.BigInt(pendingRewardInfo?.result?.['pending'] ?? 0))
+        const earnedAmount = new TokenAmount(quack, JSBI.BigInt(pendingRewardInfo?.result?.['pending'] ?? 0))
         const multiplier = JSBI.BigInt(poolInfo?.result?.['allocPoint'])
 
         const isBttPool = pair.involvesToken(WBTT[chainId])
@@ -1160,8 +1152,8 @@ export const useMinichefStakingInfos = (version = 2, pairToFilterBy?: Pair | nul
           const pairValueInUSDT = JSBI.multiply(pair.reserveOf(USDTe[chainId]).raw, BIG_INT_TWO)
           const stakedValueInUSDT = JSBI.divide(JSBI.multiply(pairValueInUSDT, totalSupplyStaked), totalSupplyAvailable)
           totalStakedInUsd = CHAINS[chainId || ChainId].mainnet
-            ? new TokenAmount(USDTe[chainId], stakedValueInUSDT)
-            : undefined
+          ? new TokenAmount(USDTe[chainId], stakedValueInUSDT)
+          : undefined
         } else if (isBttPool) {
           const _totalStakedInWbtt = calculateTotalStakedAmountInBtt(
             totalSupplyStaked,
@@ -1176,11 +1168,12 @@ export const useMinichefStakingInfos = (version = 2, pairToFilterBy?: Pair | nul
           const _totalStakedInWbtt = calculateTotalStakedAmountInBttFromPng(
             totalSupplyStaked,
             totalSupplyAvailable,
-            bttPngPair.reserveOf(png).raw,
+            bttPngPair.reserveOf(quack).raw,
             bttPngPair.reserveOf(WBTT[chainId]).raw,
-            pair.reserveOf(png).raw,
+            pair.reserveOf(quack).raw,
             chainId
           )
+
           totalStakedInUsd = CHAINS[chainId || ChainId].mainnet
             ? _totalStakedInWbtt && (usdPrice?.quote(_totalStakedInWbtt, chainId) as TokenAmount)
             : undefined
@@ -1195,7 +1188,7 @@ export const useMinichefStakingInfos = (version = 2, pairToFilterBy?: Pair | nul
           _totalRewardRatePerSecond: TokenAmount
         ): TokenAmount => {
           return new TokenAmount(
-            png,
+            quack,
             JSBI.greaterThan(_totalStakedAmount.raw, JSBI.BigInt(0))
               ? JSBI.divide(
                   JSBI.multiply(
@@ -1211,7 +1204,7 @@ export const useMinichefStakingInfos = (version = 2, pairToFilterBy?: Pair | nul
         const userRewardRatePerWeek = getHypotheticalWeeklyRewardRate(stakedAmount, totalStakedAmount, poolRewardRate)
 
         memo.push({
-          stakingRewardAddress: MINICHEF_ADDRESS[chainId],
+          stakingRewardAddress: MASTERCHEF_ADDRESS[chainId],
           tokens,
           earnedAmount,
           rewardRatePerWeek: userRewardRatePerWeek,
@@ -1222,8 +1215,6 @@ export const useMinichefStakingInfos = (version = 2, pairToFilterBy?: Pair | nul
           totalStakedInWbtt,
           totalStakedInUsd,
           multiplier: JSBI.divide(multiplier, JSBI.BigInt(100)),
-          periodFinish: periodFinishMs > 0 ? new Date(periodFinishMs) : undefined,
-          isPeriodFinished,
           getHypotheticalWeeklyRewardRate,
           getExtraTokensWeeklyRewardRate,
           rewardTokensAddress: rewardTokensAddress?.result?.[0],
@@ -1236,7 +1227,7 @@ export const useMinichefStakingInfos = (version = 2, pairToFilterBy?: Pair | nul
     }, [])
   }, [
     chainId,
-    png,
+    quack,
     pairTotalSupplies,
     poolInfos,
     userInfos,
@@ -1246,7 +1237,6 @@ export const useMinichefStakingInfos = (version = 2, pairToFilterBy?: Pair | nul
     rewardPerSecond,
     totalAllocPoint,
     pendingRewards,
-    rewardsExpiration,
     balances,
     usdPrice,
     pairAddresses,
@@ -1355,9 +1345,9 @@ export function useDerivedStakingProcess(stakingInfo: SingleSideStakingInfo) {
   const chainId = useChainId()
 
   const { t } = useTranslation()
-  const png = QUACK[chainId]
+  const quack = QUACK[chainId]
 
-  const usdcPrice = useUSDCPrice(png)
+  const usdcPrice = useUSDCPrice(quack)
 
   // detect existing unstaked position to show purchase button if none found
   const userPngUnstaked = useTokenBalance(account ?? undefined, stakingInfo?.stakedAmount?.token)
@@ -1561,7 +1551,7 @@ export function useDerivedStakingProcess(stakingInfo: SingleSideStakingInfo) {
       error,
       approval,
       account,
-      png,
+      quack,
       onAttemptToApprove,
       onUserInput,
       wrappedOnDismiss,
@@ -1585,7 +1575,7 @@ export function useDerivedStakingProcess(stakingInfo: SingleSideStakingInfo) {
       error,
       approval,
       account,
-      png,
+      quack,
       onUserInput,
       handleMax
     ]
@@ -1628,14 +1618,13 @@ export const useGetMinichefStakingInfosViaSubgraph = (): MinichefStakingInfo[] =
   const farms = minichefData?.farms
 
   const chainId = useChainId()
-  const png = QUACK[chainId]
+  const quack = QUACK[chainId]
 
-  const rewardsExpiration = minichefData?.rewardsExpiration
   const totalAllocPoint = minichefData?.totalAllocPoint
   const rewardPerSecond = minichefData?.rewardPerSecond
 
   return useMemo(() => {
-    if (!chainId || !png || !farms?.length) return []
+    if (!chainId || !quack || !farms?.length) return []
 
     return farms.reduce(function(memo: any, farm: MinichefFarm) {
       const rewardsAddress = farm?.rewarderAddress
@@ -1674,18 +1663,13 @@ export const useGetMinichefStakingInfosViaSubgraph = (): MinichefStakingInfo[] =
       const poolAllocPointAmount = new TokenAmount(lpToken, JSBI.BigInt(farm?.allocPoint))
 
       const totalAllocPointAmount = new TokenAmount(lpToken, JSBI.BigInt(totalAllocPoint ?? 0))
-      const rewardRatePerSecAmount = new TokenAmount(png, JSBI.BigInt(rewardPerSecond ?? 0))
+      const rewardRatePerSecAmount = new TokenAmount(quack, JSBI.BigInt(rewardPerSecond ?? 0))
       const poolRewardRate = new TokenAmount(
-        png,
+        quack,
         JSBI.divide(JSBI.multiply(poolAllocPointAmount.raw, rewardRatePerSecAmount.raw), totalAllocPointAmount.raw)
       )
 
-      const totalRewardRatePerWeek = new TokenAmount(png, JSBI.multiply(poolRewardRate.raw, BIG_INT_SECONDS_IN_WEEK))
-
-      const periodFinishMs = (rewardsExpiration || 0) * 1000
-      // periodFinish will be 0 immediately after a reward contract is initialized
-      const isPeriodFinished =
-        periodFinishMs === 0 ? false : periodFinishMs < Date.now() || poolAllocPointAmount.equalTo('0')
+      const totalRewardRatePerWeek = new TokenAmount(quack, JSBI.multiply(poolRewardRate.raw, BIG_INT_SECONDS_IN_WEEK))
 
       const minichefTvl = parseUnits(farm?.tvl?.toString())
       const totalSupplyReserve0 = parseUnits(farm?.pair?.reserve0.toString())
@@ -1707,7 +1691,7 @@ export const useGetMinichefStakingInfosViaSubgraph = (): MinichefStakingInfo[] =
         lpToken,
         parseUnits(farm?.farmingPositions?.[0]?.stakedTokenBalance?.toString() ?? '0').toString()
       )
-      const earnedAmount = new TokenAmount(png, JSBI.BigInt(farm?.earnedAmount ?? 0))
+      const earnedAmount = new TokenAmount(quack, JSBI.BigInt(farm?.earnedAmount ?? 0))
 
       const multiplier = JSBI.BigInt(farm?.allocPoint)
 
@@ -1724,7 +1708,7 @@ export const useGetMinichefStakingInfosViaSubgraph = (): MinichefStakingInfo[] =
         _totalRewardRatePerSecond: TokenAmount
       ): TokenAmount => {
         return new TokenAmount(
-          png,
+          quack,
           JSBI.greaterThan(_totalStakedAmount.raw, JSBI.BigInt(0))
             ? JSBI.divide(
                 JSBI.multiply(JSBI.multiply(_totalRewardRatePerSecond.raw, _stakedAmount.raw), BIG_INT_SECONDS_IN_WEEK),
@@ -1737,11 +1721,10 @@ export const useGetMinichefStakingInfosViaSubgraph = (): MinichefStakingInfo[] =
       const userRewardRatePerWeek = getHypotheticalWeeklyRewardRate(stakedAmount, totalStakedAmount, poolRewardRate)
 
       memo.push({
-        stakingRewardAddress: MINICHEF_ADDRESS[chainId],
+        stakingRewardAddress: MASTERCHEF_ADDRESS[chainId],
         pid,
         tokens,
         multiplier,
-        isPeriodFinished,
         totalStakedAmount,
         totalStakedInUsd,
         rewardRatePerWeek: userRewardRatePerWeek,
@@ -1758,7 +1741,7 @@ export const useGetMinichefStakingInfosViaSubgraph = (): MinichefStakingInfo[] =
 
       return memo
     }, [])
-  }, [chainId, png, rewardPerSecond, totalAllocPoint, rewardsExpiration, farms])
+  }, [chainId, quack, rewardPerSecond, totalAllocPoint, farms])
 }
 
 export const useGetMinichefPids = () => {
@@ -1790,7 +1773,7 @@ export const useSortFarmAprs = () => {
 }
 
 const fetchApr = async (pid: string) => {
-  const response = await axios.get(`${PANGOLIN_API_BASE_URL}/pangolin/apr2/${pid}`)
+  const response = await axios.get(`${PANGOLIN_API_BASE_URL}/quackswap/apr2/${pid}`)
 
   const res = response.data
 
@@ -1833,7 +1816,7 @@ export function useUpdateAllFarmsEarnAmount() {
   const { account } = useActiveWeb3React()
   const chainId = useChainId()
 
-  const minichefContract = useStakingContract(MINICHEF_ADDRESS[chainId])
+  const minichefContract = useStakingContract(MASTERCHEF_ADDRESS[chainId])
 
   const dispatch = useDispatch<AppDispatch>()
 
@@ -1866,15 +1849,15 @@ export function useUpdateAllFarmsEarnAmount() {
 
 export const useGetEarnedAmount = (pid: string) => {
   const chainId = useChainId()
-  const png = QUACK[chainId]
+  const quack = QUACK[chainId]
 
   const amount = useSelector<AppState, number>(state => state?.stake?.earnedAmounts?.[pid]?.earnedAmount)
 
   return useMemo(
     () => ({
-      earnedAmount: new TokenAmount(png, JSBI.BigInt(amount ?? 0))
+      earnedAmount: new TokenAmount(quack, JSBI.BigInt(amount ?? 0))
     }),
-    [png, amount]
+    [quack, amount]
   )
 }
 
