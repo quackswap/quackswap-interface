@@ -61,19 +61,19 @@ const BottomText = styled.span`
 `
 
 const VeloxLink = styled.a`
-  color: #f25c23;
+  color: #7ca8e8;
   text-decoration: none;
 `
 
 const MarginswapLink = styled.a`
-  color: #f25c23;
+  color: #7ca8e8;
   text-decoration: none;
   margin-right: 5px;
   margin-left: 5px;
 `
 
 const WowSwapLink = styled.a`
-  color: #f25c23;
+  color: #7ca8e8;
   text-decoration: none;
   margin-left: 5px;
 `
