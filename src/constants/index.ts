@@ -10,7 +10,7 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]: string } = {
 export const LANDING_PAGE = 'https://pangolin.exchange'
 export const ANALYTICS_PAGE = 'https://info.pangolin.exchange'
 
-export const PANGOLIN_API_BASE_URL = `https://quack-swap-staging.hotcross.workers.dev/`
+export const PANGOLIN_API_BASE_URL = `https://floral-river-36c3.michalis.workers.dev`
 
 // TODO
 export const PANGOLIN_TOKENS_REPO_RAW_BASE_URL = `https://raw.githubusercontent.com/pangolindex/tokens`

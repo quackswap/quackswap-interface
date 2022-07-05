@@ -69,14 +69,14 @@ export function colors(darkMode: boolean): Colors {
     text9: darkMode ? '#A3A3A3' : '#000000',
     text10: darkMode ? '#FAF9FD' : '#000000',
     text11: '#18C145',
-    text12: '#E84142',
+    text12: '#f7a34b',
     text13: darkMode ? '#A3A3A3' : '#000000',
     text14: darkMode ? '#8C8D93' : '#000000',
     text15: darkMode ? '#FFC800' : '#000000',
 
     // backgrounds / greys
-    bg1: darkMode ? '#212429' : '#FFFFFF',
-    bg2: darkMode ? '#282222' : '#F7F8FA',
+    bg1: darkMode ? '#191717' : '#FFFFFF',
+    bg2: darkMode ? '#2f2e2e' : '#F7F8FA',
     bg3: darkMode ? '#40444F' : '#EDEEF2',
     bg4: darkMode ? '#565A69' : '#CED0D9',
     bg5: darkMode ? '#6C7284' : '#888D9B',
@@ -91,18 +91,18 @@ export function colors(darkMode: boolean): Colors {
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
     //primary colors
-    primary1: darkMode ? '#DF5A3F' : '#ff007a',
-    primary2: darkMode ? '#DF6A52' : '#ff007a',
-    primary3: darkMode ? '#DF7E6A' : '#ff007a',
+    primary1: darkMode ? '#50b2bc' : '#c62e2e',
+    primary2: darkMode ? '#50b2bc' : '#cb4242',
+    primary3: darkMode ? '#50b2bc' : '#d15757',
     primary4: darkMode ? '#376bad70' : '#ff007a',
-    primary5: darkMode ? '#153d6f70' : '#ff007a',
-    primary6: darkMode ? '#DF5A3F' : '#FFFFFF',
+    primary5: darkMode ? '#50b2bc70' : '#cb4242',
+    primary6: darkMode ? '#50b2bc' : '#FFFFFF',
 
     // color text
-    primaryText1: darkMode ? '#DF8D7C' : '#ffffff',
+    primaryText1: darkMode ? '#50b2bc' : '#ffffff',
 
     // secondary colors
-    secondary1: darkMode ? '#DF5A3F' : '#ff007a',
+    secondary1: darkMode ? '#50b2bc' : '#ff007a',
     secondary2: darkMode ? '#17000b26' : '#F6DDE8',
     secondary3: darkMode ? '#17000b26' : '#FDEAF1',
 
@@ -335,12 +335,12 @@ export const TYPE = {
 
 export const FixedGlobalStyle = createGlobalStyle<{ isBeta: boolean }>`
 html, input, textarea, button {
-  font-family: ${({ isBeta }) => (isBeta ? "'Poppins', sans-serif" : "'Inter', sans-serif")};
+  font-family: ${({ isBeta }) => (isBeta ? "'Poppins', sans-serif" : "'Komikazoom', sans-serif")};
   font-display: fallback;
 }
 @supports (font-variation-settings: normal) {
   html, input, textarea, button {
-    font-family: ${({ isBeta }) => (isBeta ? "'Poppins', sans-serif" : "'Inter var', sans-serif")};
+    font-family: ${({ isBeta }) => (isBeta ? "'Poppins', sans-serif" : "'Komikazoom', sans-serif")};
   }
 }
 
@@ -352,6 +352,11 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Komikazoom";
+  src: url("/assets/fonts/KAMIKZOM.ttf") format("truetype");
 }
 
 button {
