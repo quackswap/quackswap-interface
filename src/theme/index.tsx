@@ -335,13 +335,12 @@ export const TYPE = {
 
 export const FixedGlobalStyle = createGlobalStyle<{ isBeta: boolean }>`
 html, input, textarea, button {
-  font-family: ${({ isBeta }) => (isBeta ? "'Poppins', sans-serif" : "'Komikazoom', sans-serif")};
+  font-family: ${({ isBeta }) => (isBeta ? "'Poppins', sans-serif" : "'Inter', sans-serif")};
   font-display: fallback;
 }
 @supports (font-variation-settings: normal) {
   html, input, textarea, button {
-    font-family: ${({ isBeta }) => (isBeta ? "'Poppins', sans-serif" : "'Komikazoom', sans-serif")};
-  }
+    font-family: ${({ isBeta }) => (isBeta ? "'Poppins', sans-serif" : "'Inter var', sans-serif")};  }
 }
 
 html,
@@ -352,11 +351,6 @@ body {
 
 * {
   box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "Komikazoom";
-  src: url("/assets/fonts/KAMIKZOM.ttf") format("truetype");
 }
 
 button {
