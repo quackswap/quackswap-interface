@@ -38,7 +38,7 @@
     "disconnect": "Mất kết nối",
     "change": "Thay đổi",
     "copy": "Sao chép địa chỉ",
-    "viewExplorer": "Xem trong trình khám phá chuỗi Snowtrace Avalanche",
+    "viewExplorer": "Xem trong trình khám phá chuỗi Bittorrent Bittorrent",
     "clearAll": "(xóa tất cả)",
     "transactionAppear": "Các giao dịch của bạn sẽ xuất hiện tại đây ...",
     "recentTransactions": "Các giao dịch gần đây",
@@ -46,7 +46,7 @@
   },
   "addressInputPanel": {
     "recipient": "Người nhận",
-    "viewExplorer": "(Xem trong trình khám phá chuỗi Snowtrace Avalanche)",
+    "viewExplorer": "(Xem trong trình khám phá chuỗi Bittorrent Bittorrent)",
     "walletAddress": "Địa chỉ ví"
   },
   "currencyInputPanel": {
@@ -111,7 +111,7 @@
   },
   "modalView": {
     "confirmTransaction": "Xác nhận giao dịch này trong ví của bạn",
-    "viewTransaction": "Xem giao dịch trên trình phám khá Snowtrace Avalanche"
+    "viewTransaction": "Xem giao dịch trên trình phám khá Bittorrent Bittorrent"
   },
   "navigationTabs": {
     "useThisTool": "Sử dụng công cụ này để tìm các cặp không tự động xuất hiện trong giao diện.",
@@ -127,7 +127,7 @@
   "popups": {
     "tokenListUpdated": "Danh sách mã token \" {{oldList}} \" đã được cập nhật đến ",
     "updateAvailable": "Bản cập nhật khả dụng cho danh sách token\" {{oldList}} \"",
-    "viewExplorer": "Xem trong trình khám phá chuỗi Snowtrace Avalanche",
+    "viewExplorer": "Xem trong trình khám phá chuỗi Bittorrent Bittorrent",
     "hash": "Băm:",
     "added": "thêm",
     "removed": "loại bỏ",
@@ -213,18 +213,18 @@
   },
   "tokenWarningModal": {
     "tokenImported": "Đã nhập mã token",
-    "anyoneCanCreateWarning": "Bất kỳ ai cũng có thể tạo mã thông báo ERC-20 trên Avalanche với  <em>any</em> tên, bao gồm cả việc tạo các phiên bản giả mạo của mã token hiện có và mã token tuyên bố đại diện cho các dự án không có mã token.",
+    "anyoneCanCreateWarning": "Bất kỳ ai cũng có thể tạo mã thông báo ERC-20 trên Bittorrent với  <em>any</em> tên, bao gồm cả việc tạo các phiên bản giả mạo của mã token hiện có và mã token tuyên bố đại diện cho các dự án không có mã token.",
     "loadArbitraryWarning": "Giao diện này có thể tải mã token tùy chỉnh theo địa chỉ. Vui lòng thận trọng hơn và thực hiện nghiên cứu của bạn khi tương tác với các mã token ERC-20 tùy chỉnh.",
     "purchaseArbitraryWarning": "Nếu bạn mua một mã token tùy chỉnh, <strong>bạn có thể không bán lại được.</strong>",
     "understand": "Tôi hiểu",
     "continue": "Tiếp tục",
-    "viewExplorer": "Xem trong trình khám phá chuỗi Snowtrace Avalanche"
+    "viewExplorer": "Xem trong trình khám phá chuỗi Bittorrent Bittorrent"
   },
   "transactionConfirmation": {
     "waitingConfirmation": "Đang chờ xác nhận",
     "confirmTransaction": "Xác nhận giao dịch này trong ví của bạn",
     "transactionSubmitted": "Giao dịch đã được gửi đi",
-    "viewExplorer": "Xem trong trình khám phá chuỗi Snowtrace Avalanche",
+    "viewExplorer": "Xem trong trình khám phá chuỗi Bittorrent Bittorrent",
     "close": "Đóng",
     "error": "Lỗi",
     "dismiss": "Bỏ qua"
@@ -257,16 +257,16 @@
     "votes": "những phiếu bầu",
     "submittingVote": "Đang gửi phiếu bầu",
     "confirmTransaction": "Xác nhận giao dịch này trên ví của bạn",
-    "viewExplorer": "Xem trong trình khám phá chuỗi Snowtrace Avalanche"
+    "viewExplorer": "Xem trong trình khám phá chuỗi Bittorrent Bittorrent"
   },
   "walletModal": {
     "wrongNetwork": "Sai mạng lưới",
     "errorConnecting": "Kết nỗi xảy ra lỗi",
-    "pleaseConnectAvalanche": "Vui lòng kết nối với mạng Avalanche thích hợp.",
-    "switchAvalanche": "Chuyển sang chuỗi Avalanche",
+    "pleaseConnectBittorrent": "Vui lòng kết nối với mạng Bittorrent thích hợp.",
+    "switchBittorrent": "Chuyển sang chuỗi Bittorrent",
     "errorConnectingRefresh": "Lỗi khi kết nối.Thử làm mới trang",
     "connectToWallet": "Kết nối tới một ví",
-    "newToAvalanche": "Bạn mới sử dụng Avalanche? ",
+    "newToBittorrent": "Bạn mới sử dụng Bittorrent? ",
     "learnMoreWallet": "Tìm hiểu thêm về cách thiết lập ví",
     "initializing": "Đang khởi tạo...",
     "tryAgain": "Thử lại"
@@ -506,7 +506,7 @@
   },
   "IDOPage": {
     "pangolinIDOs": "Initial DEX Offering (IDO)",
-    "pangolinIDODescription": "Initial DEX Offerings (IDO) cho phép các dự án huy động vốn từ các mã token bản vị của họ trên các sàn giao dịch phi tập trung. Chúng tôi đã hợp tác với các nhóm tuyệt vời để mang lại những dự án tuyệt vời cho cộng đồng Avalanche. ",
+    "pangolinIDODescription": "Initial DEX Offerings (IDO) cho phép các dự án huy động vốn từ các mã token bản vị của họ trên các sàn giao dịch phi tập trung. Chúng tôi đã hợp tác với các nhóm tuyệt vời để mang lại những dự án tuyệt vời cho cộng đồng Bittorrent. ",
     "upcomingIDOs": "Sắp tới",
     "endedIDOs": "Kết thúc",
     "allIDOs": "Tất cả IDO",

@@ -123,7 +123,7 @@ export default function Sidebar({ collapsed, onCollapsed }: SidebarProps) {
     {
       link: 'https://bridge.avax.network/',
       icon: Bridge,
-      title: `Avalanche ${t('header.bridge')}`,
+      title: `Bittorrent ${t('header.bridge')}`,
       id: 'bridge'
     },
     {

@@ -38,7 +38,7 @@
     "disconnect": "Déconnexion",
     "change": "Changer",
     "copy": "Copie de l'adresse",
-    "viewExplorer": "Voir sur l'explorateur Snowtrace d'Avalanche",
+    "viewExplorer": "Voir sur l'explorateur Bittorrent d'Bittorrent",
     "clearAll": "(Effacer tout)",
     "transactionAppear": "Vos transactions apparaîtront ici...",
     "recentTransactions": "Transactions récentes",
@@ -46,7 +46,7 @@
   },
   "addressInputPanel": {
     "recipient": "Bénéficiaire",
-    "viewExplorer": "(Voir sur l'explorateur Snowtrace d'Avalanche)",
+    "viewExplorer": "(Voir sur l'explorateur Bittorrent d'Bittorrent)",
     "walletAddress": "Adresse du portefeuille"
   },
   "currencyInputPanel": {
@@ -111,7 +111,7 @@
   },
   "modalView": {
     "confirmTransaction": "Confirmez cette transaction dans votre portefeuille",
-    "viewTransaction": "Voir la transaction sur le Snowtrace Explorer"
+    "viewTransaction": "Voir la transaction sur le Bittorrent Explorer"
   },
   "navigationTabs": {
     "useThisTool": "Utilisez cet outil pour trouver les paires qui n'apparaissent pas automatiquement dans l'interface.",
@@ -127,7 +127,7 @@
   "popups": {
     "tokenListUpdated": "La liste de jetons \" {{oldList}} \" a été mise à jour en ",
     "updateAvailable": "Une mise à jour est disponible pour la liste de jetons \" {{oldList}} \"",
-    "viewExplorer": "Voir sur le Snowtrace Explorer",
+    "viewExplorer": "Voir sur le Bittorrent Explorer",
     "hash": "Hash: ",
     "added": "ajouté",
     "removed": "supprimé",
@@ -213,18 +213,18 @@
   },
   "tokenWarningModal": {
     "tokenImported": "Jeton importé",
-    "anyoneCanCreateWarning": "N'importe qui peut créer un jeton ERC-20 sur Avalanche avec <em>any</em> nom, y compris créer de fausses versions de jetons existants et des jetons qui prétendent représenter des projets qui n'ont pas de jeton.",
+    "anyoneCanCreateWarning": "N'importe qui peut créer un jeton ERC-20 sur Bittorrent avec <em>any</em> nom, y compris créer de fausses versions de jetons existants et des jetons qui prétendent représenter des projets qui n'ont pas de jeton.",
     "loadArbitraryWarning": "Cette interface peut charger des jetons arbitraires par des adresses de jetons. Veuillez prendre des précautions supplémentaires et faire des recherches lorsque vous interagissez avec des jetons ERC-20 arbitraires.",
     "purchaseArbitraryWarning": "Si vous achetez un jeton arbitraire, <strong>vous ne pourrez peut-être pas le revendre.</strong>",
     "understand": "Je comprends",
     "continue": "Continuer",
-    "viewExplorer": "Voir sur le Snowtrace Explorer"
+    "viewExplorer": "Voir sur le Bittorrent Explorer"
   },
   "transactionConfirmation": {
     "waitingConfirmation": "En attente de confirmation",
     "confirmTransaction": "Confirmez cette transaction dans votre portefeuille",
     "transactionSubmitted": "Transaction soumise",
-    "viewExplorer": "Voir sur le Snowtrace Explorer",
+    "viewExplorer": "Voir sur le Bittorrent Explorer",
     "close": "Fermer",
     "error": "Erreur",
     "dismiss": "Rejeter"
@@ -257,16 +257,16 @@
     "votes": "Votes",
     "submittingVote": "Soumission du vote",
     "confirmTransaction": "Confirmez cette transaction dans votre portefeuille",
-    "viewExplorer": "Voir sur le Snowtrace Explorer"
+    "viewExplorer": "Voir sur le Bittorrent Explorer"
   },
   "walletModal": {
     "wrongNetwork": "Mauvais réseau",
     "errorConnecting": "Erreur de connexion",
-    "pleaseConnectAvalanche": "Veuillez vous connecter au réseau Avalanche approprié.",
-    "switchAvalanche": "Passer à la chaîne Avalanche",
+    "pleaseConnectBittorrent": "Veuillez vous connecter au réseau Bittorrent approprié.",
+    "switchBittorrent": "Passer à la chaîne Bittorrent",
     "errorConnectingRefresh": "Erreur de connexion. Essayez de rafraîchir la page.",
     "connectToWallet": "Se connecter à un portefeuille",
-    "newToAvalanche": "Nouveau sur Avalanche ? ",
+    "newToBittorrent": "Nouveau sur Bittorrent ? ",
     "learnMoreWallet": "En savoir plus sur la création d'un portefeuille",
     "initializing": "Initialisation...",
     "tryAgain": "Essayez à nouveau"
@@ -506,7 +506,7 @@
   },
   "IDOPage": {
     "pangolinIDOs": "Initial DEX Offering (IDO)",
-    "pangolinIDODescription": "Les offres DEX initiales (IDO) permettent aux projets de financer participatif leurs jetons natifs sur des échanges décentralisés. Nous nous sommes associés à des équipes incroyables pour apporter de grands projets à la communauté Avalanche.",
+    "pangolinIDODescription": "Les offres DEX initiales (IDO) permettent aux projets de financer participatif leurs jetons natifs sur des échanges décentralisés. Nous nous sommes associés à des équipes incroyables pour apporter de grands projets à la communauté Bittorrent.",
     "upcomingIDOs": "A venir",
     "endedIDOs": "Terminé",
     "allIDOs": "Tous les IDO",

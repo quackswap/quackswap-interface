@@ -1,8 +1,8 @@
 import React from 'react'
 import { Box } from '@pangolindex/components'
-import Logo from 'src/assets/svg/logoIcon.svg'
-import LogoDark from 'src/assets/svg/logoSloganDark.svg'
-import LogoLight from 'src/assets/svg/logoSloganLight.svg'
+import Logo from 'src/assets/images/logo.png'
+import LogoDark from 'src/assets/images/logo.png'
+import LogoLight from 'src/assets/images/logo.png'
 
 import { Title, LogoWrapper } from './styled'
 import { useIsDarkMode } from 'src/state/user/hooks'

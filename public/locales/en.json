@@ -38,7 +38,7 @@
     "disconnect": "Disconnect",
     "change": "Change",
     "copy": "Copy Address",
-    "viewExplorer": "View on the Snowtrace Explorer",
+    "viewExplorer": "View on the Bittorrent Explorer",
     "clearAll": "(clear all)",
     "transactionAppear": "Your transactions will appear here...",
     "recentTransactions": "Recent Transactions",
@@ -46,7 +46,7 @@
   },
   "addressInputPanel": {
     "recipient": "Recipient",
-    "viewExplorer": "(View on Avalanche Snowtrace Explorer)",
+    "viewExplorer": "(View on Bittorrent Bittorrent Explorer)",
     "walletAddress": "Wallet Address"
   },
   "currencyInputPanel": {
@@ -88,8 +88,8 @@
     "missingDependencies": "missing dependencies",
     "deposited": "Deposited",
     "withdrawDepositedLiquidity": "Withdraw deposited liquidity",
-    "depositedPglLiquidity": "Deposited PGL liquidity:",
-    "whenYouWithdrawWarning": "When you withdraw, your {{ symbol }} is claimed and your Pangolin Liquidity tokens, PGL, are returned to you. You will no longer earn {{ symbol }} rewards on this liquidity. Your original token liquidity will remain in its liquidity pool.",
+    "depositedPglLiquidity": "Deposited QSL liquidity:",
+    "whenYouWithdrawWarning": "When you withdraw, your {{ symbol }} is claimed and your QuackSwap Liquidity tokens, QSL, are returned to you. You will no longer earn {{ symbol }} rewards on this liquidity. Your original token liquidity will remain in its liquidity pool.",
     "whenYouWithdrawSingleSideWarning": "When you withdraw, your {{ symbol }} is claimed and your {{ pngSymbol}} is returned to you. You will no longer earn {{ symbol }} rewards on this {{ pngSymbol}}.",
     "withdrawAndClaim": "Withdraw & Claim",
     "withdrewStakingToken": "Withdrew {{ symbol }}!",
@@ -111,7 +111,7 @@
   },
   "modalView": {
     "confirmTransaction": "Confirm this transaction in your wallet",
-    "viewTransaction": "View transaction on the Snowtrace Explorer"
+    "viewTransaction": "View transaction on the Bittorrent Explorer"
   },
   "navigationTabs": {
     "useThisTool": "Use this tool to find pairs that don't automatically appear in the interface.",
@@ -127,7 +127,7 @@
   "popups": {
     "tokenListUpdated": "The token list \" {{oldList}} \" has been updated to ",
     "updateAvailable": "An update is available for the token list \" {{oldList}} \"",
-    "viewExplorer": "View on the Snowtrace Explorer",
+    "viewExplorer": "View on the Bittorrent Explorer",
     "hash": "Hash: ",
     "added": "added",
     "removed": "removed",
@@ -213,18 +213,18 @@
   },
   "tokenWarningModal": {
     "tokenImported": "Token imported",
-    "anyoneCanCreateWarning": "Anyone can create an ERC-20 token on Avalanche with <em>any</em> name, including creating fake versions of existing tokens and tokens that claim to represent projects that do not have a token.",
+    "anyoneCanCreateWarning": "Anyone can create an ERC-20 token on Bittorrent with <em>any</em> name, including creating fake versions of existing tokens and tokens that claim to represent projects that do not have a token.",
     "loadArbitraryWarning": "This interface can load arbitrary tokens by token addresses. Please take extra caution and do your research when interacting with arbitrary ERC-20 tokens.",
     "purchaseArbitraryWarning": "If you purchase an arbitrary token, <strong>you may be unable to sell it back.</strong>",
     "understand": "I understand",
     "continue": "Continue",
-    "viewExplorer": "View on the Snowtrace Explorer"
+    "viewExplorer": "View on the Bittorrent Explorer"
   },
   "transactionConfirmation": {
     "waitingConfirmation": "Waiting For Confirmation",
     "confirmTransaction": "Confirm this transaction in your wallet",
     "transactionSubmitted": "Transaction Submitted",
-    "viewExplorer": "View on the Snowtrace Explorer",
+    "viewExplorer": "View on the Bittorrent Explorer",
     "close": "Close",
     "error": "Error",
     "dismiss": "Dismiss"
@@ -240,7 +240,7 @@
     "minutes": "minutes"
   },
   "vote": {
-    "earnedPng": "Earned {{ pngSymbol }} tokens represent voting shares in Pangolin governance.",
+    "earnedPng": "Earned {{ pngSymbol }} tokens represent voting shares in QuackSwap governance.",
     "canEitherVote": "You can either vote on each proposal yourself or delegate your votes to a third party.",
     "delegateVotes": "Delegate Votes",
     "selfDelegate": "Self Delegate",
@@ -257,16 +257,16 @@
     "votes": "Votes",
     "submittingVote": "Submitting Vote",
     "confirmTransaction": "Confirm this transaction in your wallet",
-    "viewExplorer": "View on the Snowtrace Explorer"
+    "viewExplorer": "View on the Bittorrent Explorer"
   },
   "walletModal": {
     "wrongNetwork": "Wrong Network",
     "errorConnecting": "Error connecting",
-    "pleaseConnectAvalanche": "Please connect to the appropriate Avalanche network.",
-    "switchAvalanche": "Switch to Avalanche Chain",
+    "pleaseConnectBittorrent": "Please connect to the appropriate Bittorrent network.",
+    "switchBittorrent": "Switch to Bittorrent Chain",
     "errorConnectingRefresh": "Error connecting. Try refreshing the page.",
     "connectToWallet": "Connect to a wallet",
-    "newToAvalanche": "New to Avalanche? ",
+    "newToBittorrent": "New to Bittorrent? ",
     "learnMoreWallet": "Learn more about setting up a wallet",
     "initializing": "Initializing...",
     "tryAgain": "Try Again"
@@ -314,20 +314,20 @@
     "youHave": "You have ",
     "pngAvailableClaim": " {{ pngSymbol }} available to claim",
     "loading": "Loading",
-    "welcomeToTeamPangolin": "Welcome to team Pangolin",
+    "welcomeToTeamPangolin": "Welcome to team QuackSwap",
     "claim": "Claim "
   },
   "earnPage": {
-    "pangolinLiquidityMining": "Pangolin liquidity mining",
-    "pangolinLiquidityStaking": "Pangolin {{ pngSymbol }} staking",
-    "depositPangolinLiquidity": "Deposit your Pangolin Liquidity Provider PGL tokens to receive {{ pngSymbol }}, the Pangolin protocol governance token.",
+    "pangolinLiquidityMining": "QuackSwap liquidity mining",
+    "pangolinLiquidityStaking": "QuackSwap {{ pngSymbol }} staking",
+    "depositPangolinLiquidity": "Deposit your QuackSwap Liquidity Provider QSL tokens to receive {{ pngSymbol }}, the QuackSwap protocol governance token.",
     "depositPangolinStaking": "Deposit and stake your {{ pngSymbol }} tokens to earn more tokens.",
     "currentOpportunities": "Current opportunities",
     "readMoreAboutPng": "Read more about {{ pngSymbol }}",
     "getInsuranceCoverage": "Get cover on InsurAce.io",
     "getCoverNexusMutual": "Get cover on Nexus Mutual",
     "importantUpdate": "IMPORTANT UPDATE",
-    "pangolinGovernanceProposalResult": "As a result of Pangolin governance proposal 1, Pangolin is changing staking contracts! After approximately 08:59 UTC on 4/19, all staking rewards will be distributed to the new staking contracts. Before the switch, all rewards will still be distributed to the old contracts. To avoid interruptions to yield farming rewards, you need to unstake your liquidity from the old contracts and restake in the new contracts. You do not need to remove liquidity from your pools or alter your positions.",
+    "pangolinGovernanceProposalResult": "As a result of QuackSwap governance proposal 1, QuackSwap is changing staking contracts! After approximately 08:59 UTC on 4/19, all staking rewards will be distributed to the new staking contracts. Before the switch, all rewards will still be distributed to the old contracts. To avoid interruptions to yield farming rewards, you need to unstake your liquidity from the old contracts and restake in the new contracts. You do not need to remove liquidity from your pools or alter your positions.",
     "oldPngPools": "Old {{ pngSymbol }} pools",
     "newPngPools": "New {{ pngSymbol }} pools",
     "participatingPools": "Participating pools",
@@ -337,8 +337,8 @@
     "pngStaking": "{{ pngSymbol }} Staking",
     "totalStaked": "Total Staked",
     "poolRate": "Pool Rate",
-    "step1": "Step 1. Get Pangolin Liquidity tokens (PGL)",
-    "pglTokenRequired": "PGL tokens are required. Once you've added liquidity to the {{ poolHandle }} pool you can stake your liquidity tokens on this page.",
+    "step1": "Step 1. Get QuackSwap Liquidity tokens (QSL)",
+    "pglTokenRequired": "QSL tokens are required. Once you've added liquidity to the {{ poolHandle }} pool you can stake your liquidity tokens on this page.",
     "addPoolLiquidity": "Add {{ poolHandle }} liquidity",
     "liquidityDeposits": "Your liquidity deposits",
     "yourStakedToken": "Your staked {{ symbol }}",
@@ -353,8 +353,8 @@
     "unstake": "Unstake",
     "stakingTokensAvailable": "{{ symbol }} tokens available",
     "getToken": "Get {{ symbol }}",
-    "migrateTitle": "Migrate your staked PGL",
-    "migrateDescription": "Pangolin has changed tokonomics. You will need to migrate your staked PGL to new contract",
+    "migrateTitle": "Migrate your staked QSL",
+    "migrateDescription": "QuackSwap has changed tokonomics. You will need to migrate your staked QSL to new contract",
     "migrate": "Migrate"
   },
   "pool": {
@@ -464,7 +464,7 @@
   },
   "buyPage": {
     "buyBttInfo": "Buy BTT with fiat from our partner Wyre.",
-    "privacyInfo": "Pangolin does not store your purchase history or any personal data.",
+    "privacyInfo": "QuackSwap does not store your purchase history or any personal data.",
     "firstName": "First Name",
     "lastName": "Last Name",
     "email": "Email",
@@ -473,8 +473,8 @@
   "votePage": {
     "unlockVotes": "Unlock Votes",
     "updateDelegation": "Update Delegation",
-    "pangolinGovernance": "Pangolin Governance",
-    "earnedPngTokens": "{{ pngSymbol }} tokens represent voting shares in Pangolin governance. You can vote on each proposal yourself or delegate your votes to a third party.",
+    "pangolinGovernance": "QuackSwap Governance",
+    "earnedPngTokens": "{{ pngSymbol }} tokens represent voting shares in QuackSwap governance. You can vote on each proposal yourself or delegate your votes to a third party.",
     "eligibleToVote": "To be eligible to vote, you must hold {{ pngSymbol }} in your wallet and delegate it at the start of voting. After voting has begun, you may pool or spend your {{ pngSymbol }}.",
     "governanceVotes": "Governance votes are decided by simple majority. There is no quorum threshold.",
     "proposals": "Proposals",
@@ -506,7 +506,7 @@
   },
   "IDOPage": {
     "pangolinIDOs": "Initial DEX Offering (IDO)",
-    "pangolinIDODescription": "Initial DEX Offerings (IDO) allows projects to crowdfund their native tokens on decentralized exchanges. We've partnered with amazing teams to bring great projects to the Avalanche community.",
+    "pangolinIDODescription": "Initial DEX Offerings (IDO) allows projects to crowdfund their native tokens on decentralized exchanges. We've partnered with amazing teams to bring great projects to the Bittorrent community.",
     "upcomingIDOs": "Upcoming",
     "endedIDOs": "Ended",
     "allIDOs": "All IDOs",
@@ -544,7 +544,7 @@
     "add": "ADD",
     "remove": "REMOVE",
     "startMigratingNow": "START MIGRATING NOW",
-    "startMigratingNowDescription": "Below you will find all the Farms you will need to migrate to Pangolin's V2 Contracts",
+    "startMigratingNowDescription": "Below you will find all the Farms you will need to migrate to QuackSwap's V2 Contracts",
     "seeMore": "SEE MORE",
     "migrateWithEase": "MIGRATE WITH EASE",
     "migrateWithDescription": "We have designed an elegant wizard, which will help guide you through the process of migrating your Farms",
@@ -553,7 +553,7 @@
     "alreadyEarned": "already earned",
     "migrateNow": "MIGRATE NOW",
     "learn": "LEARN",
-    "moveYourTokensToNewContracts": "Migrate your Farms to Pangolin V2",
+    "moveYourTokensToNewContracts": "Migrate your Farms to QuackSwap V2",
     "readyToMigrate": "Ready to migrate",
     "apr": "APR:",
     "totalValueLocked": "Total Value Locked",
@@ -575,7 +575,7 @@
     "back": "Back",
     "availableToUnstake": "Available to unstake: ",
     "submittingTransaction": "Submitting transaction",
-    "moveYourTokensToNewContractsDescription": "As part of Pangolin's roll out to new improved contracts, you will need to migrate your Farms. If you need any help or guidance, please click on the “Learn” button.",
+    "moveYourTokensToNewContractsDescription": "As part of QuackSwap's roll out to new improved contracts, you will need to migrate your Farms. If you need any help or guidance, please click on the “Learn” button.",
     "migrateModalHeading": "Migrate {{ current }} of {{ total }} Farms"
   },
   "dashboardPage": {

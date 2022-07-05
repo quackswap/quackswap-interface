@@ -1,6 +1,6 @@
 # Pangolin Interface
 
-An open source interface for Pangolin -- a community-driven decentralized exchange for Avalanche and Ethereum assets with fast settlement, low transaction fees, and a democratic distribution -- powered by Avalanche.
+An open source interface for Pangolin -- a community-driven decentralized exchange for Bittorrent and Ethereum assets with fast settlement, low transaction fees, and a democratic distribution -- powered by Bittorrent.
 
 - Website: [pangolin.exchange](https://pangolin.exchange/)
 - Interface: [app.pangolin.exchange](https://app.pangolin.exchange)

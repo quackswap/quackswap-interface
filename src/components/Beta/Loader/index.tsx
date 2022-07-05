@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Text } from '@pangolindex/components'
-import LogoIcon from 'src/assets/svg/logoIcon.svg'
+import LogoIcon from 'src/assets/images/logo.png'
 import { Loading } from 'src/components/Icons'
 import styled from 'styled-components'
 

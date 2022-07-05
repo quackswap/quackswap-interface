@@ -38,7 +38,7 @@
     "disconnect": "Desconectar",
     "change": "Cambiar",
     "copy": "Copiar dirección",
-    "viewExplorer": "Ver en el Explorador Snowtrace",
+    "viewExplorer": "Ver en el Explorador Bittorrent",
     "clearAll": "(borrar todo)",
     "transactionAppear": "Tus transacciones aparecerán aquí...",
     "recentTransactions": "Transacciones recientes",
@@ -46,7 +46,7 @@
   },
   "addressInputPanel": {
     "recipient": "Recipient",
-    "viewExplorer": "(Ver en el  Explorador Snowtrace de Avalanche)",
+    "viewExplorer": "(Ver en el  Explorador Bittorrent de Bittorrent)",
     "walletAddress": "Dirección de la cartera"
   },
   "currencyInputPanel": {
@@ -111,7 +111,7 @@
   },
   "modalView": {
     "confirmTransaction": "Confirma esta transacción en tu cartera",
-    "viewTransaction": "Ver la transacción en el Explorador Snowtrace"
+    "viewTransaction": "Ver la transacción en el Explorador Bittorrent"
   },
   "navigationTabs": {
     "useThisTool": "Usa esta herramienta para encontrar parejas que no aparecen automáticamente en la interfaz.",
@@ -127,7 +127,7 @@
   "popups": {
     "tokenListUpdated": "la lista de Tokens \" {{oldList}} \" se ha actualizado a ",
     "updateAvailable": "Hay una actualización disponible para la lista de Tokens \" {{oldList}} \"",
-    "viewExplorer": "Ver en el Explorador Snowtrace",
+    "viewExplorer": "Ver en el Explorador Bittorrent",
     "hash": "Hash: ",
     "added": "añadido",
     "removed": "retirado",
@@ -213,18 +213,18 @@
   },
   "tokenWarningModal": {
     "tokenImported": "Token importado",
-    "anyoneCanCreateWarning": "Cualquiera puede crear un token ERC-20 en Avalanche con <em>cualquier</em> nombre, incluso creaer versiones falsas de tokens ya existentes y tokens que dicen representar a proyectos que no tienen un token.",
+    "anyoneCanCreateWarning": "Cualquiera puede crear un token ERC-20 en Bittorrent con <em>cualquier</em> nombre, incluso creaer versiones falsas de tokens ya existentes y tokens que dicen representar a proyectos que no tienen un token.",
     "loadArbitraryWarning": "Esta interfaz puede cargar tokens arbitrariamente por su dirección. Por favor tenga suma precaución y haga su propiar investigación al interactuar con tokens ERC-20 de forma arbitraria.",
     "purchaseArbitraryWarning": "Si compras un token arbitrario, <strong>puede que no pueda venderlo devuelta.</strong>",
     "understand": "Lo entiendo",
     "continue": "Continuar",
-    "viewExplorer": "Ver en el Explorador Snowtrace"
+    "viewExplorer": "Ver en el Explorador Bittorrent"
   },
   "transactionConfirmation": {
     "waitingConfirmation": "Esperando confirmación",
     "confirmTransaction": "Confirme esta transacción en su cartera",
     "transactionSubmitted": "Transacción enviada",
-    "viewExplorer": "Ver en el Explorador Snowtrace",
+    "viewExplorer": "Ver en el Explorador Bittorrent",
     "close": "Cerrar",
     "error": "Error",
     "dismiss": "Descartar"
@@ -257,16 +257,16 @@
     "votes": "Votos",
     "submittingVote": "Enviando voto",
     "confirmTransaction": "Confirme esta transacción en su cartera",
-    "viewExplorer": "Ver en el Explorador Snowtrace"
+    "viewExplorer": "Ver en el Explorador Bittorrent"
   },
   "walletModal": {
     "wrongNetwork": "Red errónea",
     "errorConnecting": "Error al conectar",
-    "pleaseConnectAvalanche": "Por favor, conéctese a la red de Avalanche correcta.",
-    "switchAvalanche": "Cambie a la Avalanche Chain",
+    "pleaseConnectBittorrent": "Por favor, conéctese a la red de Bittorrent correcta.",
+    "switchBittorrent": "Cambie a la Bittorrent Chain",
     "errorConnectingRefresh": "Error conectando. Pruebe a recargar la página.",
     "connectToWallet": "Connect to a wallet",
-    "newToAvalanche": "Nuevo en Avalanche? ",
+    "newToBittorrent": "Nuevo en Bittorrent? ",
     "learnMoreWallet": "Descubre más sobre como configurar una cartera",
     "initializing": "Inicializanddo...",
     "tryAgain": "Prueba otra vez"
@@ -506,7 +506,7 @@
   },
   "IDOPage": {
     "pangolinIDOs": "Initial DEX Offering (IDO)",
-    "pangolinIDODescription": "Las Ofertas Iniciales DEX (IDO) permiten a los proyectos financiar en forma colectiva sus tokens nativos en plataformas de intercambio descentralizados. Nos hemos asociado con equipos increíbles para llevar grandes proyectos a la comunidad de Avalanche.",
+    "pangolinIDODescription": "Las Ofertas Iniciales DEX (IDO) permiten a los proyectos financiar en forma colectiva sus tokens nativos en plataformas de intercambio descentralizados. Nos hemos asociado con equipos increíbles para llevar grandes proyectos a la comunidad de Bittorrent.",
     "upcomingIDOs": "Próximos",
     "endedIDOs": "Terminados",
     "allIDOs": "Todos los IDOs",

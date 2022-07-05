@@ -7,7 +7,7 @@ import { useLocation } from 'react-router'
 import { darken } from 'polished'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
-import Logo from '../../assets/svg/icon.svg'
+import Logo from '../../assets/images/logo.png'
 import { useActiveWeb3React } from '../../hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
 // import { CardNoise } from '../earn/styled'
@@ -305,7 +305,7 @@ export default function Header() {
       <HeaderRow>
         <Title href=".">
           <PngIcon>
-            <img width={'24px'} src={Logo} alt="logo" />
+            <img width={'54px'} src={Logo} alt="logo" />
           </PngIcon>
         </Title>
         <HeaderLinks>

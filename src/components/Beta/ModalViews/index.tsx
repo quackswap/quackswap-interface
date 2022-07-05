@@ -10,7 +10,7 @@ import { ExternalLink, BetaCloseIcon } from 'src/theme/components'
 import { useChainId } from 'src/hooks'
 import { getEtherscanLink } from 'src/utils'
 
-import Logo from 'src/assets/images/logo.svg'
+import Logo from 'src/assets/images/logo.png'
 import Circle from 'src/assets/images/orange-loader.svg'
 import ArrowCheckCircle from 'src/assets/images/arrow-check-circle.svg'
 

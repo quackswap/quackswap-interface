@@ -132,7 +132,7 @@ const WALLET_VIEWS = {
   PENDING: 'pending'
 }
 
-function addAvalancheNetwork() {
+function addBittorrentNetwork() {
   injected.getProvider().then(provider => {
     provider
       ?.request({
@@ -240,7 +240,7 @@ export default function WalletModal({
       activate(activationConnector, undefined, true)
         .then(() => {
           if (isCbWallet) {
-            addAvalancheNetwork()
+            addBittorrentNetwork()
           }
         })
         .catch(error => {
@@ -420,9 +420,9 @@ export default function WalletModal({
           <ContentWrapper>
             {web3Error instanceof UnsupportedChainIdError ? (
               <>
-                <h5>{t('walletModal.pleaseConnectAvalanche')}</h5>
+                <h5>{t('walletModal.pleaseConnectBittorrent')}</h5>
                 {isMetamaskOrCbWallet && (
-                  <ButtonLight onClick={addAvalancheNetwork}>{t('walletModal.switchAvalanche')}</ButtonLight>
+                  <ButtonLight onClick={addBittorrentNetwork}>{t('walletModal.switchBittorrent')}</ButtonLight>
                 )}
               </>
             ) : (
@@ -478,7 +478,7 @@ export default function WalletModal({
           )}
           {walletView !== WALLET_VIEWS.PENDING && (
             <Blurb>
-              <span>{t('walletModal.newToAvalanche')} &nbsp;</span>{' '}
+              <span>{t('walletModal.newToBittorrent')} &nbsp;</span>{' '}
               <ExternalLink href={WALLET_TUTORIAL}>{t('walletModal.learnMoreWallet')}</ExternalLink>
             </Blurb>
           )}
