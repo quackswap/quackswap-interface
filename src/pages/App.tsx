@@ -22,7 +22,7 @@ import Buy from './Buy'
 import PoolFinder from './PoolFinder'
 import RemoveLiquidity from './RemoveLiquidity'
 import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redirects'
-import Dashboard from './Dashboard'
+// import Dashboard from './Dashboard'
 import Swap from './Swap'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
 // import Airdrop from './Airdrop'
@@ -33,12 +33,12 @@ import VotePage from './Vote/VotePage'
 // import IDO from './IDO'
 import Migrate from './Earn/Migrate'
 
-import MigrateV2 from './Migrate'
+// import MigrateV2 from './Migrate'
 import { useIsBetaUI } from '../hooks/useLocation'
-import CustomRoute from './Route'
-import Layout from '../layout'
+// import CustomRoute from './Route'
+// import Layout from '../layout'
 
-import { BETA_MENU_LINK } from 'src/constants'
+// import { BETA_MENU_LINK } from 'src/constants'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -133,8 +133,8 @@ export default function App() {
                 component={Migrate}
               />
 
-              <CustomRoute exact path={`${BETA_MENU_LINK.dashboard}`} component={Dashboard} layout={Layout} />
-              <CustomRoute exact path={`${BETA_MENU_LINK.migrate}/:version`} component={MigrateV2} layout={Layout} />
+              {/* <CustomRoute exact path={`${BETA_MENU_LINK.dashboard}`} component={Dashboard} layout={Layout} />
+              <CustomRoute exact path={`${BETA_MENU_LINK.migrate}/:version`} component={MigrateV2} layout={Layout} /> */}
 
               {/* <CustomRoute exact path={`${BETA_MENU_LINK.swap}`} component={SwapV2} layout={Layout} />
               <CustomRoute exact strict path={`${BETA_MENU_LINK.stake}/:version`} component={StakeV2} layout={Layout} /> */}
