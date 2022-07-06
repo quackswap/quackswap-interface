@@ -29,7 +29,7 @@ const PageWrapper = styled(AutoColumn)`
 `
 
 const VoteCard = styled(DataCard)`
-  background: radial-gradient(76.02% 75.41% at 1.84% 0%, #27ae60 0%, #000000 100%);
+  background: linear-gradient(90deg, #4672c1 0%, #7ca8e8 100%);
   overflow: hidden;
 `
 
@@ -159,7 +159,7 @@ export default function Pool() {
           <AutoColumn gap="lg" style={{ width: '100%' }}>
             <TitleRow style={{ marginTop: '1rem' }} padding={'0'}>
               <Hidden upToSmall={true}>
-                <TYPE.mediumHeader style={{ marginTop: '0.5rem', justifySelf: 'flex-start' }}>
+                <TYPE.mediumHeader style={{ marginTop: '0.5rem', justifySelf: 'flex-start', color: 'white' }}>
                   {t('pool.yourLiquidity')}
                 </TYPE.mediumHeader>
               </Hidden>

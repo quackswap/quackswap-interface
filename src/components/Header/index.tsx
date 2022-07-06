@@ -1,5 +1,5 @@
 // import { TokenAmount } from '@quackswap/sdk'
-// import { Button } from '@pangolindex/components'
+// import { Button } from '@quackswapdex/components'
 import React, { useState, useRef } from 'react'
 import { Text } from 'rebass'
 import { NavLink } from 'react-router-dom'
@@ -8,12 +8,13 @@ import { darken } from 'polished'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 import Logo from '../../assets/images/logo.png'
+import LogoMobile from '../../assets/images/logo_mobile.png'
 import { useActiveWeb3React } from '../../hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
 // import { CardNoise } from '../earn/styled'
 // import { CountUp } from 'use-count-up'
-// import { TYPE } from '../../theme'
-import { RedCard } from '../Card'
+// import { ExternalLink } from '../../theme'
+import { ThemeColorCard } from '../Card'
 import Settings from '../Settings'
 import Menu from '../Menu'
 import Row, { RowFixed } from '../Row'
@@ -26,8 +27,12 @@ import { ApplicationModal } from '../../state/application/actions'
 import { useModalOpen, useToggleModal } from '../../state/application/hooks'
 // import { MenuFlyout } from '../StyledMenu'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
-import { NETWORK_LABELS, NETWORK_CURRENCY } from 'src/constants'
-import { Hidden } from 'src/theme'
+import {
+  NETWORK_LABELS,
+  // ANALYTICS_PAGE,
+  NETWORK_CURRENCY
+} from 'src/constants'
+import { Hidden, Visible } from 'src/theme'
 import { useChainId } from 'src/hooks'
 
 const HeaderFrame = styled.div`
@@ -148,7 +153,7 @@ const AccountElement = styled.div<{ active: boolean }>`
 //   }
 // `
 
-const NetworkCard = styled(RedCard)`
+const NetworkCard = styled(ThemeColorCard)`
   border-radius: 12px;
   padding: 8px 12px;
   ${({ theme }) => theme.mediaWidth.upToSmall`
@@ -305,7 +310,12 @@ export default function Header() {
       <HeaderRow>
         <Title href=".">
           <PngIcon>
-            <img width={'54px'} src={Logo} alt="logo" />
+            <Hidden upToMedium={true}>
+              <img width={'54px'} src={Logo} alt="logo" />
+            </Hidden>
+            <Visible upToMedium={true}>
+              <img width={'120px'} src={LogoMobile} alt="logo" style={{marginTop: '8px'}}/>
+            </Visible>
           </PngIcon>
         </Title>
         <HeaderLinks>
@@ -339,6 +349,9 @@ export default function Header() {
               {t('header.farm')}
             </StyledNavLink>
           </StyledLink>
+          {/* <StyledExternalLink id={`info-nav-link`} href={ANALYTICS_PAGE}>
+            {t('header.charts')} <span style={{ fontSize: '11px' }}>↗</span>
+          </StyledExternalLink> */}
         </HeaderLinks>
       </HeaderRow>
       <HeaderControls>

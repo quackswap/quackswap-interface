@@ -4,7 +4,11 @@ import styled from 'styled-components'
 import { JSBI, Currency, TokenAmount } from '@quackswap/sdk'
 import { TYPE } from '../../../theme'
 import { RowBetween } from '../../../components/Row'
-import { DataCard, CardNoise, CardBGImage } from '../../../components/earn/styled'
+import {
+  DataCard,
+  CardNoise
+  // CardBGImage
+} from '../../../components/earn/styled'
 import { ButtonEmpty } from '../../../components/Button'
 import { CountUp } from 'use-count-up'
 import usePrevious from '../../../hooks/usePrevious'
@@ -46,7 +50,7 @@ const RewardCard: React.FC<ManageProps> = ({
 
   return (
     <StyledBottomCard dim={stakedAmount?.equalTo(BIG_INT_ZERO)} isOverlay={isOverlay}>
-      <CardBGImage desaturate />
+      {/* <CardBGImage desaturate /> */}
       <CardNoise />
       <AutoColumn gap="sm">
         <RowBetween>

@@ -16,7 +16,7 @@ import {
   xDefi,
   EVM_SUPPORTED_WALLETS,
   LANDING_PAGE,
-  AVALANCHE_CHAIN_PARAMS,
+  BTT_CHAIN_PARAMS,
   IS_IN_IFRAME,
   WalletInfo
 } from '@pangolindex/components'
@@ -137,7 +137,7 @@ function addBittorrentNetwork() {
     provider
       ?.request({
         method: 'wallet_addEthereumChain',
-        params: [AVALANCHE_CHAIN_PARAMS]
+        params: [BTT_CHAIN_PARAMS]
       })
       .catch((error: any) => {
         console.log(error)

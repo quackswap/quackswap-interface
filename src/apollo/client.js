@@ -21,7 +21,7 @@ export const governanceClient = new ApolloClient({
   shouldBatch: true
 })
 
-export const mininchefV2Client = new GraphQLClient('https://graph.hotcross.dev/subgraphs/name/bttc-minichefv2', {
+export const masterchefClient = new GraphQLClient('https://graph.hotcross.dev/subgraphs/name/bttc-masterchef', {
   headers: {}
 })
 

@@ -15,7 +15,7 @@ import { useTranslation } from 'react-i18next'
 import { SearchInput } from '../../components/SearchModal/styleds'
 import useDebounce from '../../hooks/useDebounce'
 import { BIG_INT_ZERO, PANGOLIN_API_BASE_URL } from '../../constants'
-import Toggle from '../../components/Toggle'
+// import Toggle from '../../components/Toggle'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 640px;
@@ -27,11 +27,11 @@ const TopSection = styled(AutoColumn)`
   width: 100%;
 `
 
-const FlexDiv = styled.div`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-`
+// const FlexDiv = styled.div`
+//   display: flex;
+//   align-items: center;
+//   flex-wrap: wrap;
+// `
 
 const PoolSection = styled.div`
   display: grid;
@@ -77,14 +77,14 @@ const Actions = styled.div`
  `};
 `
 
-const SuperFarmToggle = styled.div`
-  display: flex;
-  align-items: center;
+// const SuperFarmToggle = styled.div`
+//   display: flex;
+//   align-items: center;
 
-  .title {
-    margin-right: 10px;
-  }
-`
+//   .title {
+//     margin-right: 10px;
+//   }
+// `
 
 enum SortingType {
   totalStakedInUsd = 'totalStakedInUsd',
@@ -110,7 +110,7 @@ const Earn: React.FC<EarnProps> = ({ version, stakingInfos, poolMap }) => {
   const [searchQuery, setSearchQuery] = useState<string>('')
   const [sortBy, setSortBy] = useState<any>({ field: '', desc: true })
   const debouncedSearchQuery = useDebounce(searchQuery, 250)
-  const [showSuperFarm, setShowSuperFarm] = useState(true)
+  // const [showSuperFarm, setShowSuperFarm] = useState(true)
   const [stakingInfoData, setStakingInfoData] = useState(stakingInfos as ExtendedDoubleSideStakingInfo[])
 
   const handleSearch = useCallback(event => {
@@ -147,19 +147,19 @@ const Earn: React.FC<EarnProps> = ({ version, stakingInfos, poolMap }) => {
       }
       return 0
     })
-    let finalFarms = sortedFarms
-    if (showSuperFarm) {
-      // if super farms toggled on then keep all super farms on top
-      const nonSuperFarms = sortedFarms.filter(
-        item => !item.rewardTokensAddress?.length && !item.stakedAmount.greaterThan(BIG_INT_ZERO)
-      )
-      const stakedFarms = sortedFarms.filter(item => item.stakedAmount.greaterThan(BIG_INT_ZERO))
-      const superFarms = sortedFarms.filter(
-        item => (item?.rewardTokensAddress?.length || 0) > 0 && !item.stakedAmount.greaterThan(BIG_INT_ZERO)
-      )
-      finalFarms = [...stakedFarms, ...superFarms, ...nonSuperFarms]
-    }
-    const _poolCards = finalFarms.map((stakingInfo, index) => {
+    // let finalFarms = sortedFarms
+    // if (showSuperFarm) {
+    //   // if super farms toggled on then keep all super farms on top
+    //   const nonSuperFarms = sortedFarms.filter(
+    //     item => !item.rewardTokensAddress?.length && !item.stakedAmount.greaterThan(BIG_INT_ZERO)
+    //   )
+    //   const stakedFarms = sortedFarms.filter(item => item.stakedAmount.greaterThan(BIG_INT_ZERO))
+    //   const superFarms = sortedFarms.filter(
+    //     item => (item?.rewardTokensAddress?.length || 0) > 0 && !item.stakedAmount.greaterThan(BIG_INT_ZERO)
+    //   )
+    //   finalFarms = [...stakedFarms, ...superFarms, ...nonSuperFarms]
+    // }
+    const _poolCards = sortedFarms.map((stakingInfo, index) => {
       return (
         <DoubleSidePoolCard
           swapFeeApr={stakingInfo.swapFeeApr}
@@ -172,7 +172,7 @@ const Earn: React.FC<EarnProps> = ({ version, stakingInfos, poolMap }) => {
     })
     setPoolCards(_poolCards)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sortBy?.field, sortBy?.desc, showSuperFarm, stakingInfoData])
+  }, [sortBy?.field, sortBy?.desc, stakingInfoData])
 
   useEffect(() => {
     setPoolCardsLoading(true)
@@ -267,9 +267,9 @@ const Earn: React.FC<EarnProps> = ({ version, stakingInfos, poolMap }) => {
     )
   }
 
-  const toggleSuperFarm = () => {
-    setShowSuperFarm(prev => !prev)
-  }
+  // const toggleSuperFarm = () => {
+  //   setShowSuperFarm(prev => !prev)
+  // }
 
   return (
     <PageWrapper gap="lg" justify="center">
@@ -295,22 +295,6 @@ const Earn: React.FC<EarnProps> = ({ version, stakingInfos, poolMap }) => {
                 >
                   <TYPE.white fontSize={14}>{t('earnPage.readMoreAboutPng', { pngSymbol: pngSymbol })}</TYPE.white>
                 </ExternalLink>
-                <FlexDiv>
-                  <ExternalLink
-                    style={{ color: 'white', textDecoration: 'underline', marginRight: 10 }}
-                    href="https://app.nexusmutual.io/cover/buy/get-quote?address=0xefa94DE7a4656D787667C749f7E1223D71E9FD88"
-                    target="_blank"
-                  >
-                    <TYPE.white fontSize={14}>{t('earnPage.getCoverNexusMutual')}</TYPE.white>
-                  </ExternalLink>
-                  <ExternalLink
-                    style={{ color: 'white', textDecoration: 'underline' }}
-                    href="https://app.insurace.io/Insurance/BuyCovers?referrer=565928487188065888397039055593264600345483712698"
-                    target="_blank"
-                  >
-                    <TYPE.white fontSize={14}>{t('earnPage.getInsuranceCoverage')}</TYPE.white>
-                  </ExternalLink>
-                </FlexDiv>
               </AutoRow>
             </AutoColumn>
           </CardSection>
@@ -366,10 +350,10 @@ const Earn: React.FC<EarnProps> = ({ version, stakingInfos, poolMap }) => {
                   </SortFieldContainer>
                   {getSortField('APR', SortingType.totalApr, sortBy, setSortBy)}
                 </SortSection>
-                <SuperFarmToggle>
+                {/* <SuperFarmToggle>
                   <span className="title">Super Farms</span>
                   <Toggle id="toggle-expert-mode-button" isActive={showSuperFarm} toggle={toggleSuperFarm} />
-                </SuperFarmToggle>
+                </SuperFarmToggle> */}
               </Actions>
 
               {filteredPoolCards}

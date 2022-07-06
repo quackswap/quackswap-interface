@@ -40,7 +40,7 @@ import { maxAmountSpend } from 'src/utils/maxAmountSpend'
 import { useApproveCallback, ApprovalState } from 'src/hooks/useApproveCallback'
 import { parseUnits, getAddress, splitSignature } from 'ethers/lib/utils'
 import { useChainId } from 'src/hooks'
-import { mininchefV2Client } from 'src/apollo/client'
+import { masterchefClient } from 'src/apollo/client'
 import { GET_MINICHEF } from 'src/apollo/minichef'
 import { useQuery } from 'react-query'
 import { useDispatch, useSelector } from 'react-redux'
@@ -1583,7 +1583,7 @@ export function useDerivedStakingProcess(stakingInfo: SingleSideStakingInfo) {
 }
 
 export const fetchMinichefData = (account: string) => async () => {
-  const { minichefs } = await mininchefV2Client.request(GET_MINICHEF, { userAddress: account })
+  const { minichefs } = await masterchefClient.request(GET_MINICHEF, { userAddress: account })
   return minichefs
 }
 

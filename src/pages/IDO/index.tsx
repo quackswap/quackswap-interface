@@ -20,7 +20,7 @@ const TopSection = styled(AutoColumn)`
 `
 
 const IDOCard = styled(DataCard)`
-  background: radial-gradient(76.02% 75.41% at 1.84% 0%, #27ae60 0%, #000000 100%);
+  background: linear-gradient(90deg, #4672c1 0%, #7ca8e8 100%);
   overflow: hidden;
 `
 

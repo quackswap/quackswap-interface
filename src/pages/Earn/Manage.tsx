@@ -56,7 +56,7 @@ const PoolData = styled(DataCard)`
 `
 
 const VoteCard = styled(DataCard)`
-  background: radial-gradient(76.02% 75.41% at 1.84% 0%, #27ae60 0%, #000000 100%);
+  background: linear-gradient(90deg, #4672c1 0%, #7ca8e8 100%);
   overflow: hidden;
 `
 
@@ -126,7 +126,7 @@ const Manage: React.FC<ManageProps> = ({ version, stakingInfo, currencyA, curren
   const poolMap = useMinichefPools()
   const pairAddress = stakingInfo?.stakedAmount?.token?.address
   const isSuperFarm = (extraRewardTokensAmount || [])?.length > 0
-console.log(stakingInfo?.totalStakedInUsd.toString())
+
   return (
     <PageWrapper gap="lg" justify="center">
       <RowBetween style={{ gap: '24px' }}>
