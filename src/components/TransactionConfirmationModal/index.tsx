@@ -1,4 +1,4 @@
-import { ChainId } from '@quackswap/sdk'
+import { ChainId } from '@hotcrosscom/quackswap-sdk'
 import React, { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 import Modal from '../Modal'

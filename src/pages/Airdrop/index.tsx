@@ -15,7 +15,7 @@ import { useActiveWeb3React, useChainId, usePngSymbol } from '../../hooks'
 import Confetti from '../../components/Confetti'
 import { useTokenBalance } from '../../state/wallet/hooks'
 import { UNI, SUSHI } from '../../constants/tokens'
-import { ChainId, JSBI } from '@quackswap/sdk'
+import { ChainId, JSBI } from '@hotcrosscom/quackswap-sdk'
 import { useTranslation } from 'react-i18next'
 
 const PageWrapper = styled(AutoColumn)``

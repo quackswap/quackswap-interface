@@ -1,6 +1,6 @@
-import { TokenAmount, Pair, Currency } from '@quackswap/sdk'
+import { TokenAmount, Pair, Currency } from '@hotcrosscom/quackswap-sdk'
 import { useMemo } from 'react'
-import { QuackSwapPairAbi } from '@quackswap/sdk'
+import { QuackSwapPairAbi } from '@hotcrosscom/quackswap-sdk'
 import { Interface } from '@ethersproject/abi'
 import { useChainId } from '../hooks'
 

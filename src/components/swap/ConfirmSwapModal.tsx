@@ -1,4 +1,4 @@
-import { ChainId, currencyEquals, Trade } from '@quackswap/sdk'
+import { ChainId, currencyEquals, Trade } from '@hotcrosscom/quackswap-sdk'
 import React, { useCallback, useMemo } from 'react'
 import TransactionConfirmationModal, {
   ConfirmationModalContent,

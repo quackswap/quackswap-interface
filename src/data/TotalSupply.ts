@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { ChainId, Token, TokenAmount } from '@quackswap/sdk'
+import { ChainId, Token, TokenAmount } from '@hotcrosscom/quackswap-sdk'
 import { useTokenContract } from '../hooks/useContract'
 import { useSingleCallResult } from '../state/multicall/hooks'
 import { QUACK } from '../constants/tokens'

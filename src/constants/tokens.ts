@@ -1,4 +1,4 @@
-import { ChainId, Token, CHAINS } from '@quackswap/sdk'
+import { ChainId, Token, CHAINS } from '@hotcrosscom/quackswap-sdk'
 
 const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 

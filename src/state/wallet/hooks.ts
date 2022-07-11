@@ -1,5 +1,5 @@
 import { QUACK } from '../../constants/tokens'
-import { Currency, CurrencyAmount, CBTT, JSBI, Token, TokenAmount, ChainId } from '@quackswap/sdk'
+import { Currency, CurrencyAmount, CBTT, JSBI, Token, TokenAmount, ChainId } from '@hotcrosscom/quackswap-sdk'
 import { useMemo } from 'react'
 import ERC20_INTERFACE from '../../constants/abis/erc20'
 import { useAllTokens } from '../../hooks/Tokens'

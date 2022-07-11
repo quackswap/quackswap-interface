@@ -1,7 +1,7 @@
 import React from 'react'
-import { Pair } from '@quackswap/sdk'
+import { Pair } from '@hotcrosscom/quackswap-sdk'
 import { PairBox } from './styleds'
-import { Text, Box, DoubleCurrencyLogo, Checkbox } from '@pangolindex/components'
+import { Text, Box, DoubleCurrencyLogo, Checkbox } from '@hotcrosscom/quackswap-components'
 import { useGetPairDataFromPair, StakingInfo } from '../../../state/stake/hooks'
 import { useTranslation } from 'react-i18next'
 

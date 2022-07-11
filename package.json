@@ -1,7 +1,7 @@
 {
-  "name": "@pangolindex/interface",
+  "name": "@quackswap/interface",
   "version": "1.0.41-dev.0",
-  "description": "Pangolin Interface",
+  "description": "Quackswap Interface",
   "homepage": ".",
   "engines": {
     "node": ">=14.17.0"
@@ -12,11 +12,11 @@
     "@gelatonetwork/limit-orders-react": "^2.4.0",
     "@gnosis.pm/safe-apps-web3-react": "^0.6.7",
     "@metamask/jazzicon": "^2.0.0",
-    "@pangolindex/components": "file:../components",
+    "@hotcrosscom/quackswap-components": "0.1.1",
     "@pangolindex/exchange-contracts": "1.0.2",
     "@pangolindex/governance": "1.2.0",
-    "@quackswap/sdk": "file:../sdk",
-    "@pangolindex/token-lists": "^1.0.1",
+    "@hotcrosscom/quackswap-sdk": "1.0.0",
+    "@apocentre/token-lists": "^1.0.2",
     "@pangolindex/web3-react-injected-connector": "^1.0.0",
     "@popperjs/core": "^2.4.4",
     "@reach/dialog": "^0.10.3",

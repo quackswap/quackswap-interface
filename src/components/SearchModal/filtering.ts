@@ -1,5 +1,5 @@
 import { isAddress } from '../../utils'
-import { Token } from '@quackswap/sdk'
+import { Token } from '@hotcrosscom/quackswap-sdk'
 
 export function filterTokens(tokens: Token[], search: string): Token[] {
   if (search.length === 0) return tokens

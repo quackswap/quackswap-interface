@@ -1,8 +1,8 @@
-import { Token } from '@quackswap/sdk'
+import { Token } from '@hotcrosscom/quackswap-sdk'
 import React from 'react'
 import { LogoSize } from 'src/constants'
 import styled from 'styled-components'
-import { CurrencyLogo } from '@pangolindex/components'
+import { CurrencyLogo } from '@hotcrosscom/quackswap-components'
 
 const Wrapper = styled.div<{ margin: boolean; sizeraw: number }>`
   position: relative;

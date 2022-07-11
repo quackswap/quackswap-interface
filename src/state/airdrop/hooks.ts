@@ -3,7 +3,7 @@ import { useActiveWeb3React } from '../../hooks'
 import { useAirdropContract } from '../../hooks/useContract'
 import { calculateGasMargin } from '../../utils'
 import { useTransactionAdder } from '../transactions/hooks'
-import { TokenAmount, JSBI } from '@quackswap/sdk'
+import { TokenAmount, JSBI } from '@hotcrosscom/quackswap-sdk'
 import { QUACK } from '../../constants/tokens'
 import { useSingleCallResult } from '../multicall/hooks'
 

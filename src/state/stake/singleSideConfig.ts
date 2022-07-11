@@ -1,4 +1,4 @@
-import { ChainId, WBTT } from '@quackswap/sdk'
+import { ChainId, WBTT } from '@hotcrosscom/quackswap-sdk'
 import { OOE, APEIN, ORBS, QUACK } from '../../constants/tokens'
 import { SingleSideStaking } from './hooks'
 

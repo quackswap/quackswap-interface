@@ -19,11 +19,11 @@ import UnstakingModal from '../../components/earn/UnstakingModal'
 import Confetti from '../../components/Confetti'
 import BridgeMigratorModal from '../../components/earn/BridgeMigratorModal'
 import Loader from '../../components/Loader'
-import { Token, WBTT } from '@quackswap/sdk'
+import { Token, WBTT } from '@hotcrosscom/quackswap-sdk'
 import { getTokenLogoURL } from '../../constants'
 import { QUACK } from '../../constants/tokens'
 import { ErrorText } from '../../components/swap/styleds'
-import { injected } from '@pangolindex/components'
+import { injected } from '@hotcrosscom/quackswap-components'
 import { useChainId } from 'src/hooks'
 
 const PageWrapper = styled(AutoColumn)`

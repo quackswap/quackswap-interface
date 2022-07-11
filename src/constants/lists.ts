@@ -1,10 +1,10 @@
 // the Pangolin Default token list lives here
 // TODO
-export const PANGOLIN_LIST = 'https://raw.githubusercontent.com/MichalisG/dummy-data/main/bttc-tokenlist/tokenlist.json'
+export const QUACKSWAP_LIST = 'https://raw.githubusercontent.com/Apocentre/quackswap-assets/main/tokenlist.json'
 
-export const DEFAULT_TOKEN_LISTS_SELECTED: string[] = [PANGOLIN_LIST]
+export const DEFAULT_TOKEN_LISTS_SELECTED: string[] = [QUACKSWAP_LIST]
 
-export const DEFAULT_TOKEN_LISTS: string[] = [PANGOLIN_LIST]
+export const DEFAULT_TOKEN_LISTS: string[] = [QUACKSWAP_LIST]
 
 // Token addresses (excluding QUACK and WBTT) ported from:
 // https://raw.githubusercontent.com/pangolindex/tokenlists/main/aeb.tokenlist.json

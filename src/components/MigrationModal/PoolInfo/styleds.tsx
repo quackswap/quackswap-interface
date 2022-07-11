@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Box, TextInput } from '@pangolindex/components'
+import { Box, TextInput } from '@hotcrosscom/quackswap-components'
 
 export const InfoWrapper = styled.div`
   margin: 0;

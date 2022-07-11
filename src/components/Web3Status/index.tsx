@@ -8,7 +8,7 @@ import {
   walletlink,
   xDefi,
   NetworkContextName
-} from '@pangolindex/components'
+} from '@hotcrosscom/quackswap-components'
 import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core'
 import { darken, lighten } from 'polished'
 import React, { useMemo, useContext, useCallback } from 'react'

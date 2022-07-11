@@ -1,5 +1,5 @@
 import { Interface } from '@ethersproject/abi'
-import { QuackSwapPairAbi } from '@quackswap/sdk'
+import { QuackSwapPairAbi } from '@hotcrosscom/quackswap-sdk'
 
 const QUACKSWAP_PAIR_INTERFACE = new Interface(QuackSwapPairAbi)
 

@@ -13,7 +13,7 @@ import { useTransactionAdder } from '../../state/transactions/hooks'
 import FormattedCurrencyAmount from '../FormattedCurrencyAmount'
 import { useActiveWeb3React, usePngSymbol } from '../../hooks'
 import { useTranslation } from 'react-i18next'
-import { TokenAmount } from '@quackswap/sdk'
+import { TokenAmount } from '@hotcrosscom/quackswap-sdk'
 
 const ContentWrapper = styled(AutoColumn)`
   width: 100%;

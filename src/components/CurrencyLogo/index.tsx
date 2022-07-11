@@ -1,4 +1,4 @@
-import { Currency, CBTT, Token, ChainId, CHAINS } from '@quackswap/sdk'
+import { Currency, CBTT, Token, ChainId, CHAINS } from '@hotcrosscom/quackswap-sdk'
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
 import useHttpLocations from '../../hooks/useHttpLocations'

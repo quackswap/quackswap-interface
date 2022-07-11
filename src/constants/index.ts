@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Percent, Token, WBTT, CHAINS } from '@quackswap/sdk'
+import { ChainId, JSBI, Percent, Token, WBTT, CHAINS } from '@hotcrosscom/quackswap-sdk'
 import { DAIe, QUACK, USDC, USDCe, USDTe, UST, axlUST } from './tokens'
 
 export const GAS_PRICE = 225
@@ -13,13 +13,13 @@ export const ANALYTICS_PAGE = 'https://info.pangolin.exchange'
 export const PANGOLIN_API_BASE_URL = `https://floral-river-36c3.michalis.workers.dev`
 
 // TODO
-export const PANGOLIN_TOKENS_REPO_RAW_BASE_URL = `https://raw.githubusercontent.com/pangolindex/tokens`
+export const QUACKSWAP_TOKENS_REPO_RAW_BASE_URL = `https://raw.githubusercontent.com/Apocentre/quackswap-assets`
 
 export const DIRECTUS_GRAPHQL_URL = `https://p7gm7mqi.directus.app/graphql`
 
 export type LogoSize = 24 | 48
 export const getTokenLogoURL = (address: string, size: LogoSize = 24) =>
-  `${PANGOLIN_TOKENS_REPO_RAW_BASE_URL}/main/assets/${address}/logo_${size}.png`
+  `${QUACKSWAP_TOKENS_REPO_RAW_BASE_URL}/main/assets/${address}/logo_${size}.png`
 
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 

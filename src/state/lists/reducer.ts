@@ -1,6 +1,6 @@
 import { createReducer } from '@reduxjs/toolkit'
-import { getVersionUpgrade, VersionUpgrade } from '@pangolindex/token-lists'
-import { TokenList } from '@pangolindex/token-lists/dist/types'
+import { getVersionUpgrade, VersionUpgrade } from '@apocentre/token-lists'
+import { TokenList } from '@apocentre/token-lists/dist/types'
 import { DEFAULT_TOKEN_LISTS, DEFAULT_TOKEN_LISTS_SELECTED } from '../../constants/lists'
 import { updateVersion } from '../global/actions'
 import { acceptListUpdate, addList, fetchTokenList, removeList, selectList } from './actions'

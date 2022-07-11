@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, currencyEquals, CBTT, Token, ChainId } from '@quackswap/sdk'
+import { Currency, CurrencyAmount, currencyEquals, CBTT, Token, ChainId } from '@hotcrosscom/quackswap-sdk'
 import React, { CSSProperties, MutableRefObject, useCallback, useMemo } from 'react'
 import { FixedSizeList } from 'react-window'
 import { Text } from 'rebass'

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text } from '@pangolindex/components'
+import { Text } from '@hotcrosscom/quackswap-components'
 import { AlertTriangle, X } from 'react-feather'
 import { useURLWarningToggle, useURLWarningVisible } from '../../state/user/hooks'
 import { isMobile } from 'react-device-detect'

@@ -1,4 +1,4 @@
-import { ChainId, Currency, CurrencyAmount, CBTT, Token, TokenAmount, WBTT } from '@quackswap/sdk'
+import { ChainId, Currency, CurrencyAmount, CBTT, Token, TokenAmount, WBTT } from '@hotcrosscom/quackswap-sdk'
 
 export function wrappedCurrency(currency: Currency | undefined, chainId: ChainId | undefined): Token | undefined {
   return chainId && currency === CBTT[chainId] ? WBTT[chainId] : currency instanceof Token ? currency : undefined

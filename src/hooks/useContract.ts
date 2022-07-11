@@ -1,5 +1,5 @@
 import { Contract } from '@ethersproject/contracts'
-import { WBTT } from '@quackswap/sdk'
+import { WBTT } from '@hotcrosscom/quackswap-sdk'
 import {
   QuackSwapPairAbi,
   StakingRewardsAbi,
@@ -8,7 +8,7 @@ import {
   QUACKAbi,
   MasterChefAbi,
   QuackSwapBridgeMigrationRouterAbi
-} from '@quackswap/sdk'
+} from '@hotcrosscom/quackswap-sdk'
 import { useMemo } from 'react'
 import ENS_PUBLIC_RESOLVER_ABI from '../constants/abis/ens-public-resolver.json'
 import { ERC20_BYTES32_ABI } from '../constants/abis/erc20'
