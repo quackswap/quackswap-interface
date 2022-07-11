@@ -9,6 +9,11 @@
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.0"
 
+"@apocentre/token-lists@^1.0.2":
+  version "1.0.2"
+  resolved "https://npm.pkg.github.com/download/@apocentre/token-lists/1.0.2/b8aa8d6a3c189f0c099ac90d7cd0bb26ffce612ef42665d622b10e5d536a59a3#d7bafb9589ed953c62de79c76869e555d9e2f5b0"
+  integrity sha512-uo2zkELB0F3HE8aIpBPIhBPlhLGfykEUGLuKLmXodLWRn1eaSMz00d5wqHrmzobGCpP3f4+aRtCH6c/zJeMaMQ==
+
 "@babel/code-frame@7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.8.3.tgz#33e25903d7481181534e12ec0a25f16b6fcf419e"
@@ -1853,10 +1858,10 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@hotcrosscom/quackswap-components@0.1.1":
-  version "0.1.1"
-  resolved "https://npm.pkg.github.com/download/@hotcrosscom/quackswap-components/0.1.1/16b5eb9306e5bb2d90dea8e6078cbbe2218c3f7560c46440cdf100818aa77879#6f5d3fa08fb7fb25543c39c97d0ab0d8c3ed61b6"
-  integrity sha512-gF7+WmI03LeHc2IQ+Bt8qQVk8wYHkn9u59jo9dXZ5ih3qjLagtHpyLiOORcbBem4tHnz70gsLjeY/Xbm0NMoUw==
+"@hotcrosscom/quackswap-components@0.1.3":
+  version "0.1.3"
+  resolved "https://npm.pkg.github.com/download/@hotcrosscom/quackswap-components/0.1.3/9f066f360d0e139e5c34624dd10d89cc7da07ca419dc07ca64f4ba5c70d119ec#1bf0368e3dac0eb4f6fb4e75b2fb745d86f89b4a"
+  integrity sha512-nbnplUUfOyH5RVx52v3DvHtKba4RUpO+0UoDslkh6jzkYiVcFHJ16niAIpariY4d+7jGCGXiCPqjWzFv17vVMQ==
   dependencies:
     "@pangolindex/web3-react-injected-connector" "^1.0.1"
     cids "^1.1.9"
@@ -2208,11 +2213,6 @@
     "@tenderly/hardhat-tenderly" "^1.0.6"
     csv-batch "^2.0.2"
     openzeppelin-solidity "^3.4.0"
-
-"@apocentre/token-lists@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@apocentre/token-lists/-/token-lists-1.0.1.tgz#922f6e9de22a71b5d4a7ec4dc8ad183afa8f6cb1"
-  integrity sha512-01MOB0lA5/Chc/g2fzzFPJVHzPAe1dNjBkD9XU6UFDupIAdwEUn9WB4ZqU0p6mAG0ASBdTB2pGEt7cWNBybyXw==
 
 "@pangolindex/web3-react-injected-connector@^1.0.0", "@pangolindex/web3-react-injected-connector@^1.0.1":
   version "1.0.1"
