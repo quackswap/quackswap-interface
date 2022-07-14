@@ -15,7 +15,6 @@ import { useTranslation } from 'react-i18next'
 import { SearchInput } from '../../components/SearchModal/styleds'
 import useDebounce from '../../hooks/useDebounce'
 import { BIG_INT_ZERO, PANGOLIN_API_BASE_URL } from '../../constants'
-// import Toggle from '../../components/Toggle'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 640px;
@@ -26,12 +25,6 @@ const TopSection = styled(AutoColumn)`
   max-width: 720px;
   width: 100%;
 `
-
-// const FlexDiv = styled.div`
-//   display: flex;
-//   align-items: center;
-//   flex-wrap: wrap;
-// `
 
 const PoolSection = styled.div`
   display: grid;
@@ -76,15 +69,6 @@ const Actions = styled.div`
    flex-direction: column;
  `};
 `
-
-// const SuperFarmToggle = styled.div`
-//   display: flex;
-//   align-items: center;
-
-//   .title {
-//     margin-right: 10px;
-//   }
-// `
 
 enum SortingType {
   totalStakedInUsd = 'totalStakedInUsd',
@@ -147,18 +131,7 @@ const Earn: React.FC<EarnProps> = ({ version, stakingInfos, poolMap }) => {
       }
       return 0
     })
-    // let finalFarms = sortedFarms
-    // if (showSuperFarm) {
-    //   // if super farms toggled on then keep all super farms on top
-    //   const nonSuperFarms = sortedFarms.filter(
-    //     item => !item.rewardTokensAddress?.length && !item.stakedAmount.greaterThan(BIG_INT_ZERO)
-    //   )
-    //   const stakedFarms = sortedFarms.filter(item => item.stakedAmount.greaterThan(BIG_INT_ZERO))
-    //   const superFarms = sortedFarms.filter(
-    //     item => (item?.rewardTokensAddress?.length || 0) > 0 && !item.stakedAmount.greaterThan(BIG_INT_ZERO)
-    //   )
-    //   finalFarms = [...stakedFarms, ...superFarms, ...nonSuperFarms]
-    // }
+
     const _poolCards = sortedFarms.map((stakingInfo, index) => {
       return (
         <DoubleSidePoolCard
@@ -267,10 +240,6 @@ const Earn: React.FC<EarnProps> = ({ version, stakingInfos, poolMap }) => {
     )
   }
 
-  // const toggleSuperFarm = () => {
-  //   setShowSuperFarm(prev => !prev)
-  // }
-
   return (
     <PageWrapper gap="lg" justify="center">
       <TopSection gap="md">
@@ -290,7 +259,7 @@ const Earn: React.FC<EarnProps> = ({ version, stakingInfos, poolMap }) => {
               <AutoRow justify="space-between">
                 <ExternalLink
                   style={{ color: 'white', textDecoration: 'underline' }}
-                  href="https://pangolin.exchange/litepaper"
+                  href="https://quackswap.com/litepaper"
                   target="_blank"
                 >
                   <TYPE.white fontSize={14}>{t('earnPage.readMoreAboutPng', { pngSymbol: pngSymbol })}</TYPE.white>
@@ -350,10 +319,6 @@ const Earn: React.FC<EarnProps> = ({ version, stakingInfos, poolMap }) => {
                   </SortFieldContainer>
                   {getSortField('APR', SortingType.totalApr, sortBy, setSortBy)}
                 </SortSection>
-                {/* <SuperFarmToggle>
-                  <span className="title">Super Farms</span>
-                  <Toggle id="toggle-expert-mode-button" isActive={showSuperFarm} toggle={toggleSuperFarm} />
-                </SuperFarmToggle> */}
               </Actions>
 
               {filteredPoolCards}

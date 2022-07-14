@@ -13,7 +13,7 @@ import { useActiveWeb3React } from '../../hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
 // import { CardNoise } from '../earn/styled'
 // import { CountUp } from 'use-count-up'
-// import { ExternalLink } from '../../theme'
+import { ExternalLink } from '../../theme'
 import { ThemeColorCard } from '../Card'
 import Settings from '../Settings'
 import Menu from '../Menu'
@@ -29,7 +29,7 @@ import { useModalOpen, useToggleModal } from '../../state/application/hooks'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
 import {
   NETWORK_LABELS,
-  // ANALYTICS_PAGE,
+  ANALYTICS_PAGE,
   NETWORK_CURRENCY
 } from 'src/constants'
 import { Hidden, Visible } from 'src/theme'
@@ -243,37 +243,37 @@ const StyledLink = styled.div<{ isActive: boolean }>`
   }
 `
 
-// const StyledExternalLink = styled(ExternalLink).attrs({
-//   activeClassName
-// })<{ isActive?: boolean }>`
-//   ${({ theme }) => theme.flexRowNoWrap}
-//   align-items: left;
-//   border-radius: 3rem;
-//   outline: none;
-//   cursor: pointer;
-//   text-decoration: none;
-//   color: ${({ theme }) => theme.text2};
-//   font-size: 1rem;
-//   width: fit-content;
-//   margin: 0 12px;
-//   font-weight: 500;
+const StyledExternalLink = styled(ExternalLink).attrs({
+  activeClassName
+})<{ isActive?: boolean }>`
+  ${({ theme }) => theme.flexRowNoWrap}
+  align-items: left;
+  border-radius: 3rem;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: ${({ theme }) => theme.text2};
+  font-size: 1rem;
+  width: fit-content;
+  margin: 0 12px;
+  font-weight: 500;
 
-//   &.${activeClassName} {
-//     border-radius: 12px;
-//     font-weight: 600;
-//     color: ${({ theme }) => theme.text1};
-//   }
+  &.${activeClassName} {
+    border-radius: 12px;
+    font-weight: 600;
+    color: ${({ theme }) => theme.text1};
+  }
 
-//   :hover,
-//   :focus {
-//     text-decoration: none;
-//     color: ${({ theme }) => darken(0.1, theme.text1)};
-//   }
+  :hover,
+  :focus {
+    text-decoration: none;
+    color: ${({ theme }) => darken(0.1, theme.text1)};
+  }
 
-//   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-//       display: none;
-// `}
-// `
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+      display: none;
+`}
+`
 
 // const NarrowMenuFlyout = styled(MenuFlyout)`
 //   min-width: 8.125rem;
@@ -349,26 +349,13 @@ export default function Header() {
               {t('header.farm')}
             </StyledNavLink>
           </StyledLink>
-          {/* <StyledExternalLink id={`info-nav-link`} href={ANALYTICS_PAGE}>
+          <StyledExternalLink id={`info-nav-link`} href={ANALYTICS_PAGE}>
             {t('header.charts')} <span style={{ fontSize: '11px' }}>↗</span>
-          </StyledExternalLink> */}
+          </StyledExternalLink>
         </HeaderLinks>
       </HeaderRow>
       <HeaderControls>
         <HeaderElement>
-          {/* <Hidden upToSmall={true}>
-            <Button
-              variant="primary"
-              height={36}
-              padding="4px 6px"
-              href={`#${BETA_MENU_LINK.dashboard}`}
-              backgroundColor={'#f05629'}
-              as="a"
-              target=""
-            >
-              <span style={{ whiteSpace: 'nowrap' }}>{t('header.switchToNewUI')}</span>
-            </Button>
-          </Hidden> */}
           <Hidden upToSmall={true}>
             {NETWORK_LABELS[chainId] && (
               <NetworkCard title={NETWORK_LABELS[chainId]}>{NETWORK_LABELS[chainId]}</NetworkCard>
