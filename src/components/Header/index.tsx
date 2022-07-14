@@ -7,8 +7,7 @@ import { useLocation } from 'react-router'
 import { darken } from 'polished'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
-import Logo from '../../assets/images/logo.png'
-import LogoMobile from '../../assets/images/logo_mobile.png'
+import Logo from '../../assets/images/logo_mobile.png'
 import { useActiveWeb3React } from '../../hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
 // import { CardNoise } from '../earn/styled'
@@ -311,10 +310,10 @@ export default function Header() {
         <Title href=".">
           <PngIcon>
             <Hidden upToMedium={true}>
-              <img width={'54px'} src={Logo} alt="logo" />
+              <img width={'125px'} src={Logo} alt="logo" style={{marginTop: '10px'}} />
             </Hidden>
             <Visible upToMedium={true}>
-              <img width={'120px'} src={LogoMobile} alt="logo" style={{marginTop: '8px'}}/>
+              <img width={'120px'} src={Logo} alt="logo" style={{marginTop: '8px'}}/>
             </Visible>
           </PngIcon>
         </Title>
