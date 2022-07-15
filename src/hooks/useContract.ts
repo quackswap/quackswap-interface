@@ -4,7 +4,6 @@ import {
   QuackSwapPairAbi,
   StakingRewardsAbi,
   AirdropAbi,
-  GovernorAlphaAbi,
   QUACKAbi,
   MasterChefAbi,
   QuackSwapBridgeMigrationRouterAbi
@@ -24,8 +23,7 @@ import {
   AIRDROP_ADDRESS,
   BRIDGE_MIGRATOR_ADDRESS,
   MASTERCHEF_ADDRESS,
-  ZERO_ADDRESS,
-  GOVERNANCE_ADDRESS
+  ZERO_ADDRESS
 } from '../constants'
 import { QUACK } from '../constants/tokens'
 import { REWARDER_VIA_MULTIPLIER_INTERFACE } from '../constants/abis/rewarderViaMultiplier'
@@ -96,10 +94,6 @@ export function usePairContract(pairAddress?: string, withSignerIfPossible?: boo
 export function useMulticallContract(): Contract | null {
   const chainId = useChainId()
   return useContract(MULTICALL_NETWORKS[chainId], MULTICALL_ABI, false)
-}
-
-export function useGovernanceContract(): Contract | null {
-  return useContract(GOVERNANCE_ADDRESS, GovernorAlphaAbi, true)
 }
 
 export function usePngContract(): Contract | null {
