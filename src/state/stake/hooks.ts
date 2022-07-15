@@ -6,7 +6,7 @@ import {
   BIG_INT_TWO,
   BIG_INT_ONE,
   BIG_INT_SECONDS_IN_WEEK,
-  PANGOLIN_API_BASE_URL,
+  QUACKSWAP_API_BASE_URL,
   ZERO_ADDRESS,
   ONE_TOKEN
 } from '../../constants'
@@ -819,8 +819,8 @@ export function useGetStakingDataWithAPR(version: number) {
         stakingInfos.map(stakingInfo => {
           const APR_URL =
             version < 2
-              ? `${PANGOLIN_API_BASE_URL}/quackswap/apr/${stakingInfo.stakingRewardAddress}`
-              : `${PANGOLIN_API_BASE_URL}/quackswap/apr2/${stakingInfo.stakingRewardAddress}`
+              ? `${QUACKSWAP_API_BASE_URL}/quackswap/apr/${stakingInfo.stakingRewardAddress}`
+              : `${QUACKSWAP_API_BASE_URL}/quackswap/apr2/${stakingInfo.stakingRewardAddress}`
           return fetch(APR_URL)
             .then(res => res.json())
             .then(res => ({
@@ -1773,7 +1773,7 @@ export const useSortFarmAprs = () => {
 }
 
 const fetchApr = async (pid: string) => {
-  const response = await axios.get(`${PANGOLIN_API_BASE_URL}/quackswap/apr2/${pid}`)
+  const response = await axios.get(`${QUACKSWAP_API_BASE_URL}/quackswap/apr2/${pid}`)
 
   const res = response.data
 

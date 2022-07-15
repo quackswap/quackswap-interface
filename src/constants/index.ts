@@ -10,7 +10,7 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]: string } = {
 // TODO: update links with production urls
 export const LANDING_PAGE = 'https://quackswap.com'
 export const ANALYTICS_PAGE = 'https://quackswap-analytics-owvhf.ondigitalocean.app/'
-export const PANGOLIN_API_BASE_URL = `https://floral-river-36c3.michalis.workers.dev`
+export const QUACKSWAP_API_BASE_URL = `https://floral-river-36c3.michalis.workers.dev`
 export const QUACKSWAP_TOKENS_REPO_RAW_BASE_URL = `https://raw.githubusercontent.com/Apocentre/quackswap-assets`
 
 export const DIRECTUS_GRAPHQL_URL = `https://p7gm7mqi.directus.app/graphql`

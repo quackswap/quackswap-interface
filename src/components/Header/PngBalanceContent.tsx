@@ -4,7 +4,7 @@ import { X } from 'react-feather'
 import styled from 'styled-components'
 import tokenLogo from '../../assets/images/token-logo.png'
 import { injected } from '@hotcrosscom/quackswap-components'
-import { getTokenLogoURL, PANGOLIN_API_BASE_URL } from '../../constants'
+import { getTokenLogoURL, QUACKSWAP_API_BASE_URL } from '../../constants'
 import { QUACK } from '../../constants/tokens'
 import { useTotalSupply } from '../../data/TotalSupply'
 import { useActiveWeb3React, usePngSymbol } from '../../hooks'
@@ -88,7 +88,7 @@ export default function PngBalanceContent({ setShowPngBalanceModal }: { setShowP
 
   useMemo(() => {
     if (quack === undefined) return
-    fetch(`${PANGOLIN_API_BASE_URL}/quack/circulating-supply`)
+    fetch(`${QUACKSWAP_API_BASE_URL}/quack/circulating-supply`)
       .then(res => res.text())
       .then(val => setCirculation(new TokenAmount(quack, val)))
   }, [quack])

@@ -14,7 +14,7 @@ import { useChainId, usePngSymbol } from '../../hooks'
 import { useTranslation } from 'react-i18next'
 import { SearchInput } from '../../components/SearchModal/styleds'
 import useDebounce from '../../hooks/useDebounce'
-import { BIG_INT_ZERO, PANGOLIN_API_BASE_URL } from '../../constants'
+import { BIG_INT_ZERO, QUACKSWAP_API_BASE_URL } from '../../constants'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 640px;
@@ -177,7 +177,7 @@ const Earn: React.FC<EarnProps> = ({ version, stakingInfos, poolMap }) => {
           .map(stakingInfo => {
             if (poolMap) {
               return fetch(
-                `${PANGOLIN_API_BASE_URL}/quackswap/apr2/${poolMap[stakingInfo.totalStakedAmount.token.address]}`
+                `${QUACKSWAP_API_BASE_URL}/quackswap/apr2/${poolMap[stakingInfo.totalStakedAmount.token.address]}`
               )
                 .then(res => res.json())
                 .then(res => ({
@@ -187,7 +187,7 @@ const Earn: React.FC<EarnProps> = ({ version, stakingInfos, poolMap }) => {
                   ...stakingInfo
                 }))
             } else {
-              return fetch(`${PANGOLIN_API_BASE_URL}/quackswap/apr/${stakingInfo.stakingRewardAddress}`)
+              return fetch(`${QUACKSWAP_API_BASE_URL}/quackswap/apr/${stakingInfo.stakingRewardAddress}`)
                 .then(res => res.json())
                 .then(res => ({
                   swapFeeApr: Number(res.swapFeeApr),
