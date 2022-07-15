@@ -19,9 +19,6 @@ export const getTokenLogoURL = (address: string, size: LogoSize = 24) =>
 
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 
-
-export const BRIDGE_MIGRATOR_ADDRESS = '0x4b23Aa72A1214d0E4fd3f2c8Da7C6ba660F7483C'
-
 export const MASTERCHEF_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.BITTORRENT_MAINNET]: CHAINS[ChainId.BITTORRENT_MAINNET].contracts!.master_chef!
 }

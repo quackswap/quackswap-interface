@@ -5,8 +5,7 @@ import {
   StakingRewardsAbi,
   AirdropAbi,
   QUACKAbi,
-  MasterChefAbi,
-  QuackSwapBridgeMigrationRouterAbi
+  MasterChefAbi
 } from '@hotcrosscom/quackswap-sdk'
 import { useMemo } from 'react'
 import ENS_PUBLIC_RESOLVER_ABI from '../constants/abis/ens-public-resolver.json'
@@ -21,7 +20,6 @@ import { getContract } from '../utils'
 import { useActiveWeb3React } from './index'
 import {
   AIRDROP_ADDRESS,
-  BRIDGE_MIGRATOR_ADDRESS,
   MASTERCHEF_ADDRESS,
   ZERO_ADDRESS
 } from '../constants'
@@ -56,10 +54,6 @@ export function useV2MigratorContract(): Contract | null {
 export function useMiniChefContract(): Contract | null {
   const chainId = useChainId()
   return useContract(MASTERCHEF_ADDRESS[chainId], MasterChefAbi, true)
-}
-
-export function useBridgeMigratorContract(): Contract | null {
-  return useContract(BRIDGE_MIGRATOR_ADDRESS, QuackSwapBridgeMigrationRouterAbi, true)
 }
 
 export function useV1ExchangeContract(address?: string, withSignerIfPossible?: boolean): Contract | null {
