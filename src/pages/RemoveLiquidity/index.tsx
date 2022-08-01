@@ -132,7 +132,7 @@ export default function RemoveLiquidity({
       { name: 'verifyingContract', type: 'address' }
     ]
     const domain = {
-      name: 'Pangolin Liquidity',
+      name: 'QuackSwap Liquidity',
       version: '1',
       chainId: chainId,
       verifyingContract: pair.liquidityToken.address

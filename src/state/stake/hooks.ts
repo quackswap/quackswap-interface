@@ -1490,7 +1490,7 @@ export function useDerivedStakingProcess(stakingInfo: SingleSideStakingInfo) {
       { name: 'verifyingContract', type: 'address' }
     ]
     const domain = {
-      name: 'Pangolin',
+      name: 'QuackSwap',
       chainId: chainId,
       verifyingContract: stakingTokenContract.address
     }

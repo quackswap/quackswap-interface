@@ -161,7 +161,7 @@ export default function StakingModalSingleSide({
       { name: 'verifyingContract', type: 'address' }
     ]
     const domain = {
-      name: 'Pangolin',
+      name: 'QuackSwap',
       chainId: chainId,
       verifyingContract: stakingTokenContract.address
     }
