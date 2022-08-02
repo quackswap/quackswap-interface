@@ -267,7 +267,7 @@ const StyledExternalLink = styled(ExternalLink).attrs({
 
 const StyledExternalFlyoutLink = styled(StyledExternalLink)`
   display: none;
-
+  line-height: 2;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     display: block;
   `}
@@ -277,6 +277,7 @@ const NarrowMenuFlyout = styled(MenuFlyout)`
   min-width: 8.125rem;
   left: 15rem;
   right: auto !important;
+  hei
 `
 
 export default function Header() {
