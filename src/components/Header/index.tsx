@@ -12,6 +12,7 @@ import { useActiveWeb3React } from '../../hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
 // import { CardNoise } from '../earn/styled'
 // import { CountUp } from 'use-count-up'
+import { ChevronDown } from 'react-feather'
 import { ExternalLink } from '../../theme'
 import { ThemeColorCard } from '../Card'
 import Settings from '../Settings'
@@ -24,7 +25,7 @@ import PngBalanceContent from './PngBalanceContent'
 import LanguageSelection from '../LanguageSelection'
 import { ApplicationModal } from '../../state/application/actions'
 import { useModalOpen, useToggleModal } from '../../state/application/hooks'
-// import { MenuFlyout } from '../StyledMenu'
+import { MenuFlyout } from '../StyledMenu'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
 import {
   NETWORK_LABELS,
@@ -110,6 +111,7 @@ const HeaderLinks = styled(Row)`
   ${({ theme }) => theme.mediaWidth.upToMedium`
     padding: 1rem 0 1rem 1rem;
     justify-content: flex-end;
+    overflow-x: scroll;
 `};
 `
 
@@ -130,27 +132,6 @@ const AccountElement = styled.div<{ active: boolean }>`
     background-color: ${({ theme, active }) => (!active ? theme.bg2 : theme.bg4)};
   } */
 `
-
-// const PNGAmount = styled(AccountElement)`
-//   color: white;
-//   padding: 4px 8px;
-//   height: 36px;
-//   font-weight: 500;
-//   background-color: ${({ theme }) => theme.bg3};
-//   background: radial-gradient(174.47% 188.91% at 1.84% 0%, #f97316 0%, #e84142 100%), #edeef2;
-// `
-
-// const PNGWrapper = styled.span`
-//   width: fit-content;
-//   position: relative;
-//   cursor: pointer;
-//   :hover {
-//     opacity: 0.8;
-//   }
-//   :active {
-//     opacity: 0.9;
-//   }
-// `
 
 const NetworkCard = styled(ThemeColorCard)`
   border-radius: 12px;
@@ -242,6 +223,16 @@ const StyledLink = styled.div<{ isActive: boolean }>`
   }
 `
 
+const StyledFlyoutLink = styled(StyledLink)`
+  margin: 0;
+  line-height: 0;
+  display: none;
+
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    display: block;
+  `}
+`
+
 const StyledExternalLink = styled(ExternalLink).attrs({
   activeClassName
 })<{ isActive?: boolean }>`
@@ -270,15 +261,23 @@ const StyledExternalLink = styled(ExternalLink).attrs({
   }
 
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-      display: none;
+    display: none;
 `}
 `
 
-// const NarrowMenuFlyout = styled(MenuFlyout)`
-//   min-width: 8.125rem;
-//   left: 15rem;
-//   right: auto !important;
-// `
+const StyledExternalFlyoutLink = styled(StyledExternalLink)`
+  display: none;
+
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    display: block;
+  `}
+`
+
+const NarrowMenuFlyout = styled(MenuFlyout)`
+  min-width: 8.125rem;
+  left: 15rem;
+  right: auto !important;
+`
 
 export default function Header() {
   const { account } = useActiveWeb3React()
@@ -313,7 +312,7 @@ export default function Header() {
               <img width={'125px'} src={Logo} alt="logo" style={{marginTop: '10px'}} />
             </Hidden>
             <Visible upToMedium={true}>
-              <img width={'120px'} src={Logo} alt="logo" style={{marginTop: '8px'}}/>
+              <img width={'100px'} src={Logo} alt="logo" style={{marginTop: '8px'}}/>
             </Visible>
           </PngIcon>
         </Title>
@@ -321,9 +320,6 @@ export default function Header() {
           <StyledNavLink id={`swap-nav-link`} to={'/swap'}>
             {t('header.swap')}
           </StyledNavLink>
-          {/* <StyledNavLink id={`swap-nav-link`} to={'/buy'}>
-            {t('header.buy')}
-          </StyledNavLink> */}
           <StyledNavLink
             id={`pool-nav-link`}
             to={'/pool'}
@@ -351,6 +347,16 @@ export default function Header() {
           <StyledExternalLink id={`info-nav-link`} href={ANALYTICS_PAGE}>
             {t('header.charts')} <span style={{ fontSize: '11px' }}>↗</span>
           </StyledExternalLink>
+          <StyledFlyoutLink id={`png-nav-link`} onClick={toggle} isActive={false} ref={node as any}>
+            <ChevronDown size={20} />
+            {open && (
+              <NarrowMenuFlyout>
+                <StyledExternalFlyoutLink id={`info-nav-link`} href={ANALYTICS_PAGE}>
+                  {t('header.charts')} <span style={{ fontSize: '11px' }}>↗</span>
+                </StyledExternalFlyoutLink>
+              </NarrowMenuFlyout>
+            )}
+          </StyledFlyoutLink>
         </HeaderLinks>
       </HeaderRow>
       <HeaderControls>
@@ -360,32 +366,6 @@ export default function Header() {
               <NetworkCard title={NETWORK_LABELS[chainId]}>{NETWORK_LABELS[chainId]}</NetworkCard>
             )}
           </Hidden>
-          {/* {aggregateBalance && (
-            <PNGWrapper onClick={() => setShowPngBalanceModal(true)}>
-              <PNGAmount active={!!account} style={{ pointerEvents: 'auto' }}>
-                {account && (
-                  <Hidden upToSmall={true}>
-                    <TYPE.white
-                      style={{
-                        paddingRight: '.4rem'
-                      }}
-                    >
-                      <CountUp
-                        key={countUpValue}
-                        isCounting
-                        start={parseFloat(countUpValuePrevious)}
-                        end={parseFloat(countUpValue)}
-                        thousandsSeparator={','}
-                        duration={1}
-                      />
-                    </TYPE.white>
-                  </Hidden>
-                )}
-                QUACK
-              </PNGAmount>
-              <CardNoise />
-            </PNGWrapper>
-          )} */}
           <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
             {account && userEthBalance ? (
               <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>

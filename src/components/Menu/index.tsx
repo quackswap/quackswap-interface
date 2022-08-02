@@ -46,14 +46,6 @@ export default function Menu() {
             <Info size={14} />
             {t('menu.about')}
           </MenuItem>
-          {/* <MenuNavItem id="link" to={'/IDO'}>
-            <Calendar size={14} />
-            {t('menu.idos')}
-          </MenuNavItem> */}
-          {/* <MenuItem id="link" href={TutorialPage}>
-            <Book size={14} />
-            {t('menu.tutorials')}
-          </MenuItem> */}
           <MenuItem id="link" href="https://t.me/pangolindexV2">
             <Send size={14} />
             {t('menu.telegram')}
@@ -66,18 +58,10 @@ export default function Menu() {
             <MessageSquare size={14} />
             {t('header.forum')}
           </MenuItem>
-          {/* <MenuNavItem id="link" to={'/vote'}>
-            <CheckSquare size={14} />
-            {t('header.vote')}
-          </MenuNavItem> */}
           <MenuItem id="link" href="https://twitter.com/pangolindex">
             <Twitter size={14} />
             {t('menu.twitter')}
           </MenuItem>
-          {/* <MenuItem id="link" href="https://github.com/pangolindex">
-            <GitHub size={14} />
-            {t('menu.code')}
-          </MenuItem> */}
         </NarrowMenuFlyout>
       )}
     </StyledMenu>
