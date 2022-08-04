@@ -12,7 +12,6 @@ export const QUACK: { [chainId in ChainId]: Token } = {
   )
 }
 
-
 export const OG: { [chainId in ChainId]: Token } = {
   [ChainId.BITTORRENT_MAINNET]: new Token(ChainId.BITTORRENT_MAINNET, ZERO_ADDRESS, 18, 'OG', 'OG')
 }
