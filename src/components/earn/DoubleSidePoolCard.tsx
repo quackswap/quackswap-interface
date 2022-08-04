@@ -116,8 +116,9 @@ export default function DoubleSidePoolCard({
       ? token1
       : token0
 
+  console.log("🚀 ~ file: DoubleSidePoolCard.tsx ~ line 121 ~ stakingInfo", stakingInfo)
   const totalStakedInUsd = CHAINS[chainId].mainnet
-    ? stakingInfo.totalStakedInUsd.toSignificant(4, { groupSeparator: ',' })
+    ? stakingInfo.totalStakedInUsd?.toSignificant(4, { groupSeparator: ',' })
     : 0
 
   const backgroundColor = useColor(token)

@@ -1858,20 +1858,20 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@hotcrosscom/quackswap-components@0.1.5":
-  version "0.1.5"
-  resolved "https://npm.pkg.github.com/download/@hotcrosscom/quackswap-components/0.1.5/6931078c441b76f2990ed0a73a724ab5ab1a2d7993c181044b3756888ca54921#1beac7496636258a22ef07f69cc1d3be8cb82f40"
-  integrity sha512-XsYp1Hzy7dqHZXNn+Ms2g5R25vYPSVPhUjYLGtPj55kslSiGtbFPpe2Xb308KCcUgOdqGgeRyRqiutiXPjAyow==
+"@hotcrosscom/quackswap-components@0.1.6":
+  version "0.1.6"
+  resolved "https://npm.pkg.github.com/download/@hotcrosscom/quackswap-components/0.1.6/85a1d56f65673c1e1dbfcb9744175fba0619db609a99f0c95c915d8201984b73#9e55fdb7936c26915b0ff96fe8fd410cae0ee62d"
+  integrity sha512-OiADZJdgoFGnX7PTa+Px1r+tOBIIdOr5pLNNoJ5nXCHTbZVFk1FHaQkfpOp/75HkUGGfQFGLg5Wgm4+6Quee8A==
   dependencies:
     "@pangolindex/web3-react-injected-connector" "^1.0.1"
     cids "^1.1.9"
     graphql-request "^4.2.0"
     react-switch "^6.0.0"
 
-"@hotcrosscom/quackswap-sdk@1.0.0":
-  version "1.0.0"
-  resolved "https://npm.pkg.github.com/download/@hotcrosscom/quackswap-sdk/1.0.0/d05ff0fec277524759a360893a2620814675d4744af79dcffec936d745e392f0#187b98edbe4b6ea7d86e6cde18f71d0c68301873"
-  integrity sha512-5c8HIe9EpqGW6LSTVezUsJkCEkXnq4LFAgEckhlkgqnwWu1DtlXwNGwIoY760XDfchUljm0n5o5SKxVcYYb+OQ==
+"@hotcrosscom/quackswap-sdk@1.1.0":
+  version "1.1.0"
+  resolved "https://npm.pkg.github.com/download/@hotcrosscom/quackswap-sdk/1.1.0/35d1df25d07f5f9ef870266a9a5ceba94cb94197585bc56b8bae8617ffb607dc#a037d9ad61959983b280d9c567dc2414ae8f50ba"
+  integrity sha512-XE3XQB76JzQD8iJfRj7Sbn+AjAMoRQ2JdAdYBGECc+vUlkrDAgxwApLdyOmox2q3aHQ2sK88vAyKqh0klJQwnA==
   dependencies:
     big.js "^5.2.2"
     decimal.js-light "^2.5.0"
@@ -2196,23 +2196,6 @@
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
-
-"@pangolindex/exchange-contracts@1.0.2", "@pangolindex/exchange-contracts@^1.0.1":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@pangolindex/exchange-contracts/-/exchange-contracts-1.0.2.tgz#2d5be49d9e63a311cb3c2de53b21815923b3a996"
-  integrity sha512-G0imyN39C/vGX1VT/dn5do9SB8rJjRViT4p76KbseKNZ2wPChtFsz6yRFkqEJjeDRvqhBk7TZZlPGcbNvz/mBA==
-  dependencies:
-    hardhat-tracer "^1.0.0-alpha.5"
-
-"@pangolindex/governance@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@pangolindex/governance/-/governance-1.2.0.tgz#ef471636dab83d62ba414be6420ecacae07c74d2"
-  integrity sha512-+O2itZPNGSdcL9aAfzDghWqO337tY7H2qw8BadlMgbJq/OaTNEyALT9tgNwg9Y9xucsekOt/pB6MuyzpEboVbg==
-  dependencies:
-    "@pangolindex/exchange-contracts" "^1.0.1"
-    "@tenderly/hardhat-tenderly" "^1.0.6"
-    csv-batch "^2.0.2"
-    openzeppelin-solidity "^3.4.0"
 
 "@pangolindex/web3-react-injected-connector@^1.0.0", "@pangolindex/web3-react-injected-connector@^1.0.1":
   version "1.0.1"
@@ -2634,15 +2617,6 @@
     "@svgr/plugin-jsx" "^4.3.3"
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
-
-"@tenderly/hardhat-tenderly@^1.0.6":
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/@tenderly/hardhat-tenderly/-/hardhat-tenderly-1.0.13.tgz#6182a2d32bf12d110622f0b24263dc964ed7aa6d"
-  integrity sha512-XsrF2QIUh8YmzCcWHmPnSNQjZNBQkyrHER8bcrWsFIgL7ub49hmPbpGVB2Isb6gUV/IGBpBm7R69jpmoTvJ17g==
-  dependencies:
-    axios "^0.21.1"
-    fs-extra "^9.0.1"
-    js-yaml "^3.14.0"
 
 "@testing-library/dom@^7.11.0":
   version "7.31.2"
@@ -6683,11 +6657,6 @@ csstype@^3.0.2, csstype@^3.0.6:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.11.tgz#d66700c5eacfac1940deb4e3ee5642792d85cd33"
   integrity sha512-sa6P2wJ+CAbgyy4KFssIb/JNMLxFvKF1pCYCSXS8ZMuqZnMsrxqI2E5sPyoTpxoPU/gVZMzr2zjOfg8GIZOMsw==
 
-csv-batch@^2.0.2:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/csv-batch/-/csv-batch-2.0.5.tgz#7ddc61cc90192a6d29b772785acace0eef1c7103"
-  integrity sha512-qvFNRZRWxXwVDOGSbZDW7qLVonvSiAMFNl+8ZPJJabVGxdsk3AuQ6Fbr1bT8eDrWEH2l2RrZgNSB97OBhPv7MA==
-
 cyclist@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
@@ -8250,7 +8219,7 @@ ethereumjs-vm@^2.1.0, ethereumjs-vm@^2.3.4, ethereumjs-vm@^2.6.0:
     rustbn.js "~0.2.0"
     safe-buffer "^5.1.1"
 
-ethers@^5.0.24, ethers@^5.0.7, ethers@^5.4.6, ethers@^5.4.7, ethers@^5.6.0:
+ethers@^5.0.7, ethers@^5.4.6, ethers@^5.4.7, ethers@^5.6.0:
   version "5.6.1"
   resolved "https://registry.yarnpkg.com/ethers/-/ethers-5.6.1.tgz#a56cd67f1595b745dc3dde0ccf2b5de53a41a6d0"
   integrity sha512-qtl/2W+dwmUa5Z3JqwsbV3JEBZZHNARe5K/A2ePcNAuhJYnEKIgGOT/O9ouPwBijSqVoQnmQMzi5D48LFNOY2A==
@@ -9029,7 +8998,7 @@ fs-extra@^7.0.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
-fs-extra@^9.0.1, fs-extra@^9.1.0:
+fs-extra@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.1.0.tgz#5954460c764a8da2094ba3554bf839e6b9a7c86d"
   integrity sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==
@@ -9368,13 +9337,6 @@ har-validator@~5.1.3:
   dependencies:
     ajv "^6.12.3"
     har-schema "^2.0.0"
-
-hardhat-tracer@^1.0.0-alpha.5:
-  version "1.0.0-alpha.6"
-  resolved "https://registry.yarnpkg.com/hardhat-tracer/-/hardhat-tracer-1.0.0-alpha.6.tgz#4545a772930567cad4620ee9448cb76e89b07b02"
-  integrity sha512-QXKEJPaCDU0P7ZNHvFuGQoKLZ9+uma3ASAoPjhHr4CYwgIHcronVPZ7zkztRc7LhDbKFffIuoh0jEQWGgR6Neg==
-  dependencies:
-    ethers "^5.0.24"
 
 harmony-reflect@^1.4.6:
   version "1.6.2"
@@ -11007,7 +10969,7 @@ js-tokens@^3.0.2:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
-js-yaml@^3.13.1, js-yaml@^3.14.0:
+js-yaml@^3.13.1:
   version "3.14.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.1.tgz#dae812fdb3825fa306609a8717383c50c36a0537"
   integrity sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==
@@ -13187,11 +13149,6 @@ open@^7.0.2:
   dependencies:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
-
-openzeppelin-solidity@^3.4.0:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/openzeppelin-solidity/-/openzeppelin-solidity-3.4.2.tgz#ec9b3d701c459e6075691bbda642d54290e0c7ab"
-  integrity sha512-mpk74A6Bo+/ISfalUqtD8bAfINQgkGH2yInUFn/uBYz1pXbefwMTApjlnCYr+HpQpeOgO7nO8deJYrzBGDFDMA==
 
 opn@^5.5.0:
   version "5.5.0"

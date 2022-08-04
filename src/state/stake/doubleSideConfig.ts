@@ -4,8 +4,8 @@ import * as TOKENS from '../../constants/tokens'
 import { BridgeMigrator, DoubleSideStaking, Migration } from './hooks'
 
 export const DOUBLE_SIDE_STAKING: { [key: string]: DoubleSideStaking } = {
-  PGL_WBTT_V2: {
-    tokens: [TOKENS.PGL[ChainId.BITTORRENT_MAINNET], WBTT[ChainId.BITTORRENT_MAINNET]],
+  QUACK_WBTT_V2: {
+    tokens: [TOKENS.QUACK[ChainId.BITTORRENT_MAINNET], WBTT[ChainId.BITTORRENT_MAINNET]],
     stakingRewardAddress: MASTERCHEF_ADDRESS[ChainId.BITTORRENT_MAINNET],
     version: 2
   }
