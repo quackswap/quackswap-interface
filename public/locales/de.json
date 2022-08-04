@@ -338,7 +338,7 @@
     "totalStaked": "Insgesamt gestakt",
     "poolRate": "Pool-Rate",
     "step1": "Schritt 1. Hole dir Pangolin Liquidity-Token (QSL)",
-    "pglTokenRequired": "Es sind QSL-Token erforderlich. Sobald du Liquidität zu dem {{ poolHandle }} Pool hinzugefügt hast, kannst du deine Liquiditätsprovider-Token auf dieser Seite staken.",
+    "qslTokenRequired": "Es sind QSL-Token erforderlich. Sobald du Liquidität zu dem {{ poolHandle }} Pool hinzugefügt hast, kannst du deine Liquiditätsprovider-Token auf dieser Seite staken.",
     "addPoolLiquidity": "Füge {{ poolHandle }} Liquidität hinzu",
     "liquidityDeposits": "Deine Liquiditätseinzahlungen",
     "yourStakedToken": "Your staked {{ symbol }}",

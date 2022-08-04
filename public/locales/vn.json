@@ -338,7 +338,7 @@
     "totalStaked": "Tổng số cổ phần đã đặt",
     "poolRate": "Tỷ suất bể",
     "step1": "Bước 1. Nhận token thanh khoản Pangolin (QSL)",
-    "pglTokenRequired": "Mã token QSL là bắt buộc. Khi bạn thêm thanh khoản vào {{ poolHandle }} bể bạn có thể đặt cổ phần mã token thanh khoản của mình trên trang này.",
+    "qslTokenRequired": "Mã token QSL là bắt buộc. Khi bạn thêm thanh khoản vào {{ poolHandle }} bể bạn có thể đặt cổ phần mã token thanh khoản của mình trên trang này.",
     "addPoolLiquidity": "Thêm {{ poolHandle }} thanh khoản",
     "liquidityDeposits": "Số tiền thanh khoản của bạn",
     "yourStakedToken": "Số cổ phần {{ symbol }} đã đặt của bạn",

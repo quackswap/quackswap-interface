@@ -217,7 +217,7 @@ const Manage: React.FC<ManageProps> = ({ version, stakingInfo, currencyA, curren
               </RowBetween>
               <RowBetween style={{ marginBottom: '1rem' }}>
                 <TYPE.white fontSize={14}>
-                  {t('earnPage.pglTokenRequired', { poolHandle: currencyA?.symbol + '-' + currencyB?.symbol })}
+                  {t('earnPage.qslTokenRequired', { poolHandle: currencyA?.symbol + '-' + currencyB?.symbol })}
                 </TYPE.white>
               </RowBetween>
               <ButtonPrimary

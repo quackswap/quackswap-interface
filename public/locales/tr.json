@@ -338,7 +338,7 @@
     "totalStaked": "Yatırılan Toplam",
     "poolRate": "Havuzun Getirisi",
     "step1": "1. Aşama: QSL token(Pangolin'in likidite tokenı) edinin.",
-    "pglTokenRequired": "QSL tokenı gereklidir. {{ poolHandle }} havuzuna likidite ekledikten sonra bu sayfadan likidite tokenlarınızı farma yatırabilirsiniz.",
+    "qslTokenRequired": "QSL tokenı gereklidir. {{ poolHandle }} havuzuna likidite ekledikten sonra bu sayfadan likidite tokenlarınızı farma yatırabilirsiniz.",
     "addPoolLiquidity": "{{ poolHandle }} havuzuna likidite ekle",
     "liquidityDeposits": "Likidite yatırımlarınız",
     "yourStakedToken": "Stake edilmiş {{ symbol }} tokenlarınız",

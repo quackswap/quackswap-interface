@@ -338,7 +338,7 @@
     "totalStaked": "Total Staked",
     "poolRate": "Pool Rate",
     "step1": "Step 1. Get QuackSwap Liquidity tokens (QSL)",
-    "pglTokenRequired": "QSL tokens are required. Once you've added liquidity to the {{ poolHandle }} pool you can stake your liquidity tokens on this page.",
+    "qslTokenRequired": "QSL tokens are required. Once you've added liquidity to the {{ poolHandle }} pool you can stake your liquidity tokens on this page.",
     "addPoolLiquidity": "Add {{ poolHandle }} liquidity",
     "liquidityDeposits": "Your liquidity deposits",
     "yourStakedToken": "Your staked {{ symbol }}",
