@@ -88,7 +88,7 @@
     "missingDependencies": "eksik değer",
     "deposited": "Yatırıldı",
     "withdrawDepositedLiquidity": "Yatırılan likiditeyi çek",
-    "depositedPglLiquidity": "Yatırılan QSL likiditesi:",
+    "depositedQslLiquidity": "Yatırılan QSL likiditesi:",
     "whenYouWithdrawWarning": "Sağladığınız likiditeyi çektiğinizde QSL tokenlarınız ve kazandığınız {{ symbol }}'ler hesabınıza gelecektir. QSL tokenlarının farmdan çekilmesi durumunda ise artık {{ symbol }} kazanamayacaksınız. Asıl tokenlarınız ise siz çekene kadar likidite havuzunda kalacaktır.",
     "whenYouWithdrawSingleSideWarning": "Çekim işlemi yaptığınızda {{ symbol }} tokenları talep edilir ve {{ pngSymbol }} tokenlarınız size iade edilir. Bu, {{ pngSymbol }} staking üzerinden artık {{ symbol }} ödülü kazanamayacaksınız anlamına gelir.",
     "withdrawAndClaim": "Çek & Ödülleri Talep Et",

@@ -1257,20 +1257,20 @@ export function useGetPoolDollerWorth(pair: Pair | null) {
   const currency0PriceTmp = useUSDCPrice(currency0)
   const currency0Price = CHAINS[chainId].mainnet ? currency0PriceTmp : undefined
 
-  const userPglTmp = useTokenBalance(account ?? undefined, pair?.liquidityToken)
-  const userPgl = CHAINS[chainId].mainnet ? userPglTmp : undefined
+  const userQslTmp = useTokenBalance(account ?? undefined, pair?.liquidityToken)
+  const userQsl = CHAINS[chainId].mainnet ? userQslTmp : undefined
 
   const totalPoolTokens = useTotalSupply(pair?.liquidityToken)
 
   const [token0Deposited] =
     !!pair &&
     !!totalPoolTokens &&
-    !!userPgl &&
+    !!userQsl &&
     // this condition is a short-circuit in the case where useTokenBalance updates sooner than useTotalSupply
-    JSBI.greaterThanOrEqual(totalPoolTokens.raw, userPgl.raw)
+    JSBI.greaterThanOrEqual(totalPoolTokens.raw, userQsl.raw)
       ? [
-          pair.getLiquidityValue(pair.token0, totalPoolTokens, userPgl, false),
-          pair.getLiquidityValue(pair.token1, totalPoolTokens, userPgl, false)
+          pair.getLiquidityValue(pair.token0, totalPoolTokens, userQsl, false),
+          pair.getLiquidityValue(pair.token1, totalPoolTokens, userQsl, false)
         ]
       : [undefined, undefined]
 
@@ -1282,10 +1282,10 @@ export function useGetPoolDollerWorth(pair: Pair | null) {
   //
   return useMemo(
     () => ({
-      userPgl,
+      userQsl,
       liquidityInUSD
     }),
-    [userPgl, liquidityInUSD]
+    [userQsl, liquidityInUSD]
   )
 }
 

@@ -88,7 +88,7 @@
     "missingDependencies": "Fehlende Abhängigkeiten",
     "deposited": "Eingezahlt",
     "withdrawDepositedLiquidity": "Eingezahlte Liquidität abbuchen",
-    "depositedPglLiquidity": "Eingezahlte QSL-Liquidität:",
+    "depositedQslLiquidity": "Eingezahlte QSL-Liquidität:",
     "whenYouWithdrawWarning": "Wenn du abbuchst, wird deine ausstehenden {{ symbol }}-Vergütung beansprucht. Deine Pangolin-Liquiditätstoken, QSL, werden an dich zurückgegeben und du wirst keine {{ symbol }}-Vergütungen mehr auf diese Liquiditätsposition erhalten. Deine ursprüngliche Liquidität wird im Liquiditätspool verbleiben.",
     "whenYouWithdrawSingleSideWarning": "When you withdraw, your {{ symbol }} is claimed and your {{ pngSymbol}} is returned to you. You will no longer earn {{ symbol }} rewards on this {{ pngSymbol}}.",
     "withdrawAndClaim": "Abbuchen & Beanspruchen",

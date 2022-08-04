@@ -88,7 +88,7 @@
     "missingDependencies": "Dependências ausentes",
     "deposited": "Depositado",
     "withdrawDepositedLiquidity": "Retirar a liquidez depositada",
-    "depositedPglLiquidity": "Deposited QSL liquidity:",
+    "depositedQslLiquidity": "Deposited QSL liquidity:",
     "whenYouWithdrawWarning": "Quando você retirar, seu {{ symbol }} é resgatado e seus tokens de liquidez do Pangolin, QSL, são devolvidos para você. Você não vai mais ganhar recompensas de {{ symbol }} nessa liquidez. Sua liquidez original de token permanecerá na sua pool de liquidez.",
     "whenYouWithdrawSingleSideWarning": "When you withdraw, your {{ symbol }} is claimed and your {{ pngSymbol }} is returned to you. You will no longer earn {{ symbol }} rewards on this {{ pngSymbol }}.",
     "withdrawAndClaim": "Retirar & resgatar",

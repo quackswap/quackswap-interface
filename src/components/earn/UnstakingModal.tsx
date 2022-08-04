@@ -103,7 +103,7 @@ export default function UnstakingModal({
               <TYPE.body fontWeight={600} fontSize={36}>
                 {<FormattedCurrencyAmount currencyAmount={stakingInfo.stakedAmount} />}
               </TYPE.body>
-              <TYPE.body>{t('earn.depositedPglLiquidity')}</TYPE.body>
+              <TYPE.body>{t('earn.depositedQslLiquidity')}</TYPE.body>
             </AutoColumn>
           )}
           {stakingInfo?.earnedAmount && (

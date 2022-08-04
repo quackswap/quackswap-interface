@@ -88,7 +88,7 @@
     "missingDependencies": "missing dependencies",
     "deposited": "Deposited",
     "withdrawDepositedLiquidity": "Withdraw deposited liquidity",
-    "depositedPglLiquidity": "Deposited QSL liquidity:",
+    "depositedQslLiquidity": "Deposited QSL liquidity:",
     "whenYouWithdrawWarning": "When you withdraw, your {{ symbol }} is claimed and your QuackSwap Liquidity tokens, QSL, are returned to you. You will no longer earn {{ symbol }} rewards on this liquidity. Your original token liquidity will remain in its liquidity pool.",
     "whenYouWithdrawSingleSideWarning": "When you withdraw, your {{ symbol }} is claimed and your {{ pngSymbol}} is returned to you. You will no longer earn {{ symbol }} rewards on this {{ pngSymbol}}.",
     "withdrawAndClaim": "Withdraw & Claim",

@@ -88,7 +88,7 @@
     "missingDependencies": "dépendances manquantes",
     "deposited": "Déposé",
     "withdrawDepositedLiquidity": "Retirer les liquidités déposées",
-    "depositedPglLiquidity": "Liquidité QSL déposée :",
+    "depositedQslLiquidity": "Liquidité QSL déposée :",
     "whenYouWithdrawWarning": "Lorsque vous effectuez un retrait, votre {{ symbol }} est réclamé et vos jetons de liquidité Pangolin, QSL, vous sont rendus. Vous ne gagnerez plus de récompenses en {{ symbol }} sur cette liquidité. Votre jeton de liquidité original restera dans sa pool de liquidité.",
     "whenYouWithdrawSingleSideWarning": "Lorsque vous retirez, vos {{ symbol }} sont réclamés et vous récupérez vos {{ pngSymbol }}. Vous ne gagnerez plus de récompenses en  {{ symbol }} sur ces {{ pngSymbol}}.",
     "withdrawAndClaim": "Retirer & réclamer",

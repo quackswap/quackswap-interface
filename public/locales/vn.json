@@ -88,7 +88,7 @@
     "missingDependencies": "Mất phụ thuộc",
     "deposited": "Đã gửi",
     "withdrawDepositedLiquidity": "Rút thanh khoản đã gửi",
-    "depositedPglLiquidity": "Thanh khoản QSL đã gửi:",
+    "depositedQslLiquidity": "Thanh khoản QSL đã gửi:",
     "whenYouWithdrawWarning": "Khi bạn rút tiền, số phần thưởng {{ symbol }} được nhận và mã thông báo Pangolin Liquidity của bạn, QSL, được trả lại cho bạn. Bạn sẽ không được thưởng thêm {{ symbol }} trên mã thanh khoản này nữa. Số token thanh khoản ban đầu vẫn còn lại trong bể",
     "whenYouWithdrawSingleSideWarning": "Khi bạn rút tiền, {{symbol}} của bạn sẽ được nhận và {{ pngSymbol }} của bạn sẽ được trả lại. Bạn sẽ không còn kiếm được phần thưởng {{Symbol}} trên token {{ pngSymbol }} này nữa.",
     "withdrawAndClaim": "Rút và nhận",
