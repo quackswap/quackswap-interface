@@ -4,14 +4,32 @@ import { useWeb3React as useWeb3ReactCore } from '@web3-react/core'
 import { Web3ReactContextInterface } from '@web3-react/core/dist/types'
 import { useEffect, useState } from 'react'
 import { isMobile } from 'react-device-detect'
-import { gnosisSafe, injected, xDefi, IS_IN_IFRAME, NetworkContextName } from '@hotcrosscom/quackswap-components'
+import {
+  gnosisSafe,
+  injected,
+  xDefi,
+  IS_IN_IFRAME,
+  NetworkContextName,
+  BTT_CHAIN_PARAMS
+} from '@hotcrosscom/quackswap-components'
 
 export function useActiveWeb3React(): Web3ReactContextInterface<Web3Provider> & { chainId?: ChainId } {
   const context = useWeb3ReactCore<Web3Provider>()
   const contextNetwork = useWeb3ReactCore<Web3Provider>(NetworkContextName)
   return context.active ? context : contextNetwork
 }
-
+function addBittorrentNetwork() {
+  injected.getProvider().then(provider => {
+    provider
+      ?.request({
+        method: 'wallet_addEthereumChain',
+        params: [BTT_CHAIN_PARAMS]
+      })
+      .catch((error: any) => {
+        console.log(error)
+      })
+  })
+}
 export function useEagerConnect() {
   const { activate, active } = useWeb3ReactCore() // specifically using useWeb3ReactCore because of what this hook does
   const [tried, setTried] = useState(false)
@@ -22,6 +40,7 @@ export function useEagerConnect() {
       if (!triedSafe) {
         gnosisSafe.isSafeApp().then(loadedInSafe => {
           if (loadedInSafe) {
+            console.log(1)
             activate(gnosisSafe, undefined, true).catch(() => {
               setTriedSafe(true)
             })
@@ -36,7 +55,9 @@ export function useEagerConnect() {
 
         existingConnector.isAuthorized().then(isAuthorized => {
           if (isAuthorized) {
-            activate(existingConnector, undefined, true).catch(() => {
+            console.log(2)
+            activate(existingConnector, undefined, true).catch(err => {
+              err.name === 'UnsupportedChainIdError' && addBittorrentNetwork()
               setTried(true)
             })
           } else {
