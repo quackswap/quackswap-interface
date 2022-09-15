@@ -1,4 +1,4 @@
-import { Box, Button } from '@hotcrosscom/quackswap-components'
+import { Box, Button } from '@quackswap/components'
 import styled from 'styled-components'
 
 import { ButtonPrimary } from '../../../components/Button'

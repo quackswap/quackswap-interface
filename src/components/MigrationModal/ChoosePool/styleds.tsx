@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Box } from '@hotcrosscom/quackswap-components'
+import { Box } from '@quackswap/components'
 
 export const Wrapper = styled.div`
   margin: 0;

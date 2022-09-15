@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useState } from 'react'
 import styled from 'styled-components'
 
-import { JSBI } from '@hotcrosscom/quackswap-sdk'
+import { JSBI } from '@quackswap/sdk'
 import { Link, RouteComponentProps } from 'react-router-dom'
 import { useCurrency } from 'src/hooks/Tokens'
 import { useWalletModalToggle } from 'src/state/application/hooks'

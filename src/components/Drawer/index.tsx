@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { DrawerRoot, DrawerContent } from './styled'
 import { CloseIcon } from 'src/theme/components'
-import { Box, Text } from '@hotcrosscom/quackswap-components'
+import { Box, Text } from '@quackswap/components'
 import { ThemeContext } from 'styled-components'
 
 interface DrawerProps {

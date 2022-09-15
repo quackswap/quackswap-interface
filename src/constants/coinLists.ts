@@ -37,7 +37,7 @@ import {
   OG,
   wWAGMI
 } from 'src/constants/tokens'
-import { WBTT } from '@hotcrosscom/quackswap-sdk'
+import { WBTT } from '@quackswap/sdk'
 
 export const COIN_LISTS = [
   WBTT,

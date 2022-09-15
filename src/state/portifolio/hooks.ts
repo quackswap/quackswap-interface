@@ -1,7 +1,7 @@
 import axios from 'axios'
 import qs from 'qs'
 import { useQuery } from 'react-query'
-import { CBTT, ChainId, Currency, Pair, Token, TokenAmount, Chain, AVALANCHE_MAINNET } from '@hotcrosscom/quackswap-sdk'
+import { CBTT, ChainId, Currency, Pair, Token, TokenAmount, Chain, AVALANCHE_MAINNET } from '@quackswap/sdk'
 import { ethers } from 'ethers'
 import Logo from 'src/assets/images/logo.png'
 import { useActiveWeb3React, useChain, useChainId } from 'src/hooks'

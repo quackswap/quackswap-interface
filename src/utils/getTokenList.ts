@@ -1,6 +1,6 @@
-import { TokenList } from '@apocentre/token-lists'
+import { TokenList } from '@quackswap/token-lists'
 // TODO
-import schema from '@apocentre/token-lists/src/tokenlist.schema.json'
+import schema from '@quackswap/token-lists/src/tokenlist.schema.json'
 import Ajv from 'ajv'
 import contenthashToUri from './contenthashToUri'
 import { parseENSAddress } from './parseENSAddress'

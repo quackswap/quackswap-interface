@@ -1,4 +1,4 @@
-import { ChainId, CurrencyAmount, JSBI, Token, TokenAmount, WBTT, Pair, Percent, CHAINS } from '@hotcrosscom/quackswap-sdk'
+import { ChainId, CurrencyAmount, JSBI, Token, TokenAmount, WBTT, Pair, Percent, CHAINS } from '@quackswap/sdk'
 import { useMemo, useEffect, useState, useCallback, useRef } from 'react'
 import {
   MASTERCHEF_ADDRESS,

@@ -4,7 +4,7 @@ import { useModalOpen, useMigrationModalToggle } from '../../state/application/h
 import { Wrapper } from './styleds'
 import Modal from '../Modal'
 import StepView from './StepView'
-import { Pair } from '@hotcrosscom/quackswap-sdk'
+import { Pair } from '@quackswap/sdk'
 import { StakingInfo } from '../../state/stake/hooks'
 import { ThemeContext } from 'styled-components'
 

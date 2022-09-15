@@ -1,4 +1,4 @@
-// import { TokenAmount } from '@hotcrosscom/quackswap-sdk'
+// import { TokenAmount } from '@quackswap/sdk'
 // import { Button } from '@quackswapdex/components'
 import React, { useState, useRef } from 'react'
 import { Text } from 'rebass'

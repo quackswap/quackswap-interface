@@ -14,7 +14,7 @@ import watchlists from './watchlists/reducer'
 import token from './token/reducer'
 import pair from './pair/reducer'
 import stake from './stake/reducer'
-import { pangolinReducers, PANGOLIN_PERSISTED_KEYS } from '@hotcrosscom/quackswap-components'
+import { pangolinReducers, PANGOLIN_PERSISTED_KEYS } from '@quackswap/components'
 
 const PERSISTED_KEYS: string[] = ['user', 'transactions', 'lists', 'watchlists', 'stake', ...PANGOLIN_PERSISTED_KEYS]
 

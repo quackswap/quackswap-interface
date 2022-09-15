@@ -1,4 +1,4 @@
-import { Box } from '@hotcrosscom/quackswap-components'
+import { Box } from '@quackswap/components'
 import styled from 'styled-components'
 
 export const Panel = styled(Box)`

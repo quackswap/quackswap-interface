@@ -1,4 +1,4 @@
-import { Trade, TradeType } from '@hotcrosscom/quackswap-sdk'
+import { Trade, TradeType } from '@quackswap/sdk'
 import React, { useContext, useMemo, useState } from 'react'
 import { Repeat } from 'react-feather'
 import { Text } from 'rebass'

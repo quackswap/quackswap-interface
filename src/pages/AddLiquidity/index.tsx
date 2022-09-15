@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { TransactionResponse } from '@ethersproject/providers'
-import { Currency, currencyEquals, CBTT, TokenAmount, WBTT } from '@hotcrosscom/quackswap-sdk'
+import { Currency, currencyEquals, CBTT, TokenAmount, WBTT } from '@quackswap/sdk'
 import React, { useCallback, useContext, useState } from 'react'
 import { Plus } from 'react-feather'
 import ReactGA from 'react-ga'

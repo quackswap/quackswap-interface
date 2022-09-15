@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text } from 'rebass'
-import { Currency, currencyEquals, CBTT, Token } from '@hotcrosscom/quackswap-sdk'
+import { Currency, currencyEquals, CBTT, Token } from '@quackswap/sdk'
 import styled from 'styled-components'
 
 import { SUGGESTED_BASES } from '../../constants'

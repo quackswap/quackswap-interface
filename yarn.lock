@@ -9,11 +9,6 @@
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.0"
 
-"@apocentre/token-lists@^1.0.2":
-  version "1.0.2"
-  resolved "https://npm.pkg.github.com/download/@apocentre/token-lists/1.0.2/b8aa8d6a3c189f0c099ac90d7cd0bb26ffce612ef42665d622b10e5d536a59a3#d7bafb9589ed953c62de79c76869e555d9e2f5b0"
-  integrity sha512-uo2zkELB0F3HE8aIpBPIhBPlhLGfykEUGLuKLmXodLWRn1eaSMz00d5wqHrmzobGCpP3f4+aRtCH6c/zJeMaMQ==
-
 "@babel/code-frame@7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.8.3.tgz#33e25903d7481181534e12ec0a25f16b6fcf419e"
@@ -1858,28 +1853,6 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@hotcrosscom/quackswap-components@0.1.6":
-  version "0.1.6"
-  resolved "https://npm.pkg.github.com/download/@hotcrosscom/quackswap-components/0.1.6/85a1d56f65673c1e1dbfcb9744175fba0619db609a99f0c95c915d8201984b73#9e55fdb7936c26915b0ff96fe8fd410cae0ee62d"
-  integrity sha512-OiADZJdgoFGnX7PTa+Px1r+tOBIIdOr5pLNNoJ5nXCHTbZVFk1FHaQkfpOp/75HkUGGfQFGLg5Wgm4+6Quee8A==
-  dependencies:
-    "@pangolindex/web3-react-injected-connector" "^1.0.1"
-    cids "^1.1.9"
-    graphql-request "^4.2.0"
-    react-switch "^6.0.0"
-
-"@hotcrosscom/quackswap-sdk@1.1.0":
-  version "1.1.0"
-  resolved "https://npm.pkg.github.com/download/@hotcrosscom/quackswap-sdk/1.1.0/35d1df25d07f5f9ef870266a9a5ceba94cb94197585bc56b8bae8617ffb607dc#a037d9ad61959983b280d9c567dc2414ae8f50ba"
-  integrity sha512-XE3XQB76JzQD8iJfRj7Sbn+AjAMoRQ2JdAdYBGECc+vUlkrDAgxwApLdyOmox2q3aHQ2sK88vAyKqh0klJQwnA==
-  dependencies:
-    big.js "^5.2.2"
-    decimal.js-light "^2.5.0"
-    jsbi "^3.1.1"
-    tiny-invariant "^1.1.0"
-    tiny-warning "^1.0.3"
-    toformat "^2.0.0"
-
 "@jest/console@^24.7.1", "@jest/console@^24.9.0":
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/@jest/console/-/console-24.9.0.tgz#79b1bc06fb74a8cfb01cbdedf945584b1b9707f0"
@@ -2249,6 +2222,33 @@
     ethereumjs-util "5.2.0"
     penpal "3.0.7"
     pocket-js-core "0.0.3"
+
+"@quackswap/components@1.0.0":
+  version "1.0.0"
+  resolved "https://npm.pkg.github.com/download/@quackswap/components/1.0.0/873d979ff1d1eb41d694d53f8fdecfde1afecae0#873d979ff1d1eb41d694d53f8fdecfde1afecae0"
+  integrity sha512-GPymhxwcvVRlh2L+l1Ou4tebsKP5wCrd6NX7F+6mtf1EaftCk4jg7Fzv4sYmFi/wBPQCZtuMLbbkeKP4CNwg5g==
+  dependencies:
+    "@pangolindex/web3-react-injected-connector" "^1.0.1"
+    cids "^1.1.9"
+    graphql-request "^4.2.0"
+    react-switch "^6.0.0"
+
+"@quackswap/sdk@1.0.0":
+  version "1.0.0"
+  resolved "https://npm.pkg.github.com/download/@quackswap/sdk/1.0.0/b90392471f74ad28077b53150582219968b9f618#b90392471f74ad28077b53150582219968b9f618"
+  integrity sha512-zVwNurfbBSaLH4ek6YMYiYOCUgv2thKuDGqq+oXWf7bN15BwMDWLgxZvV44VqqQ6ZbyiSPfV1iMTyemqLzdR9w==
+  dependencies:
+    big.js "^5.2.2"
+    decimal.js-light "^2.5.0"
+    jsbi "^3.1.1"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+    toformat "^2.0.0"
+
+"@quackswap/token-lists@^1.0.0":
+  version "1.0.0"
+  resolved "https://npm.pkg.github.com/download/@quackswap/token-lists/1.0.0/53834c997e87d00397302c4fa96c332a74c0386f#53834c997e87d00397302c4fa96c332a74c0386f"
+  integrity sha512-p9g/t4sKTNBZyv+ovpkpQZ+LrMV+JFD8Kdzg21c1eeDdyKFYybkwYc9OJWXHgbWpm4PHGvFm7cMdxfMMAZHjTA==
 
 "@reach/dialog@^0.10.3":
   version "0.10.5"

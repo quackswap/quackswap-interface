@@ -1,4 +1,4 @@
-import { ChainId, Trade, TradeType } from '@hotcrosscom/quackswap-sdk'
+import { ChainId, Trade, TradeType } from '@quackswap/sdk'
 import React, { useContext, useMemo } from 'react'
 import { ArrowDown, AlertTriangle } from 'react-feather'
 import { Text } from 'rebass'

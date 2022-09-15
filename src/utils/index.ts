@@ -3,7 +3,7 @@ import { getAddress } from '@ethersproject/address'
 import { AddressZero } from '@ethersproject/constants'
 import { JsonRpcSigner, Web3Provider } from '@ethersproject/providers'
 import { BigNumber } from '@ethersproject/bignumber'
-import { QuackSwapRouterAbi } from '@hotcrosscom/quackswap-sdk'
+import { QuackSwapRouterAbi } from '@quackswap/sdk'
 import { ROUTER_ADDRESS } from '../constants'
 import {
   ChainId,
@@ -16,7 +16,7 @@ import {
   currencyEquals,
   Trade,
   CHAINS
-} from '@hotcrosscom/quackswap-sdk'
+} from '@quackswap/sdk'
 import { TokenAddressMap } from '../state/lists/hooks'
 
 // returns the checksummed address if the address is valid, otherwise returns false

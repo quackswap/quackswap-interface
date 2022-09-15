@@ -1,6 +1,6 @@
 import React from 'react'
-import { Text, Box, CurrencyLogo } from '@hotcrosscom/quackswap-components'
-import { Currency, Token, WBTT } from '@hotcrosscom/quackswap-sdk'
+import { Text, Box, CurrencyLogo } from '@quackswap/components'
+import { Currency, Token, WBTT } from '@quackswap/sdk'
 import { Colors } from 'src/theme/styled'
 import { useChainId } from 'src/hooks'
 import { ANALYTICS_PAGE } from 'src/constants'

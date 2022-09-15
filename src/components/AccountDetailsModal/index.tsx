@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import AccountDetails from '../AccountDetails'
-import { Modal } from '@hotcrosscom/quackswap-components'
+import { Modal } from '@quackswap/components'
 
 const Wrapper = styled.div`
   ${({ theme }) => theme.flexColumnNoWrap}

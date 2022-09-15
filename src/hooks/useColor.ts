@@ -2,7 +2,7 @@ import { useState, useLayoutEffect } from 'react'
 import { shade } from 'polished'
 import Vibrant from 'node-vibrant'
 import { hex } from 'wcag-contrast'
-import { Token } from '@hotcrosscom/quackswap-sdk'
+import { Token } from '@quackswap/sdk'
 import { getTokenLogoURL } from '../constants'
 
 async function getColorFromToken(token: Token): Promise<string | null> {

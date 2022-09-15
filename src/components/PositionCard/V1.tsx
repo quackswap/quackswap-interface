@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom'
-import { Token, TokenAmount, WBTT } from '@hotcrosscom/quackswap-sdk'
+import { Token, TokenAmount, WBTT } from '@quackswap/sdk'
 
 import { Text } from 'rebass'
 import { AutoColumn } from '../Column'

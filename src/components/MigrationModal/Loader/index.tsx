@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from '@hotcrosscom/quackswap-components'
+import { Text } from '@quackswap/components'
 import Circle from '../../../assets/images/blue-loader.svg'
 import { CustomLightSpinner } from '../../../theme/components'
 import { Wrapper, ConfirmedIcon, Section } from './styleds'

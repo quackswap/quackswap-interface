@@ -8,7 +8,7 @@ import {
   Percent,
   Price,
   TokenAmount
-} from '@hotcrosscom/quackswap-sdk'
+} from '@quackswap/sdk'
 import { useCallback, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { PairState, usePair } from '../../data/Reserves'

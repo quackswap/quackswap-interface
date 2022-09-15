@@ -19,7 +19,7 @@ import {
   BTT_CHAIN_PARAMS,
   IS_IN_IFRAME,
   WalletInfo
-} from '@hotcrosscom/quackswap-components'
+} from '@quackswap/components'
 import usePrevious from '../../hooks/usePrevious'
 import { ApplicationModal } from '../../state/application/actions'
 import { useModalOpen, useWalletModalToggle } from '../../state/application/hooks'

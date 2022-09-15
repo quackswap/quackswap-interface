@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Price } from '@hotcrosscom/quackswap-sdk'
+import { Price } from '@quackswap/sdk'
 import { Repeat } from 'react-feather'
 import { Text } from 'rebass'
 import { ThemeContext } from 'styled-components'

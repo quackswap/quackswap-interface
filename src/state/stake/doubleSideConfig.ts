@@ -1,4 +1,4 @@
-import { ChainId, WBTT } from '@hotcrosscom/quackswap-sdk'
+import { ChainId, WBTT } from '@quackswap/sdk'
 import { MASTERCHEF_ADDRESS } from '../../constants'
 import * as TOKENS from '../../constants/tokens'
 import { BridgeMigrator, DoubleSideStaking, Migration } from './hooks'

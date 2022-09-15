@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from 'react'
-import { Pair } from '@hotcrosscom/quackswap-sdk'
+import { Pair } from '@quackswap/sdk'
 import { useActiveWeb3React, useChainId } from '../../hooks'
 import { useTokenBalancesWithLoadingIndicator } from '../wallet/hooks'
 import { usePairs } from '../../data/Reserves'

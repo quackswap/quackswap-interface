@@ -1,6 +1,6 @@
 import React from 'react'
 import { ContentWrapper, Panel } from './styleds'
-import { Text, Box } from '@hotcrosscom/quackswap-components'
+import { Text, Box } from '@quackswap/components'
 
 export interface StatProps {
   icon?: React.ReactNode

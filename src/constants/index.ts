@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Percent, Token, WBTT, CHAINS } from '@hotcrosscom/quackswap-sdk'
+import { ChainId, JSBI, Percent, Token, WBTT, CHAINS } from '@quackswap/sdk'
 import { DAIe, QUACK, USDC, USDCe, USDTe, UST, axlUST } from './tokens'
 
 export const GAS_PRICE = 225
@@ -11,7 +11,7 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]: string } = {
 export const LANDING_PAGE = 'https://quackswap.com'
 export const ANALYTICS_PAGE = 'https://quackswap-analytics-owvhf.ondigitalocean.app/'
 export const QUACKSWAP_API_BASE_URL = `https://floral-river-36c3.michalis.workers.dev`
-export const QUACKSWAP_TOKENS_REPO_RAW_BASE_URL = `https://raw.githubusercontent.com/Apocentre/quackswap-assets`
+export const QUACKSWAP_TOKENS_REPO_RAW_BASE_URL = `https://raw.githubusercontent.com/quackswap/quackswap-assets`
 
 export type LogoSize = 24 | 48
 export const getTokenLogoURL = (address: string, size: LogoSize = 24) =>

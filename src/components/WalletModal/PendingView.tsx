@@ -2,7 +2,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 import React from 'react'
 import styled from 'styled-components'
 import Option from './Option'
-import { WalletInfo } from '@hotcrosscom/quackswap-components'
+import { WalletInfo } from '@quackswap/components'
 
 import { darken } from 'polished'
 import Loader from '../Loader'

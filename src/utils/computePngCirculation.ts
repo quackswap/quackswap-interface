@@ -1,4 +1,4 @@
-import { JSBI, Token, TokenAmount } from '@hotcrosscom/quackswap-sdk'
+import { JSBI, Token, TokenAmount } from '@quackswap/sdk'
 import { BigNumber } from 'ethers'
 
 const TREASURY_VESTING_GENESIS = 1612899125

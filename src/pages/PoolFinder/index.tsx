@@ -1,4 +1,4 @@
-import { Currency, CBTT, JSBI, TokenAmount } from '@hotcrosscom/quackswap-sdk'
+import { Currency, CBTT, JSBI, TokenAmount } from '@quackswap/sdk'
 import React, { useCallback, useEffect, useState } from 'react'
 import { Plus } from 'react-feather'
 import { Text } from 'rebass'

@@ -1,5 +1,5 @@
 import { Web3Provider } from '@ethersproject/providers'
-import { ChainId, ALL_CHAINS, CHAINS } from '@hotcrosscom/quackswap-sdk'
+import { ChainId, ALL_CHAINS, CHAINS } from '@quackswap/sdk'
 import { useWeb3React as useWeb3ReactCore } from '@web3-react/core'
 import { Web3ReactContextInterface } from '@web3-react/core/dist/types'
 import { useEffect, useState } from 'react'
@@ -11,7 +11,7 @@ import {
   IS_IN_IFRAME,
   NetworkContextName,
   BTT_CHAIN_PARAMS
-} from '@hotcrosscom/quackswap-components'
+} from '@quackswap/components'
 
 export function useActiveWeb3React(): Web3ReactContextInterface<Web3Provider> & { chainId?: ChainId } {
   const context = useWeb3ReactCore<Web3Provider>()

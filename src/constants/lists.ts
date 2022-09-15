@@ -1,6 +1,6 @@
 // the Pangolin Default token list lives here
 // TODO
-export const QUACKSWAP_LIST = 'https://raw.githubusercontent.com/Apocentre/quackswap-assets/main/tokenlist.json'
+export const QUACKSWAP_LIST = 'https://raw.githubusercontent.com/quackswap/quackswap-assets/main/tokenlist.json'
 
 export const DEFAULT_TOKEN_LISTS_SELECTED: string[] = [QUACKSWAP_LIST]
 

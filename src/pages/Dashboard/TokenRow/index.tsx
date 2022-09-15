@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { LineChart, Line } from 'recharts'
-import { Box } from '@hotcrosscom/quackswap-components'
+import { Box } from '@quackswap/components'
 import Logo from 'src/assets/images/logo.png'
 
 export const RowContainer = styled(Box)`
