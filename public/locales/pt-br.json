@@ -22,7 +22,7 @@
     "totalSupply": "Suprimento total",
     "makeSureURLWarning": "Certifique-se que a URL seja",
     "alwaysMakeSureWarning": "Certifique-se sempre que a URL seja",
-    "betaWarning": "This page is still in its BETA stage, we don't take responsibility for any funds loss.",
+    "betaWarning": "This application is still in beta phase. Proceed at your own risk.",
     "bookmarkIt": "marque para ser seguro.",
     "addMetamask": "Adicionar {{ symbol }} no MetaMask",
     "bridge": "Ponte",

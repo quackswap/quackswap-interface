@@ -22,7 +22,7 @@
     "totalSupply": "Toplam Arz",
     "makeSureURLWarning": "URL'nin bu olduğundan emin olun:",
     "alwaysMakeSureWarning": "Her zaman URL'nin bu olduğundan emin olun:",
-    "betaWarning": "This page is still in its BETA stage, we don't take responsibility for any funds loss.",
+    "betaWarning": "This application is still in beta phase. Proceed at your own risk.",
     "bookmarkIt": "güvenliğiniz için yer imlerine ekleyin.",
     "addMetamask": "{{ symbol }}'yi MetaMask'e Ekle",
     "bridge": "Köprü",
