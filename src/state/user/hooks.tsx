@@ -17,7 +17,8 @@ import {
   updateUserDeadline,
   updateUserExpertMode,
   updateUserSlippageTolerance,
-  toggleURLWarning
+  toggleURLWarning,
+  toggleBetaWarning
 } from './actions'
 
 function serializeToken(token: Token): SerializedToken {
@@ -173,6 +174,15 @@ export function useURLWarningVisible(): boolean {
 export function useURLWarningToggle(): () => void {
   const dispatch = useDispatch()
   return useCallback(() => dispatch(toggleURLWarning()), [dispatch])
+}
+
+export function useBetaWarningVisible(): boolean {
+  return useSelector((state: AppState) => state.user.BetaWarningVisible)
+}
+
+export function useBetaWarningToggle(): () => void {
+  const dispatch = useDispatch()
+  return useCallback(() => dispatch(toggleBetaWarning()), [dispatch])
 }
 
 /**

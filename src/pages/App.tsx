@@ -6,6 +6,7 @@ import Header from '../components/Header'
 import Polling from '../components/Header/Polling'
 import URLWarning from '../components/Header/URLWarning'
 import Popups from '../components/Popups'
+import BetaWarning from '../components/BetaWarning'
 import Web3ReactManager from '../components/Web3ReactManager'
 import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
 import AddLiquidity from './AddLiquidity'
@@ -15,29 +16,14 @@ import {
   RedirectToAddLiquidity
 } from './AddLiquidity/redirects'
 import { EarnV1, EarnV2, ManageV1, ManageV2 } from './Earn'
-// import Stake from './Stake'
-// import ManageStake from './Stake/Manage'
 import Pool from './Pool'
 import Buy from './Buy'
 import PoolFinder from './PoolFinder'
 import RemoveLiquidity from './RemoveLiquidity'
 import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redirects'
-// import Dashboard from './Dashboard'
 import Swap from './Swap'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
-// import Airdrop from './Airdrop'
-
-// import Vote from './Vote'
-// import VotePage from './Vote/VotePage'
-
-// import IDO from './IDO'
-// import Migrate from './Earn/Migrate'
-
-// import MigrateV2 from './Migrate'
 import { useIsBetaUI } from '../hooks/useLocation'
-// import CustomRoute from './Route'
-// import Layout from '../layout'
-
 
 const AppWrapper = styled.div`
   display: flex;
@@ -84,6 +70,8 @@ export default function App() {
     <Suspense fallback={null}>
       <Route component={GoogleAnalyticsReporter} />
       <Route component={DarkModeQueryParamReader} />
+      <BetaWarning />
+
       <AppWrapper>
         {!isBeta && (
           <>
@@ -107,10 +95,7 @@ export default function App() {
               <Route exact strict path="/pool" component={Pool} />
               <Route exact strict path="/quack/2" component={EarnV2} />
               <Route exact strict path="/quack/:version" component={EarnV1} />
-              {/* <Route exact strict path="/stake/:version" component={Stake} /> */}
-              {/* <Route exact strict path="/vote" component={Vote} /> */}
-              {/* <Route exact strict path="/ido" component={IDO} /> */}
-              {/* <Route exact strict path="/airdrop" component={Airdrop} /> */}
+
               <Route exact strict path="/create" component={RedirectToAddLiquidity} />
               <Route exact path="/add" component={AddLiquidity} />
               <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
@@ -123,14 +108,6 @@ export default function App() {
 
               <Route exact strict path="/quack/:currencyIdA/:currencyIdB/2" component={ManageV2} />
               <Route exact strict path="/quack/:currencyIdA/:currencyIdB/:version" component={ManageV1} />
-
-              {/* <Route exact strict path="/stake/:version/:rewardCurrencyId" component={ManageStake} /> */}
-              {/* <Route exact strict path="/vote/:id" component={VotePage} />
-              <Route
-                exact
-                path="/migrate/:currencyIdFromA/:currencyIdFromB/:versionFrom/:currencyIdToA/:currencyIdToB/:versionTo/"
-                component={Migrate}
-              /> */}
 
               <Route component={RedirectPathToSwapOnly} />
             </Switch>

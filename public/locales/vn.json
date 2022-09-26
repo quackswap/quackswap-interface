@@ -22,6 +22,7 @@
     "totalSupply": "Tổng cung",
     "makeSureURLWarning": "Đảm bảo rằng URL là:",
     "alwaysMakeSureWarning": "Luôn đảm bảo rằng URL là:",
+    "betaWarning": "This page is still in its BETA stage, we don't take responsibility for any funds loss.",
     "bookmarkIt": "Đánh dấu nó để an toàn.",
     "addMetamask": "Thêm {{ symbol }} vào MetaMask",
     "bridge": "Cầu",
