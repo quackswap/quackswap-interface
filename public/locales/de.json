@@ -108,7 +108,8 @@
     "telegram": "Telegram",
     "tutorials": "Tutorials",
     "idos": "IDOs",
-    "about": "Info"
+    "about": "Info",
+    "docs": "Documentation"
   },
   "modalView": {
     "confirmTransaction": "Diese Transaktion in deiner Wallet überprüfen",

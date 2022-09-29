@@ -108,7 +108,8 @@
     "telegram": "Telegram",
     "tutorials": "Rehber",
     "idos": "IDO",
-    "about": "Hakkımızda"
+    "about": "Hakkımızda",
+    "docs": "Documentation"
   },
   "modalView": {
     "confirmTransaction": "Bu işlemi cüzdanınızda onaylayın",

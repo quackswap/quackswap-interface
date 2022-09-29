@@ -1,8 +1,15 @@
 import React, { useRef } from 'react'
-import { MessageCircle, Send, Info, Twitter, MessageSquare } from 'react-feather'
+import {
+  // MessageCircle,
+  // Send,
+  // Twitter,
+  // MessageSquare,
+  Paperclip,
+  Info
+} from 'react-feather'
 import styled from 'styled-components'
 import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'
-import { LANDING_PAGE } from '../../constants'
+import { LANDING_PAGE, DOCS_PAGE } from '../../constants'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
 import { ApplicationModal } from '../../state/application/actions'
 import { useModalOpen, useToggleModal } from '../../state/application/hooks'
@@ -20,7 +27,7 @@ const StyledMenuIcon = styled(MenuIcon)`
 `
 
 const NarrowMenuFlyout = styled(MenuFlyout)`
-  min-width: 8.125rem;
+  min-width: 11rem;
   ${({ theme }) => theme.mediaWidth.upToMedium`
     top: -17.25rem;
   `};
@@ -46,22 +53,26 @@ export default function Menu() {
             <Info size={14} />
             {t('menu.about')}
           </MenuItem>
-          <MenuItem id="link" href="https://t.me/pangolindexV2">
+          <MenuItem id="link" href={DOCS_PAGE}>
+            <Paperclip size={14} />
+            {t('menu.docs')}
+          </MenuItem>
+          {/* <MenuItem id="link" href="https://t.me/pangolindexV2">
             <Send size={14} />
             {t('menu.telegram')}
-          </MenuItem>
-          <MenuItem id="link" href="https://discord.com/invite/pangolindex">
+          </MenuItem> */}
+          {/* <MenuItem id="link" href="https://discord.com/invite/pangolindex">
             <MessageCircle size={14} />
             {t('menu.discord')}
-          </MenuItem>
-          <MenuItem id="link" href="https://gov.pangolin.exchange">
+          </MenuItem> */}
+          {/* <MenuItem id="link" href="https://gov.pangolin.exchange">
             <MessageSquare size={14} />
             {t('header.forum')}
-          </MenuItem>
-          <MenuItem id="link" href="https://twitter.com/pangolindex">
+          </MenuItem> */}
+          {/* <MenuItem id="link" href="https://twitter.com/pangolindex">
             <Twitter size={14} />
             {t('menu.twitter')}
-          </MenuItem>
+          </MenuItem> */}
         </NarrowMenuFlyout>
       )}
     </StyledMenu>
