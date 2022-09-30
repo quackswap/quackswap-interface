@@ -129,14 +129,8 @@ export const MIN_ETH: JSBI = JSBI.exponentiate(JSBI.BigInt(10), JSBI.BigInt(16))
 export const BETTER_TRADE_LINK_THRESHOLD = new Percent(JSBI.BigInt(75), JSBI.BigInt(10000))
 
 export const MOONPAY_PK = process.env.REACT_APP_MOONPAY_PK || ''
-export const WYRE_API_KEY = process.env.REACT_APP_WYRE_API_KEY ? process.env.REACT_APP_WYRE_API_KEY : ''
-export const WYRE_SECRET_KEY = process.env.REACT_APP_WYRE_SECRET_KEY ? process.env.REACT_APP_WYRE_SECRET_KEY : ''
-export const WYRE_ID = process.env.REACT_APP_WYRE_ID ? process.env.REACT_APP_WYRE_ID : ''
-export const WYRE_API_URL = 'https://api.sendwyre.com'
-export const WYRE_QUOTE_API_ENDPOINT = '/v3/orders/quote/partner'
-export const WYRE_RESERVE_API_ENDPOINT = '/v3/orders/reserve'
-export const WYRE_CALLBACK_URL = 'https://app.pangolin.exchange/'
 export const SUBGRAPH_BASE_URL = process.env.REACT_APP_SUBGRAPH_BASE_URL
+console.log("🚀 ~ file: index.ts ~ line 133 ~ SUBGRAPH_BASE_URL", SUBGRAPH_BASE_URL)
 
 export const IS_IN_IFRAME = window.parent !== window
 export const TIMEFRAME = [

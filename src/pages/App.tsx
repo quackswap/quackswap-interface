@@ -17,7 +17,6 @@ import {
 } from './AddLiquidity/redirects'
 import { EarnV1, EarnV2, ManageV1, ManageV2 } from './Earn'
 import Pool from './Pool'
-import Buy from './Buy'
 import PoolFinder from './PoolFinder'
 import RemoveLiquidity from './RemoveLiquidity'
 import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redirects'
@@ -90,7 +89,6 @@ export default function App() {
               <Route exact strict path="/swap" component={Swap} />
               <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
               <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
-              <Route exact strict path="/buy" component={Buy} />
               <Route exact strict path="/find" component={PoolFinder} />
               <Route exact strict path="/pool" component={Pool} />
               <Route exact strict path="/quack/2" component={EarnV2} />
