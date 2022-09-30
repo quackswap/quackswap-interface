@@ -7,27 +7,27 @@ import { GraphQLClient } from 'graphql-request'
 
 export const client = new ApolloClient({
   link: new HttpLink({
-    uri: `https://graph.hotcross.dev/subgraphs/name/bttc-dex`
+    uri: `${SUBGRAPH_BASE_URL}/bttc-dex`
   }),
   cache: new InMemoryCache(),
   shouldBatch: true
 })
 
-export const governanceClient = new ApolloClient({
-  link: new HttpLink({
-    uri: `${SUBGRAPH_BASE_URL}/governance`
-  }),
-  cache: new InMemoryCache(),
-  shouldBatch: true
-})
+// export const governanceClient = new ApolloClient({
+//   link: new HttpLink({
+//     uri: `${SUBGRAPH_BASE_URL}/governance`
+//   }),
+//   cache: new InMemoryCache(),
+//   shouldBatch: true
+// })
 
-export const masterchefClient = new GraphQLClient('https://graph.hotcross.dev/subgraphs/name/bttc-masterchef', {
+export const masterchefClient = new GraphQLClient(`${SUBGRAPH_BASE_URL}/bttc-masterchef`, {
   headers: {}
 })
 
 export const blockClient = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://graph.hotcross.dev/subgraphs/name/bttc-blocks'
+    uri: `${SUBGRAPH_BASE_URL}/bttc-blocks`
   }),
   cache: new InMemoryCache()
 })
