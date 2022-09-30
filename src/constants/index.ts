@@ -11,7 +11,7 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]: string } = {
 export const LANDING_PAGE = 'https://quackswap.com'
 export const DOCS_PAGE = '#'
 export const ANALYTICS_PAGE = 'https://info.quackswap.xyz/'
-export const QUACKSWAP_API_BASE_URL = `https://api.quackswap.xyx`
+export const QUACKSWAP_API_BASE_URL = `https://api.quackswap.xyz`
 export const QUACKSWAP_TOKENS_REPO_RAW_BASE_URL = `https://raw.githubusercontent.com/quackswap/quackswap-assets`
 
 export type LogoSize = 24 | 48
