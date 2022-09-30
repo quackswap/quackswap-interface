@@ -130,7 +130,6 @@ export const BETTER_TRADE_LINK_THRESHOLD = new Percent(JSBI.BigInt(75), JSBI.Big
 
 export const MOONPAY_PK = process.env.REACT_APP_MOONPAY_PK || ''
 export const SUBGRAPH_BASE_URL = process.env.REACT_APP_SUBGRAPH_BASE_URL
-console.log("🚀 ~ file: index.ts ~ line 133 ~ SUBGRAPH_BASE_URL", SUBGRAPH_BASE_URL)
 
 export const IS_IN_IFRAME = window.parent !== window
 export const TIMEFRAME = [
