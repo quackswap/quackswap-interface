@@ -1,6 +1,6 @@
 {
   "name": "@quackswap/interface",
-  "version": "1.0.41-dev.0",
+  "version": "1.0.1",
   "description": "Quackswap Interface",
   "homepage": ".",
   "engines": {

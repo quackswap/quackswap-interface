@@ -4,7 +4,7 @@ An open source interface for QuackSwap -- a community-driven decentralized excha
 
 ## Accessing the QuackSwap Interface
 
-Visit [app.quackswap.exchange](https://app.quackswap.exchange).
+Visit [app.quackswap.xyz](https://app.quackswap.xyz).
 
 ## Development
 
