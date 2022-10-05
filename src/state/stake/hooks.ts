@@ -1100,12 +1100,19 @@ export const useMinichefStakingInfos = (version = 2, pairToFilterBy?: Pair | nul
         const poolAllocPointAmount = new TokenAmount(lpToken, JSBI.BigInt(poolInfo?.result?.['allocPoint']))
         const totalAllocPointAmount = new TokenAmount(lpToken, JSBI.BigInt(totalAllocPoint?.[0]))
         const rewardRatePerSecAmount = new TokenAmount(quack, JSBI.BigInt(rewardPerSecond?.[0]))
-        const poolRewardRate = new TokenAmount(
-          quack,
-          JSBI.divide(JSBI.multiply(poolAllocPointAmount.raw, rewardRatePerSecAmount.raw), totalAllocPointAmount.raw)
-        )
+        const poolRewardRate = JSBI.notEqual(totalAllocPointAmount.raw, BIG_INT_ZERO)
+          ? new TokenAmount(
+              quack,
+              JSBI.divide(
+                JSBI.multiply(poolAllocPointAmount.raw, rewardRatePerSecAmount.raw), totalAllocPointAmount.raw
+              )
+            )
+          : new TokenAmount(quack, BIG_INT_ZERO)
 
-        const totalRewardRatePerWeek = new TokenAmount(quack, JSBI.multiply(poolRewardRate.raw, BIG_INT_SECONDS_IN_WEEK))
+        const totalRewardRatePerWeek = new TokenAmount(
+          quack,
+          JSBI.multiply(poolRewardRate.raw, BIG_INT_SECONDS_IN_WEEK)
+        )
 
         const totalSupplyStaked = JSBI.BigInt(balanceState?.result?.[0])
         const totalSupplyAvailable = JSBI.BigInt(pairTotalSupplyState?.result?.[0])
