@@ -31,15 +31,15 @@ export default function URLWarning() {
     <PhishAlert isActive={showURLWarning}>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <AlertTriangle style={{ marginRight: 6 }} size={12} /> {t('header.makeSureURLWarning')}
-        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>app.quackswap.xyz</code>
+        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>quackswap.xyz</code>
       </div>
       <StyledClose size={12} onClick={toggleURLWarning} />
     </PhishAlert>
-  ) : window.location.hostname === 'app.quackswap.xyz' ? (
+  ) : window.location.hostname === 'quackswap.xyz' ? (
     <PhishAlert isActive={showURLWarning}>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <AlertTriangle style={{ marginRight: 6 }} size={12} /> {t('header.alwaysMakeSureWarning')}
-        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>app.quackswap.xyz</code> -
+        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>quackswap.xyz</code> -
         {t('header.bookmarkIt')}
       </div>
       <StyledClose size={12} onClick={toggleURLWarning} />
