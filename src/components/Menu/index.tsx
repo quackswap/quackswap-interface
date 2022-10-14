@@ -29,7 +29,7 @@ const StyledMenuIcon = styled(MenuIcon)`
 const NarrowMenuFlyout = styled(MenuFlyout)`
   min-width: 11rem;
   ${({ theme }) => theme.mediaWidth.upToMedium`
-    top: -17.25rem;
+    top: -6.25rem;
   `};
 `
 
