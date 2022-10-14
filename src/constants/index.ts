@@ -8,7 +8,7 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]: string } = {
 }
 
 // TODO: update links with production urls
-export const LANDING_PAGE = 'https://quackswap.com'
+export const LANDING_PAGE = 'https://quackswap.xyz'
 export const DOCS_PAGE = '#'
 export const ANALYTICS_PAGE = 'https://info.quackswap.xyz/'
 export const QUACKSWAP_API_BASE_URL = `https://api.quackswap.xyz`
